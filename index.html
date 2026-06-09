@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHAOS SWEEPSTAKE 2026</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0d1b2a;
+      --surface:   #132233;
+      --surface2:  #1a2e42;
+      --border:    #243d55;
+      --green:     #00c853;
+      --gold:      #ffd600;
+      --silver:    #b0bec5;
+      --bronze:    #bf8c53;
+      --red:       #ef5350;
+      --draw:      #78909c;
+      --text:      #e8f0fe;
+      --muted:     #7b9bb5;
+      --radius:    10px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* ── Header ─────────────────────────────────────────── */
+    header {
+      background: linear-gradient(135deg, #0a3d2b 0%, #0d5c3f 50%, #064e37 100%);
+      border-bottom: 2px solid var(--green);
+      padding: 24px 20px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+    header h1 span { color: var(--gold); }
+    #last-updated {
+      margin-top: 6px;
+      font-size: 0.78rem;
+      color: #89b8a0;
+    }
+
+    /* ── Nav ─────────────────────────────────────────────── */
+    nav {
+      display: flex;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    nav::-webkit-scrollbar { display: none; }
+    .tab-btn {
+      flex: 1;
+      min-width: 110px;
+      padding: 14px 20px;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+      letter-spacing: 0.3px;
+    }
+    .tab-btn:hover { color: var(--text); background: var(--surface2); }
+    .tab-btn.active { color: var(--green); border-bottom-color: var(--green); }
+
+    /* ── Main container ──────────────────────────────────── */
+    main { max-width: 960px; margin: 0 auto; padding: 24px 16px 60px; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── Section title ───────────────────────────────────── */
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 28px 0 12px;
+    }
+    .section-title:first-child { margin-top: 0; }
+
+    /* ── Leaderboard ─────────────────────────────────────── */
+    .leaderboard-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+    }
+    .leaderboard-table th {
+      background: var(--surface2);
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+    }
+    .leaderboard-table th:last-child,
+    .leaderboard-table td:last-child { text-align: right; }
+    .leaderboard-table td {
+      padding: 13px 16px;
+      border-top: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+    .leaderboard-table tr:hover td { background: var(--surface2); }
+
+    .rank-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .rank-1 { background: var(--gold);   color: #000; }
+    .rank-2 { background: var(--silver); color: #000; }
+    .rank-3 { background: var(--bronze); color: #fff; }
+    .rank-other { background: var(--surface2); color: var(--muted); }
+
+    .player-name { font-weight: 700; font-size: 1rem; }
+    .team-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 4px; }
+    .team-chip {
+      font-size: 0.72rem;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2px 9px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .points-big {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--green);
+    }
+    .points-zero { color: var(--muted); }
+
+    /* ── Fixtures ─────────────────────────────────────────── */
+    .date-group { margin-bottom: 24px; }
+    .date-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      padding: 8px 0 10px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 8px;
+    }
+    .stage-pill {
+      display: inline-block;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 0.7rem;
+      padding: 2px 10px;
+      margin-left: 10px;
+      color: var(--muted);
+      vertical-align: middle;
+    }
+    .match-card {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      margin-bottom: 6px;
+      gap: 10px;
+    }
+    .match-card:hover { border-color: var(--green); }
+    .match-team {
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+    .match-team.home { text-align: right; }
+    .match-team.away { text-align: left; }
+    .match-score {
+      text-align: center;
+      min-width: 70px;
+    }
+    .score-played {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+    .score-upcoming {
+      font-size: 0.8rem;
+      color: var(--muted);
+      background: var(--surface2);
+      border-radius: 6px;
+      padding: 4px 10px;
+      letter-spacing: 1px;
+    }
+    .kickoff-time {
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-top: 4px;
+      letter-spacing: 0.3px;
+    }
+    .owner-tag {
+      font-size: 0.7rem;
+      color: var(--green);
+      opacity: 0.85;
+    }
+    .home-win .match-team.home,
+    .away-win .match-team.away { color: var(--green); }
+    .score-draw { color: var(--draw); }
+
+    /* Filter bar */
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .filter-btn:hover { border-color: var(--green); color: var(--text); }
+    .filter-btn.active { background: var(--green); color: #000; border-color: var(--green); }
+
+    /* ── Players ──────────────────────────────────────────── */
+    .players-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .player-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color 0.2s;
+      cursor: pointer;
+    }
+    .player-card:hover { border-color: var(--green); }
+    .player-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      background: var(--surface2);
+    }
+    .player-card-name { font-size: 1.05rem; font-weight: 700; }
+    .player-card-pts {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--green);
+    }
+    .player-card-pts.zero { color: var(--muted); }
+    .player-card-rank {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+    .team-breakdown {
+      padding: 10px 16px 14px;
+    }
+    .team-row {
+      display: grid;
+      grid-template-columns: 1fr repeat(4, auto);
+      gap: 6px 12px;
+      align-items: center;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.83rem;
+    }
+    .team-row:last-child { border-bottom: none; }
+    .team-row-name { font-weight: 600; }
+    .team-row-stat {
+      text-align: right;
+      color: var(--muted);
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+    .team-row-pts {
+      text-align: right;
+      font-weight: 700;
+      min-width: 28px;
+    }
+    .pts-pos { color: var(--green); }
+    .pts-neg { color: var(--red); }
+    .pts-zero { color: var(--muted); }
+    .team-breakdown-header {
+      display: grid;
+      grid-template-columns: 1fr repeat(4, auto);
+      gap: 6px 12px;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0 0 4px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2px;
+    }
+    .team-breakdown-header span { text-align: right; }
+
+    /* ── Progress chart ──────────────────────────────────── */
+    .chart-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .chart-wrap h2 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 16px;
+    }
+    .chart-canvas-wrap { position: relative; height: 420px; }
+    .chart-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px 4px 8px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition: opacity 0.15s;
+      user-select: none;
+    }
+    .legend-item.hidden { opacity: 0.35; }
+    .legend-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .no-data-msg {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+
+    /* ── Player detail view ──────────────────────────────── */
+    #player-detail {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      overflow-y: auto;
+      z-index: 100;
+    }
+    #player-detail.open { display: block; }
+    .detail-header {
+      background: linear-gradient(135deg, #0a3d2b 0%, #0d5c3f 50%, #064e37 100%);
+      border-bottom: 2px solid var(--green);
+      padding: 14px 20px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .detail-header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .back-btn {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+    .back-btn:hover { background: rgba(255,255,255,0.2); }
+    .detail-player-name {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      flex: 1;
+    }
+    .detail-header-spacer { width: 80px; }
+    .detail-header-flags {
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      padding: 0 10px;
+    }
+    .detail-bg-name {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(4rem, 16vw, 9rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.18);
+      letter-spacing: 0.08em;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .detail-flag-item {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+    }
+    .detail-flag-emoji {
+      font-size: 3.5rem;
+      line-height: 1;
+    }
+    .detail-flag-name {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.85);
+      font-weight: 500;
+      text-align: center;
+    }
+    .detail-body {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 16px 60px;
+    }
+    .detail-pts-banner {
+      text-align: center;
+      padding: 20px 16px 16px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .detail-pts-banner .pts-number {
+      display: block;
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .detail-pts-banner .pts-label {
+      font-size: 0.75rem;
+      color: #89b8a0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .stat-list {
+      display: flex;
+      flex-direction: column;
+      max-width: 340px;
+      margin: 20px auto;
+    }
+    .stat-list-row {
+      display: flex;
+      align-items: baseline;
+      padding: 7px 0;
+      font-size: 0.9rem;
+    }
+    .stat-list-lbl { color: var(--muted); font-weight: 500; white-space: nowrap; }
+    .stat-list-dots {
+      flex: 1;
+      border-bottom: 2px dotted var(--border);
+      margin: 0 8px 3px;
+      opacity: 0.5;
+    }
+    .stat-list-val { font-weight: 700; color: var(--text); white-space: nowrap; }
+    .stat-list-val.pos { color: var(--green); }
+    .stat-list-val.neg { color: var(--red); }
+    .detail-chart-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .detail-chart-wrap h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 16px;
+    }
+    .detail-canvas-wrap { position: relative; height: 240px; }
+
+
+    /* ── Breadcrumb game results ─────────────────────────── */
+    .bc-table    { width: 100%; }
+    .bc-header, .bc-row {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    .bc-row {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .bc-row:last-child { border-bottom: none; }
+    .bc-team-label, .bc-name-spacer {
+      font-size: 0.85rem;
+      font-weight: 600;
+      width: 150px;
+      flex-shrink: 0;
+    }
+    .bc-header {
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 4px;
+    }
+    .bc-cols {
+      display: flex;
+      flex: 1;
+    }
+    .bc-col {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .bc-hcell {
+      font-size: 0.6rem;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+      text-align: center;
+    }
+    .bc-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: default;
+    }
+    .bc-win      { background: #00c853; color: #fff; }
+    .bc-loss     { background: #ef5350; color: #fff; }
+    .bc-draw     { background: #ff9100; color: #fff; font-size: 1.1rem; line-height: 1; }
+    .bc-upcoming { background: transparent; border: 2px solid var(--border); }
+    .bc-ko       { background: transparent; border: 2px dashed #3d5a72; color: #3d5a72;
+                   font-size: 0.9rem; font-weight: 700; }
+
+    /* ── Loading / error ─────────────────────────────────── */
+    #loading {
+      text-align: center;
+      padding: 80px 20px;
+      color: var(--muted);
+    }
+    .spinner {
+      width: 40px; height: 40px;
+      border: 3px solid var(--border);
+      border-top-color: var(--green);
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Responsive ──────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .leaderboard-table th:nth-child(2),
+      .leaderboard-table td:nth-child(2) { display: none; }
+      .match-card { padding: 10px 12px; gap: 6px; }
+      .match-team { font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>⚽ CHAOS SWEEPSTAKE <span>2026</span></h1>
+  <p id="last-updated">Loading...</p>
+</header>
+
+<nav>
+  <button class="tab-btn active" onclick="showTab('leaderboard')">🏆 Leaderboard</button>
+  <button class="tab-btn" onclick="showTab('fixtures')">📅 Fixtures</button>
+  <button class="tab-btn" onclick="showTab('players')">👤 Players</button>
+  <button class="tab-btn" onclick="showTab('progress')">📈 Daily Point Tracker</button>
+</nav>
+
+<main>
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>Loading sweepstake data...</p>
+  </div>
+
+  <div id="tab-leaderboard" class="tab-panel"></div>
+  <div id="tab-fixtures"    class="tab-panel"></div>
+  <div id="tab-players"     class="tab-panel"></div>
+  <div id="tab-progress"    class="tab-panel"></div>
+
+</main>
+
+<!-- Player detail overlay -->
+<div id="player-detail">
+  <div class="detail-header">
+    <div class="detail-header-top">
+      <button class="back-btn" onclick="closePlayer()">← Players</button>
+      <div class="detail-header-spacer"></div>
+    </div>
+    <div class="detail-header-flags" id="detail-flags"></div>
+  </div>
+  <div class="detail-pts-banner">
+    <span class="pts-number" id="detail-pts"></span>
+    <span class="pts-label">total points</span>
+  </div>
+  <div class="detail-body">
+    <div class="stat-list" id="detail-pills"></div>
+    <div class="detail-chart-wrap">
+      <h3>Points Overview</h3>
+      <div class="detail-canvas-wrap"><canvas id="chart-points-overview"></canvas></div>
+    </div>
+    <div class="detail-chart-wrap">
+      <h3>Goal Difference</h3>
+      <div class="detail-canvas-wrap"><canvas id="chart-goal-diff"></canvas></div>
+    </div>
+    <div class="detail-chart-wrap">
+      <h3>Game Results</h3>
+      <div id="chart-game-results"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Flag emoji map ────────────────────────────────────────────────────────────
+const FLAGS = {
+  "Algeria":"🇩🇿","Argentina":"🇦🇷","Australia":"🇦🇺","Austria":"🇦🇹",
+  "Belgium":"🇧🇪","Bosnia and Herzegovina":"🇧🇦","Brazil":"🇧🇷",
+  "Canada":"🇨🇦","Cape Verde":"🇨🇻","Colombia":"🇨🇴","Croatia":"🇭🇷",
+  "Curaçao":"🇨🇼","Czechia":"🇨🇿","DR Congo":"🇨🇩","Ecuador":"🇪🇨",
+  "Egypt":"🇪🇬","England":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","France":"🇫🇷","Germany":"🇩🇪",
+  "Ghana":"🇬🇭","Haiti":"🇭🇹","Iran":"🇮🇷","Iraq":"🇮🇶",
+  "Ivory Coast":"🇨🇮","Japan":"🇯🇵","Jordan":"🇯🇴","Mexico":"🇲🇽",
+  "Morocco":"🇲🇦","Netherlands":"🇳🇱","New Zealand":"🇳🇿","Norway":"🇳🇴",
+  "Panama":"🇵🇦","Paraguay":"🇵🇾","Portugal":"🇵🇹","Qatar":"🇶🇦",
+  "Saudi Arabia":"🇸🇦","Scotland":"🏴󠁧󠁢󠁳󠁣󠁴󠁿","Senegal":"🇸🇳",
+  "South Africa":"🇿🇦","South Korea":"🇰🇷","Spain":"🇪🇸","Sweden":"🇸🇪",
+  "Switzerland":"🇨🇭","Tunisia":"🇹🇳","Turkey":"🇹🇷","USA":"🇺🇸",
+  "Uruguay":"🇺🇾","Uzbekistan":"🇺🇿","TBD":"🏳️",
+};
+const flag = t => FLAGS[t] || "🏳️";
+
+// ── Tab switching ─────────────────────────────────────────────────────────────
+let activeTab = "leaderboard";
+function showTab(name) {
+  const names = ["leaderboard","fixtures","players","progress"];
+  document.querySelectorAll(".tab-btn").forEach((b, i) => {
+    b.classList.toggle("active", names[i] === name);
+  });
+  document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+  document.getElementById("tab-" + name).classList.add("active");
+  activeTab = name;
+  if (name === "progress" && DATA) renderProgress(DATA);
+}
+
+// ── Fetch data ────────────────────────────────────────────────────────────────
+let DATA = null;
+let fixtureFilter = "all";
+
+fetch("data.json?_=" + Date.now())
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(data => {
+    DATA = data;
+    document.getElementById("loading").style.display = "none";
+    buildTeamToPlayer(data);
+    renderLeaderboard(data);
+    renderFixtures(data);
+    renderPlayers(data);
+    showTab("leaderboard");
+    const ts = new Date(data.last_updated);
+    document.getElementById("last-updated").textContent =
+      "Last updated: " + ts.toLocaleString("en-GB", {dateStyle:"medium",timeStyle:"short",timeZone:"UTC"}) + " UTC";
+  })
+  .catch(e => {
+    document.getElementById("loading").innerHTML =
+      `<p style="color:#ef5350">⚠️ Could not load data.json — run export_data.py first.<br><small>${e}</small></p>`;
+  });
+
+// ── Team → player lookup ──────────────────────────────────────────────────────
+let teamToPlayer = {};
+function buildTeamToPlayer(data) {
+  data.players.forEach(p => p.teams.forEach(t => teamToPlayer[t] = p.name));
+}
+
+// ── Leaderboard ───────────────────────────────────────────────────────────────
+function renderLeaderboard(data) {
+  const el = document.getElementById("tab-leaderboard");
+  const rows = data.players.map((p, i) => {
+    const rankClass = i === 0 ? "rank-1" : i === 1 ? "rank-2" : i === 2 ? "rank-3" : "rank-other";
+    const ptsClass  = p.total_points > 0 ? "points-big" : "points-big points-zero";
+    const chips = p.teams.map(t => `<span class="team-chip">${flag(t)} ${t}</span>`).join("");
+    return `
+      <tr>
+        <td><span class="rank-badge ${rankClass}">${p.rank}</span></td>
+        <td>
+          <div class="player-name" onclick="openPlayer('${p.name}')" style="cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--border)">${p.name}</div>
+          <div class="team-chips">${chips}</div>
+        </td>
+        <td><span class="${ptsClass}">${p.total_points}</span></td>
+      </tr>`;
+  }).join("");
+
+  el.innerHTML = `
+    <table class="leaderboard-table">
+      <thead>
+        <tr>
+          <th style="width:48px">#</th>
+          <th>Player</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+}
+
+// ── Fixtures ──────────────────────────────────────────────────────────────────
+function renderFixtures(data, filter) {
+  filter = filter || fixtureFilter;
+  fixtureFilter = filter;
+  const el = document.getElementById("tab-fixtures");
+
+  let fixtures = data.fixtures;
+  if (filter === "played")   fixtures = fixtures.filter(f => f.status === "played");
+  if (filter === "upcoming") fixtures = fixtures.filter(f => f.status === "upcoming");
+
+  const KO_STAGES = ["Round of 32","Round of 16","Quarter-finals","Semi-finals","Third Place","Final"];
+
+  // Group by stage for KO, by date for group stage
+  const grouped = {};
+  fixtures.forEach(f => {
+    const key = KO_STAGES.includes(f.stage) ? f.stage : f.date;
+    if (!grouped[key]) grouped[key] = [];
+    grouped[key].push(f);
+  });
+
+  // Preserve correct order: dates first, then KO stages in order
+  const allKeys = [...new Set(fixtures.map(f =>
+    KO_STAGES.includes(f.stage) ? f.stage : f.date
+  ))];
+
+  const groups = allKeys.map(key => {
+    const matches = grouped[key];
+    const isKO = KO_STAGES.includes(key);
+    let label, stagePill;
+    if (isKO) {
+      label = key;
+      const dates = [...new Set(matches.map(m => m.date))];
+      const fmtDate = d => new Date(d+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short"});
+      stagePill = dates.length === 1
+        ? fmtDate(dates[0])
+        : fmtDate(dates[0]) + " – " + fmtDate(dates[dates.length-1]);
+    } else {
+      const d = new Date(key + "T00:00:00");
+      label = d.toLocaleDateString("en-GB", {weekday:"long", day:"numeric", month:"long"});
+      stagePill = matches[0].stage;
+    }
+    const cards = matches.map(m => matchCard(m)).join("");
+    return `
+      <div class="date-group">
+        <div class="date-label">${label}<span class="stage-pill">${stagePill}</span></div>
+        ${cards}
+      </div>`;
+  }).join("");
+
+  el.innerHTML = `
+    <div class="filter-bar">
+      <button class="filter-btn ${filter==='all'?'active':''}"      onclick="renderFixtures(DATA,'all')">All</button>
+      <button class="filter-btn ${filter==='played'?'active':''}"   onclick="renderFixtures(DATA,'played')">Results</button>
+      <button class="filter-btn ${filter==='upcoming'?'active':''}" onclick="renderFixtures(DATA,'upcoming')">Upcoming</button>
+    </div>
+    ${groups || '<p style="color:var(--muted);text-align:center;padding:40px">No matches found.</p>'}`;
+}
+
+function matchCard(m) {
+  const homeOwner = teamToPlayer[m.home] || "";
+  const awayOwner = teamToPlayer[m.away] || "";
+
+  let scoreHtml, cardClass = "match-card";
+  if (m.status === "played") {
+    const hs = m.home_score, as_ = m.away_score;
+    const cls = hs > as_ ? "home-win" : hs < as_ ? "away-win" : "draw";
+    cardClass += " " + cls;
+    const scoreColor = hs === as_ ? "score-draw" : "";
+    scoreHtml = `<div class="score-played ${scoreColor}">${hs} – ${as_}</div>`;
+  } else {
+    const time = m.kickoff_bst ? `<div class="kickoff-time">${m.kickoff_bst} BST</div>` : "";
+    scoreHtml = `<div class="score-upcoming">vs</div>${time}`;
+  }
+
+  const homeTBD = m.home === "TBD";
+  const awayTBD = m.away === "TBD";
+  const tbdStyle = 'style="color:var(--muted);font-style:italic"';
+
+  return `
+    <div class="${cardClass}">
+      <div class="match-team home">
+        <div ${homeTBD ? tbdStyle : ""}>${homeTBD ? "🏳️ TBD" : flag(m.home) + " " + m.home}</div>
+        ${homeOwner ? `<div class="owner-tag">${homeOwner}</div>` : ""}
+      </div>
+      <div class="match-score">${scoreHtml}</div>
+      <div class="match-team away">
+        <div ${awayTBD ? tbdStyle : ""}>${awayTBD ? "🏳️ TBD" : flag(m.away) + " " + m.away}</div>
+        ${awayOwner ? `<div class="owner-tag">${awayOwner}</div>` : ""}
+      </div>
+    </div>`;
+}
+
+// ── Players ───────────────────────────────────────────────────────────────────
+function renderPlayers(data) {
+  const el = document.getElementById("tab-players");
+  const cards = data.players.map(p => {
+    const ptsClass = p.total_points > 0 ? "" : "zero";
+    const rows = p.breakdown.map(t => {
+      const pts = t.points;
+      const ptsCls = pts > 0 ? "pts-pos" : pts < 0 ? "pts-neg" : "pts-zero";
+      const record = t.played ? `${t.won}W · ${t.drawn}D · ${t.lost}L` : "—";
+      const goals  = t.played ? `${t.goals_for}:${t.goals_against}` : "—";
+      return `
+        <div class="team-row">
+          <div class="team-row-name">${flag(t.team)} ${t.team}</div>
+          <div class="team-row-stat">${record}</div>
+          <div class="team-row-stat">${goals}</div>
+          <div class="team-row-stat">${t.played ? (t.goal_diff >= 0 ? "+" : "") + t.goal_diff : "—"}</div>
+          <div class="team-row-pts ${ptsCls}">${pts}</div>
+        </div>`;
+    }).join("");
+
+    return `
+      <div class="player-card" onclick="openPlayer('${p.name}')" style="cursor:pointer">
+        <div class="player-card-header">
+          <div>
+            <div class="player-card-name">${p.name}</div>
+            <div class="player-card-rank">#${p.rank} overall</div>
+          </div>
+          <div class="player-card-pts ${ptsClass}">${p.total_points} <span style="font-size:0.6em;font-weight:500;color:var(--muted)">pts</span></div>
+        </div>
+        <div class="team-breakdown">
+          <div class="team-breakdown-header">
+            <span>Team</span><span>Record</span><span>GF:GA</span><span>GD</span><span>Pts</span>
+          </div>
+          ${rows}
+        </div>
+      </div>`;
+  }).join("");
+
+  el.innerHTML = `<div class="players-grid">${cards}</div>`;
+}
+
+// ── Progress chart ────────────────────────────────────────────────────────────
+const PLAYER_COLOURS = [
+  "#00c853","#2979ff","#ff6d00","#d500f9","#ffea00",
+  "#00e5ff","#ff1744","#76ff03","#f50057","#1de9b6",
+  "#ff9100","#651fff","#c6ff00","#00b0ff","#ff4081","#69f0ae"
+];
+
+let progressChart = null;
+
+function renderProgress(data) {
+  const el = document.getElementById("tab-progress");
+  const ds = data.daily_scores;
+
+  if (!ds || ds.dates.length === 0) {
+    el.innerHTML = `<div class="no-data-msg">📊 No match results yet — check back once the tournament kicks off.</div>`;
+    return;
+  }
+
+  // Format date labels as "11 Jun"
+  const labels = ds.dates.map(d => {
+    const dt = new Date(d + "T00:00:00");
+    return dt.toLocaleDateString("en-GB", {day:"numeric", month:"short"});
+  });
+
+  const datasets = ds.series.map((s, i) => ({
+    label:           s.name,
+    data:            s.data,
+    borderColor:     PLAYER_COLOURS[i % PLAYER_COLOURS.length],
+    backgroundColor: PLAYER_COLOURS[i % PLAYER_COLOURS.length] + "22",
+    borderWidth:     2.5,
+    pointRadius:     4,
+    pointHoverRadius:7,
+    tension:         0.3,
+    fill:            false,
+  }));
+
+  el.innerHTML = `
+    <div class="chart-wrap">
+      <h2>Cumulative Points — All Players</h2>
+      <div class="chart-canvas-wrap"><canvas id="progress-canvas"></canvas></div>
+      <div class="chart-legend" id="chart-legend"></div>
+    </div>`;
+
+  // Destroy previous chart instance if re-rendering
+  if (progressChart) { progressChart.destroy(); progressChart = null; }
+
+  const ctx = document.getElementById("progress-canvas").getContext("2d");
+  progressChart = new Chart(ctx, {
+    type: "line",
+    data: { labels, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: "index", intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: "#132233",
+          borderColor: "#243d55",
+          borderWidth: 1,
+          titleColor: "#7b9bb5",
+          bodyColor: "#e8f0fe",
+          padding: 12,
+          itemSort: (a, b) => b.raw - a.raw,
+          callbacks: {
+            label(item) {
+              return `  ${item.dataset.label}: ${item.raw} pts`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid:  { color: "#243d55" },
+          ticks: { color: "#7b9bb5", font: { size: 11 } },
+        },
+        y: {
+          grid:  { color: "#243d55" },
+          ticks: { color: "#7b9bb5", font: { size: 11 } },
+          title: { display: true, text: "Cumulative Points", color: "#7b9bb5", font: { size: 12 } },
+        }
+      }
+    }
+  });
+
+  // Custom legend with toggle
+  const legendEl = document.getElementById("chart-legend");
+
+  // Select all / Deselect all buttons
+  const legendControls = document.createElement("div");
+  legendControls.style.cssText = "display:flex;gap:6px;width:100%;margin-bottom:4px;";
+
+  ["Select all", "Deselect all"].forEach(label => {
+    const btn = document.createElement("button");
+    btn.textContent = label;
+    btn.className = "filter-btn";
+    btn.addEventListener("click", () => {
+      const hide = label === "Deselect all";
+      datasets.forEach((_, i) => {
+        progressChart.getDatasetMeta(i).hidden = hide;
+      });
+      legendEl.querySelectorAll(".legend-item").forEach(el => el.classList.toggle("hidden", hide));
+      progressChart.update();
+    });
+    legendControls.appendChild(btn);
+  });
+  legendEl.appendChild(legendControls);
+
+  datasets.forEach((ds, i) => {
+    const item = document.createElement("div");
+    item.className = "legend-item";
+    item.innerHTML = `<span class="legend-dot" style="background:${ds.borderColor}"></span>${ds.label}`;
+    item.addEventListener("click", () => {
+      const meta = progressChart.getDatasetMeta(i);
+      meta.hidden = !meta.hidden;
+      item.classList.toggle("hidden", meta.hidden);
+      progressChart.update();
+    });
+    legendEl.appendChild(item);
+  });
+
+  // ── Stacked bar: cumulative points by result type per player ───────────────
+  // Compute per-player won/drawn/lost point totals from raw fixtures
+  function matchPts(hs, as_) {
+    if (hs === as_) return [1, 1];
+    if (hs > as_)   return [3 + hs - as_, as_ - hs];
+    return              [hs - as_, 3 + as_ - hs];
+  }
+
+  const breakdown = {};
+  data.players.forEach(p => { breakdown[p.name] = { won: 0, drawn: 0, lost: 0 }; });
+
+  data.fixtures.forEach(f => {
+    if (f.status !== "played") return;
+    const [hp, ap] = matchPts(f.home_score, f.away_score);
+    [[f.home, hp, f.home_score, f.away_score],
+     [f.away, ap, f.away_score, f.home_score]].forEach(([team, pts, gf, ga]) => {
+      const owner = teamToPlayer[team];
+      if (!owner) return;
+      const b = breakdown[owner];
+      if (gf > ga)       b.won  += pts;
+      else if (gf === ga) b.drawn += pts;
+      else               b.lost  += pts;
+    });
+  });
+
+  const barLabels  = data.players.map(p => p.name);
+  const wonData    = data.players.map(p => breakdown[p.name].won);
+  const drawnData  = data.players.map(p => breakdown[p.name].drawn);
+  const lostData   = data.players.map(p => breakdown[p.name].lost);
+
+  // Append a second chart card
+  const barWrap = document.createElement("div");
+  barWrap.className = "chart-wrap";
+  barWrap.innerHTML = `
+    <h2>Total Points Breakdown — All Players</h2>
+    <div class="chart-canvas-wrap"><canvas id="pts-breakdown-canvas"></canvas></div>`;
+  el.appendChild(barWrap);
+
+  if (window._ptsBreakdownChart) { window._ptsBreakdownChart.destroy(); }
+  window._ptsBreakdownChart = new Chart(
+    document.getElementById("pts-breakdown-canvas").getContext("2d"), {
+      type: "bar",
+      data: {
+        labels: barLabels,
+        datasets: [
+          { label:"Drawn", data:drawnData, backgroundColor:"#78909c99", borderColor:"#78909c", borderWidth:1.5, stack:"s" },
+          { label:"Won",   data:wonData,   backgroundColor:"#00c85399", borderColor:"#00c853", borderWidth:1.5, stack:"s" },
+          { label:"Lost",  data:lostData,  backgroundColor:"#ef535099", borderColor:"#ef5350", borderWidth:1.5, stack:"s" },
+        ]
+      },
+      plugins: [ChartDataLabels],
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position:"top", labels:{ color:"#b0bec5", font:{ size:11 } } },
+          tooltip: { backgroundColor:"#132233", borderColor:"#243d55", borderWidth:1,
+                     titleColor:"#7b9bb5", bodyColor:"#e8f0fe", padding:10 },
+          datalabels: {
+            display: ctx => ctx.datasetIndex === 1,  // only on "Won" (top of positive stack)
+            anchor: "end",
+            align: "end",
+            offset: 2,
+            color: "#e8f0fe",
+            font: { weight:"bold", size:11 },
+            formatter: (_, ctx) => {
+              const total = ctx.chart.data.datasets.reduce(
+                (sum, ds) => sum + (ds.data[ctx.dataIndex] || 0), 0
+              );
+              return total === 0 ? null : total;
+            }
+          }
+        },
+        scales: {
+          x: { stacked:true, offset:true, grid:{ color:"#243d55", offset:false }, ticks:{ color:"#7b9bb5", align:"center", maxRotation:0, autoSkip:false } },
+          y: { stacked:true,
+               grid:{ color: ctx => ctx.tick.value === 0 ? "#ffffff" : "#243d55" },
+               ticks:{ color:"#7b9bb5" },
+               title:{ display:true, text:"Points", color:"#7b9bb5" } }
+        }
+      }
+    }
+  );
+}
+
+// ── Player detail view ───────────────────────────────────────────────────────
+let detailCharts = [];
+
+function openPlayer(name) {
+  const player = DATA.players.find(p => p.name === name);
+  if (!player) return;
+
+  document.getElementById("detail-flags").innerHTML =
+    `<span class="detail-bg-name">${name}</span>` +
+    player.teams.map(t => `
+    <div class="detail-flag-item">
+      <span class="detail-flag-emoji">${flag(t)}</span>
+      <span class="detail-flag-name">${t}</span>
+    </div>`).join("");
+  document.getElementById("detail-pts").textContent = player.total_points;
+
+  const gf    = player.breakdown.reduce((s,t) => s + t.goals_for, 0);
+  const ga    = player.breakdown.reduce((s,t) => s + t.goals_against, 0);
+  const won   = player.breakdown.reduce((s,t) => s + t.won, 0);
+  const drawn = player.breakdown.reduce((s,t) => s + t.drawn, 0);
+  const lost  = player.breakdown.reduce((s,t) => s + t.lost, 0);
+  const gd    = gf - ga;
+  document.getElementById("detail-pills").innerHTML = [
+    ["Wins",          won,   "pos"],
+    ["Draws",         drawn, ""],
+    ["Losses",        lost,  lost > 0 ? "neg" : ""],
+    ["Goals For",     gf,    gf > 0   ? "pos" : ""],
+    ["Goals Against", ga,    ga > 0   ? "neg" : ""],
+    ["Goal Diff",     gd,    gd > 0   ? "pos" : gd < 0 ? "neg" : ""],
+  ].map(([lbl, val, cls]) => `
+    <div class="stat-list-row">
+      <span class="stat-list-lbl">${lbl}</span>
+      <span class="stat-list-dots"></span>
+      <span class="stat-list-val ${cls}">${lbl === "Goal Diff" && val > 0 ? "+" : ""}${val}</span>
+    </div>`).join("");
+
+  detailCharts.forEach(c => c.destroy());
+  detailCharts = [];
+
+  const bd     = player.breakdown;
+  const labels = bd.map(t => flag(t.team) + " " + t.team);
+
+  const axisDefaults = {
+    x: { grid: { color: "#243d55" }, ticks: { color: "#7b9bb5" } },
+    y: { grid: { color: "#243d55" }, ticks: { color: "#7b9bb5" } },
+  };
+  const pluginDefaults = {
+    legend: { labels: { color: "#b0bec5", font: { size: 11 } } },
+    tooltip: { backgroundColor: "#132233", borderColor: "#243d55", borderWidth: 1,
+                titleColor: "#7b9bb5", bodyColor: "#e8f0fe", padding: 10 }
+  };
+
+  // Chart 1 — Points Overview (combo: stacked bars as point contributions + line for total)
+  // Each bar shows point value: Won=+3/game, Drawn=+1/game, Lost=-1/game (approximate; actual varies by goal diff)
+  detailCharts.push(new Chart(
+    document.getElementById("chart-points-overview").getContext("2d"), {
+      data: {
+        labels,
+        datasets: [
+          { type:"bar",  label:"Drawn pts",  data:bd.map(t=>t.drawn * 1),  backgroundColor:"#78909c88", borderColor:"#78909c", borderWidth:1.5, stack:"bars" },
+          { type:"bar",  label:"Won pts",    data:bd.map(t=>t.won   * 3),  backgroundColor:"#00c85388", borderColor:"#00c853", borderWidth:1.5, stack:"bars" },
+          { type:"bar",  label:"Lost pts",   data:bd.map(t=>-t.lost * 1),  backgroundColor:"#ef535088", borderColor:"#ef5350", borderWidth:1.5, stack:"bars" },
+          { type:"line", label:"Total pts", data:bd.map(t=>t.points),    borderColor:"#ffd600", backgroundColor:"#ffd60033",
+            borderWidth:2.5, pointRadius:5, pointBackgroundColor:"#ffd600", tension:0.3, order:0, stack:"pts" },
+          { type:"line", label:"Goal diff", data:bd.map(t=>t.goal_diff), borderColor:"#00e5ff", backgroundColor:"#00e5ff22",
+            borderWidth:2, pointRadius:4, pointBackgroundColor:"#00e5ff", borderDash:[4,3], tension:0.3, order:0, stack:"gd" },
+        ]
+      },
+      options: {
+        responsive:true, maintainAspectRatio:false,
+        plugins: { ...pluginDefaults, legend:{ ...pluginDefaults.legend, position:"right" } },
+        scales: {
+          x: { stacked:true, grid:{color:"#243d55"}, ticks:{color:"#7b9bb5"} },
+          y: { stacked:true,
+               grid:{color:ctx=>ctx.tick.value===0?"#ffffff":"#243d55"},
+               ticks:{color:"#7b9bb5"},
+               title:{display:true, text:"Points", color:"#7b9bb5"} },
+        }
+      }
+    }
+  ));
+
+  // Chart 2 — Goal Difference (Goals Scored vs Goals Conceded)
+  detailCharts.push(new Chart(
+    document.getElementById("chart-goal-diff").getContext("2d"), {
+      type:"bar",
+      data: {
+        labels,
+        datasets: [
+          { label:"Goals Scored",   data:bd.map(t=>t.goals_for),     backgroundColor:"#00c85355", borderColor:"#00c853", borderWidth:1.5, stack:"bars" },
+          { label:"Goals Conceded", data:bd.map(t=>-t.goals_against), backgroundColor:"#ef535055", borderColor:"#ef5350", borderWidth:1.5, stack:"bars" },
+          { type:"line", label:"Goal diff", data:bd.map(t=>t.goal_diff), borderColor:"#00e5ff", backgroundColor:"#00e5ff22",
+            borderWidth:2, pointRadius:4, pointBackgroundColor:"#00e5ff", borderDash:[4,3], tension:0.3, order:0, stack:"gd" },
+        ]
+      },
+      options: {
+        responsive:true, maintainAspectRatio:false,
+        plugins: { ...pluginDefaults, legend:{ ...pluginDefaults.legend, position:"right" } },
+        scales: {
+          x: { stacked:true, grid:{color:"#243d55"}, ticks:{color:"#7b9bb5"} },
+          y: { stacked:true, grid:{color:ctx=>ctx.tick.value===0?"#ffffff":"#243d55"}, ticks:{color:"#7b9bb5",stepSize:1},
+               title:{display:true,text:"Goals",color:"#7b9bb5"} },
+        }
+      }
+    }
+  ));
+
+  // Chart 3 — Game Results (breadcrumb grid)
+  const KO_STAGES_DEF = [
+    { key:"Round of 32",    label:"Rd of 32" },
+    { key:"Round of 16",    label:"Rd of 16" },
+    { key:"Quarter-finals", label:"QF"       },
+    { key:"Semi-finals",    label:"SF"       },
+    { key:"Final",          label:"Final"    },
+  ];
+  const fmtDate = d => new Date(d + "T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short"});
+
+  // Single shared header row
+  const headerCols = [
+    `<div class="bc-col"><span class="bc-hcell"></span></div>`,
+    `<div class="bc-col"><span class="bc-hcell">Group Stage</span></div>`,
+    `<div class="bc-col"><span class="bc-hcell"></span></div>`,
+    ...KO_STAGES_DEF.map(s => `<div class="bc-col"><span class="bc-hcell">${s.label}</span></div>`),
+  ].join("");
+
+  // Data rows — one per team
+  const teamRows = bd.map(t => {
+    const groupFixtures = DATA.fixtures
+      .filter(f => (f.home === t.team || f.away === t.team) && f.stage === "Group Stage")
+      .sort((a,b) => a.date.localeCompare(b.date));
+
+    const groupCols = groupFixtures.map(f => {
+      let circle;
+      if (f.status !== "played") {
+        circle = `<span class="bc-circle bc-upcoming" title="${fmtDate(f.date)}"></span>`;
+      } else {
+        const isHome = f.home === t.team;
+        const gf = isHome ? f.home_score : f.away_score;
+        const ga = isHome ? f.away_score : f.home_score;
+        const opp = isHome ? f.away : f.home;
+        if (gf > ga)       circle = `<span class="bc-circle bc-win"  title="W ${gf}-${ga} vs ${opp}">✓</span>`;
+        else if (gf < ga)  circle = `<span class="bc-circle bc-loss" title="L ${gf}-${ga} vs ${opp}">✕</span>`;
+        else               circle = `<span class="bc-circle bc-draw" title="D ${gf}-${ga} vs ${opp}">–</span>`;
+      }
+      return `<div class="bc-col">${circle}</div>`;
+    }).join("");
+
+    const koCols = KO_STAGES_DEF.map(s =>
+      `<div class="bc-col"><span class="bc-circle bc-ko" title="${s.key}">?</span></div>`
+    ).join("");
+
+    return `
+      <div class="bc-row">
+        <div class="bc-team-label">${flag(t.team)} ${t.team}</div>
+        <div class="bc-cols">${groupCols}${koCols}</div>
+      </div>`;
+  }).join("");
+
+  const resultsEl = document.getElementById("chart-game-results");
+  resultsEl.innerHTML = `
+    <div class="bc-table">
+      <div class="bc-header">
+        <div class="bc-name-spacer"></div>
+        <div class="bc-cols">${headerCols}</div>
+      </div>
+      ${teamRows}
+    </div>`;
+
+  document.getElementById("player-detail").classList.add("open");
+  document.getElementById("player-detail").scrollTop = 0;
+}
+
+function closePlayer() {
+  document.getElementById("player-detail").classList.remove("open");
+  detailCharts.forEach(c => c.destroy());
+  detailCharts = [];
+}
+</script>
+</body>
+</html>
