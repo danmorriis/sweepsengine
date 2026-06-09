@@ -96,6 +96,24 @@
     .section-title:first-child { margin-top: 0; }
 
     /* ── Leaderboard ─────────────────────────────────────── */
+    .scoring-key {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px 6px;
+      padding: 8px 12px;
+      margin-bottom: 12px;
+      background: var(--surface);
+      border-radius: 8px;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .sk-item { font-weight: 600; letter-spacing: 0.02em; }
+    .sk-pos  { color: #00c853; }
+    .sk-neg  { color: #ef5350; }
+    .sk-neu  { color: var(--muted); }
+    .sk-sep  { color: var(--border); }
     .leaderboard-table {
       width: 100%;
       border-collapse: collapse;
@@ -603,9 +621,11 @@
     @keyframes spin { to { transform: rotate(360deg); } }
 
     /* ── Responsive ──────────────────────────────────────── */
+    .tab-label-short { display: none; }
     @media (max-width: 600px) {
-      .leaderboard-table th:nth-child(2),
-      .leaderboard-table td:nth-child(2) { display: none; }
+      .tab-btn { font-size: 0.75rem; padding: 12px 10px; min-width: 0; }
+      .tab-label-long  { display: none; }
+      .tab-label-short { display: inline; }
       .match-card { padding: 10px 12px; gap: 6px; }
       .match-team { font-size: 0.82rem; }
     }
@@ -619,10 +639,10 @@
 </header>
 
 <nav>
-  <button class="tab-btn active" onclick="showTab('leaderboard')">🏆 Leaderboard</button>
-  <button class="tab-btn" onclick="showTab('fixtures')">📅 Fixtures</button>
-  <button class="tab-btn" onclick="showTab('players')">👤 Players</button>
-  <button class="tab-btn" onclick="showTab('progress')">📈 Daily Point Tracker</button>
+  <button class="tab-btn active" onclick="showTab('leaderboard')">🏆 <span class="tab-label">Leaderboard</span></button>
+  <button class="tab-btn" onclick="showTab('fixtures')">📅 <span class="tab-label">Fixtures</span></button>
+  <button class="tab-btn" onclick="showTab('players')">👤 <span class="tab-label">Players</span></button>
+  <button class="tab-btn" onclick="showTab('progress')">📈 <span class="tab-label tab-label-long">Daily Point Tracker</span><span class="tab-label-short">Points</span></button>
 </nav>
 
 <main>
@@ -748,6 +768,15 @@ function renderLeaderboard(data) {
   }).join("");
 
   el.innerHTML = `
+    <div class="scoring-key">
+      <span class="sk-item sk-pos">+3 win</span>
+      <span class="sk-sep">·</span>
+      <span class="sk-item sk-neu">+1 draw</span>
+      <span class="sk-sep">·</span>
+      <span class="sk-item sk-pos">+1 goal scored</span>
+      <span class="sk-sep">·</span>
+      <span class="sk-item sk-neg">−1 goal conceded</span>
+    </div>
     <table class="leaderboard-table">
       <thead>
         <tr>
