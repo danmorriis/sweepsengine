@@ -244,7 +244,7 @@ def main():
 
     # ── 6. Write output ───────────────────────────────────────────────────────
     output = {
-        "last_updated": datetime.now(BST).strftime("%Y-%m-%dT%H:%M:%S BST"),
+        "last_updated": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
         "players":      player_data,
         "fixtures":     fixtures,
         "daily_scores": daily_scores,

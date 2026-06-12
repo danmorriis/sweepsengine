@@ -736,7 +736,7 @@ fetch("data.json?_=" + Date.now())
     showTab("leaderboard");
     const ts = new Date(data.last_updated);
     document.getElementById("last-updated").textContent =
-      "Last updated: " + ts.toLocaleString("en-GB", {dateStyle:"medium",timeStyle:"short",timeZone:"UTC"}) + " UTC";
+      "Last updated: " + ts.toLocaleString("en-GB", {dateStyle:"medium",timeStyle:"short",timeZone:"Europe/London"}) + " BST";
   })
   .catch(e => {
     document.getElementById("loading").innerHTML =
@@ -942,15 +942,15 @@ function renderProgress(data) {
     return;
   }
 
-  // Format date labels as "11 Jun"
-  const labels = ds.dates.map(d => {
+  // Format date labels as "11 Jun", prepend START
+  const labels = ["START", ...ds.dates.map(d => {
     const dt = new Date(d + "T00:00:00");
     return dt.toLocaleDateString("en-GB", {day:"numeric", month:"short"});
-  });
+  })];
 
   const datasets = ds.series.map((s, i) => ({
     label:           s.name,
-    data:            s.data,
+    data:            [0, ...s.data],
     borderColor:     PLAYER_COLOURS[i % PLAYER_COLOURS.length],
     backgroundColor: PLAYER_COLOURS[i % PLAYER_COLOURS.length] + "22",
     borderWidth:     2.5,
