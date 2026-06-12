@@ -52,7 +52,7 @@ def fetch_scores_for_date(d: date) -> list[dict]:
     for event in data.get("events", []):
         comp = event["competitions"][0]
         status = comp["status"]["type"]["name"]  # e.g. "STATUS_FINAL", "STATUS_SCHEDULED"
-        if status != "STATUS_FINAL":
+        if status not in ("STATUS_FINAL", "STATUS_FULL_TIME"):
             continue
 
         home_comp = next((t for t in comp["competitors"] if t["homeAway"] == "home"), None)
