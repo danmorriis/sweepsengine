@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-11T23:44:33Z",
+  "last_updated": "2026-06-12T04:51:45Z",
   "players": [
     {
       "name": "Anna",
@@ -778,7 +778,7 @@
       "away": "South Africa",
       "home_score": null,
       "away_score": null,
-      "status": "live",
+      "status": "upcoming",
       "stage": "Group Stage"
     },
     {
@@ -788,7 +788,7 @@
       "away": "Czechia",
       "home_score": null,
       "away_score": null,
-      "status": "live",
+      "status": "upcoming",
       "stage": "Group Stage"
     },
     {
@@ -798,7 +798,7 @@
       "away": "Bosnia and Herzegovina",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -808,7 +808,7 @@
       "away": "Paraguay",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
