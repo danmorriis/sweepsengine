@@ -46,8 +46,8 @@
       color: #fff;
     }
     header h1 span { color: var(--gold); }
-    #last-updated {
-      margin-top: 6px;
+    #last-updated, #next-update {
+      margin-top: 4px;
       font-size: 0.78rem;
       color: #89b8a0;
     }
@@ -196,9 +196,18 @@
       color: var(--muted);
       vertical-align: middle;
     }
+    .match-pts {
+      font-size: 0.85rem;
+      font-weight: 800;
+      min-width: 32px;
+      text-align: center;
+    }
+    .match-pts.pos  { color: #00c853; }
+    .match-pts.neg  { color: #ef5350; }
+    .match-pts.zero { color: #ffd600; }
     .match-card {
       display: grid;
-      grid-template-columns: 1fr auto 1fr;
+      grid-template-columns: 32px 1fr auto 1fr 32px;
       align-items: center;
       background: var(--surface);
       border: 1px solid var(--border);
@@ -626,8 +635,9 @@
       .tab-btn { font-size: 0.75rem; padding: 12px 10px; min-width: 0; }
       .tab-label-long  { display: none; }
       .tab-label-short { display: inline; }
-      .match-card { padding: 10px 12px; gap: 6px; }
+      .match-card { padding: 10px 8px; gap: 4px; grid-template-columns: 28px 1fr auto 1fr 28px; }
       .match-team { font-size: 0.82rem; }
+      .match-pts { font-size: 0.75rem; min-width: 28px; }
     }
   </style>
 </head>
@@ -636,6 +646,7 @@
 <header>
   <h1>⚽ CHAOS SWEEPSTAKE <span>2026</span></h1>
   <p id="last-updated">Loading...</p>
+  <p id="next-update"></p>
 </header>
 
 <nav>
@@ -707,6 +718,12 @@ const FLAGS = {
 };
 const flag = t => FLAGS[t] || "🏳️";
 
+function matchPts(hs, as_) {
+  if (hs === as_) return [1, 1];
+  if (hs > as_)   return [3 + hs - as_, as_ - hs];
+  return              [hs - as_, 3 + as_ - hs];
+}
+
 // ── Tab switching ─────────────────────────────────────────────────────────────
 let activeTab = "leaderboard";
 function showTab(name) {
@@ -737,6 +754,10 @@ fetch("data.json?_=" + Date.now())
     const ts = new Date(data.last_updated);
     document.getElementById("last-updated").textContent =
       "Last updated: " + ts.toLocaleString("en-GB", {dateStyle:"medium",timeStyle:"short",timeZone:"Europe/London"}) + " BST";
+    const next = new Date(ts);
+    next.setUTCHours(Math.ceil((next.getUTCHours() + 1) / 2) * 2, 0, 0, 0);
+    document.getElementById("next-update").textContent =
+      "Next update: " + next.toLocaleString("en-GB", {dateStyle:"medium",timeStyle:"short",timeZone:"Europe/London"}) + " BST";
   })
   .catch(e => {
     document.getElementById("loading").innerHTML =
@@ -854,12 +875,18 @@ function matchCard(m) {
   const awayOwner = teamToPlayer[m.away] || "";
 
   let scoreHtml, cardClass = "match-card";
+  let homePtsHtml = `<div class="match-pts"></div>`, awayPtsHtml = `<div class="match-pts"></div>`;
   if (m.status === "played") {
     const hs = m.home_score, as_ = m.away_score;
     const cls = hs > as_ ? "home-win" : hs < as_ ? "away-win" : "draw";
     cardClass += " " + cls;
     const scoreColor = hs === as_ ? "score-draw" : "";
     scoreHtml = `<div class="score-played ${scoreColor}">${hs} – ${as_}</div>`;
+    const [hp, ap] = matchPts(hs, as_);
+    const pCls = p => p > 0 ? "match-pts pos" : p < 0 ? "match-pts neg" : "match-pts zero";
+    const pFmt = p => p > 0 ? `+${p}` : `${p}`;
+    homePtsHtml = `<div class="${pCls(hp)}">${pFmt(hp)}</div>`;
+    awayPtsHtml = `<div class="${pCls(ap)}">${pFmt(ap)}</div>`;
   } else {
     const time = m.kickoff_bst ? `<div class="kickoff-time">${m.kickoff_bst} BST</div>` : "";
     scoreHtml = `<div class="score-upcoming">vs</div>${time}`;
@@ -871,6 +898,7 @@ function matchCard(m) {
 
   return `
     <div class="${cardClass}">
+      ${homePtsHtml}
       <div class="match-team home">
         <div ${homeTBD ? tbdStyle : ""}>${homeTBD ? "🏳️ TBD" : flag(m.home) + " " + m.home}</div>
         ${homeOwner ? `<div class="owner-tag">${homeOwner}</div>` : ""}
@@ -880,6 +908,7 @@ function matchCard(m) {
         <div ${awayTBD ? tbdStyle : ""}>${awayTBD ? "🏳️ TBD" : flag(m.away) + " " + m.away}</div>
         ${awayOwner ? `<div class="owner-tag">${awayOwner}</div>` : ""}
       </div>
+      ${awayPtsHtml}
     </div>`;
 }
 
@@ -998,11 +1027,11 @@ function renderProgress(data) {
       scales: {
         x: {
           grid:  { color: "#243d55" },
-          ticks: { color: "#7b9bb5", font: { size: 11 } },
+          ticks: { color: "#7b9bb5", font: { size: 11 }, precision: 0 },
         },
         y: {
           grid:  { color: "#243d55" },
-          ticks: { color: "#7b9bb5", font: { size: 11 } },
+          ticks: { color: "#7b9bb5", font: { size: 11 }, precision: 0 },
           title: { display: true, text: "Cumulative Points", color: "#7b9bb5", font: { size: 12 } },
         }
       }
@@ -1174,7 +1203,7 @@ function openPlayer(name) {
 
   const axisDefaults = {
     x: { grid: { color: "#243d55" }, ticks: { color: "#7b9bb5" } },
-    y: { grid: { color: "#243d55" }, ticks: { color: "#7b9bb5" } },
+    y: { grid: { color: "#243d55" }, ticks: { color: "#7b9bb5", precision: 0 } },
   };
   const pluginDefaults = {
     legend: { labels: { color: "#b0bec5", font: { size: 11 } } },
@@ -1202,10 +1231,10 @@ function openPlayer(name) {
         responsive:true, maintainAspectRatio:false,
         plugins: { ...pluginDefaults, legend:{ ...pluginDefaults.legend, position:"right" } },
         scales: {
-          x: { stacked:true, grid:{color:"#243d55"}, ticks:{color:"#7b9bb5"} },
+          x: { stacked:true, grid:{color:"#243d55"}, ticks:{color:"#7b9bb5",precision:0} },
           y: { stacked:true,
                grid:{color:ctx=>ctx.tick.value===0?"#ffffff":"#243d55"},
-               ticks:{color:"#7b9bb5"},
+               ticks:{color:"#7b9bb5",precision:0},
                title:{display:true, text:"Points", color:"#7b9bb5"} },
         }
       }
@@ -1229,8 +1258,8 @@ function openPlayer(name) {
         responsive:true, maintainAspectRatio:false,
         plugins: { ...pluginDefaults, legend:{ ...pluginDefaults.legend, position:"right" } },
         scales: {
-          x: { stacked:true, grid:{color:"#243d55"}, ticks:{color:"#7b9bb5"} },
-          y: { stacked:true, grid:{color:ctx=>ctx.tick.value===0?"#ffffff":"#243d55"}, ticks:{color:"#7b9bb5",stepSize:1},
+          x: { stacked:true, grid:{color:"#243d55"}, ticks:{color:"#7b9bb5",precision:0} },
+          y: { stacked:true, grid:{color:ctx=>ctx.tick.value===0?"#ffffff":"#243d55"}, ticks:{color:"#7b9bb5",stepSize:1,precision:0},
                title:{display:true,text:"Goals",color:"#7b9bb5"} },
         }
       }
