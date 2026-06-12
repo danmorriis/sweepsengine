@@ -752,7 +752,9 @@ function buildTeamToPlayer(data) {
 // ── Leaderboard ───────────────────────────────────────────────────────────────
 function renderLeaderboard(data) {
   const el = document.getElementById("tab-leaderboard");
-  const rows = data.players.map((p, i) => {
+  const sorted = [...data.players].sort((a, b) => b.total_points - a.total_points || a.name.localeCompare(b.name));
+  sorted.forEach((p, i) => { p.rank = i + 1; });
+  const rows = sorted.map((p, i) => {
     const rankClass = i === 0 ? "rank-1" : i === 1 ? "rank-2" : i === 2 ? "rank-3" : "rank-other";
     const ptsClass  = p.total_points > 0 ? "points-big" : "points-big points-zero";
     const chips = p.teams.map(t => `<span class="team-chip">${flag(t)} ${t}</span>`).join("");
