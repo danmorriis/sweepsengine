@@ -1148,7 +1148,7 @@ function renderProgress(data) {
           }
         },
         scales: {
-          x: { stacked:true, offset:true, grid:{ color:"#243d55", offset:false }, ticks:{ color:"#7b9bb5", align:"center", maxRotation:0, autoSkip:false } },
+          x: { stacked:true, offset:true, grid:{ color:"#243d55", offset:false }, ticks:{ color:"#7b9bb5", maxRotation:90, minRotation:90, autoSkip:false } },
           y: { stacked:true,
                grid:{ color: ctx => ctx.tick.value === 0 ? "#ffffff" : "#243d55" },
                ticks:{ color:"#7b9bb5" },
