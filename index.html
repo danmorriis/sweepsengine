@@ -757,7 +757,7 @@ fetch("data.json?_=" + Date.now())
     const next = new Date(ts);
     next.setUTCHours(Math.ceil((next.getUTCHours() + 1) / 2) * 2, 0, 0, 0);
     document.getElementById("next-update").textContent =
-      "Next update: " + next.toLocaleString("en-GB", {dateStyle:"medium",timeStyle:"short",timeZone:"Europe/London"}) + " BST";
+      "Next update approx: " + next.toLocaleString("en-GB", {timeStyle:"short",timeZone:"Europe/London"}) + " BST";
   })
   .catch(e => {
     document.getElementById("loading").innerHTML =
