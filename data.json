@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-12T23:40:18Z",
+  "last_updated": "2026-06-13T04:39:53Z",
   "players": [
     {
       "name": "Chow",
@@ -50,6 +50,54 @@
       "rank": 1
     },
     {
+      "name": "Dom",
+      "teams": [
+        "USA",
+        "Panama",
+        "Czechia"
+      ],
+      "total_points": 5,
+      "breakdown": [
+        {
+          "team": "USA",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 4,
+          "goals_against": 1,
+          "goal_diff": 3,
+          "points": 6,
+          "eliminated": false
+        },
+        {
+          "team": "Panama",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        },
+        {
+          "team": "Czechia",
+          "played": 1,
+          "won": 0,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 2,
+          "goal_diff": -1,
+          "points": -1,
+          "eliminated": false
+        }
+      ],
+      "rank": 2
+    },
+    {
       "name": "Rowan",
       "teams": [
         "Belgium",
@@ -95,7 +143,7 @@
           "eliminated": false
         }
       ],
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "Francesca",
@@ -143,7 +191,7 @@
           "eliminated": false
         }
       ],
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "Anna",
@@ -191,7 +239,7 @@
           "eliminated": false
         }
       ],
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Anne",
@@ -239,7 +287,7 @@
           "eliminated": false
         }
       ],
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "Chris",
@@ -287,7 +335,7 @@
           "eliminated": false
         }
       ],
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "Connor",
@@ -335,7 +383,7 @@
           "eliminated": false
         }
       ],
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "Dan",
@@ -383,7 +431,7 @@
           "eliminated": false
         }
       ],
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "Johnny",
@@ -420,54 +468,6 @@
         },
         {
           "team": "Uzbekistan",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        }
-      ],
-      "rank": 9
-    },
-    {
-      "name": "Josh",
-      "teams": [
-        "France",
-        "Paraguay",
-        "Cura\u00e7ao"
-      ],
-      "total_points": 0,
-      "breakdown": [
-        {
-          "team": "France",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Paraguay",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Cura\u00e7ao",
           "played": 0,
           "won": 0,
           "lost": 0,
@@ -674,54 +674,6 @@
       "rank": 14
     },
     {
-      "name": "Dom",
-      "teams": [
-        "USA",
-        "Panama",
-        "Czechia"
-      ],
-      "total_points": -1,
-      "breakdown": [
-        {
-          "team": "USA",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Panama",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Czechia",
-          "played": 1,
-          "won": 0,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 2,
-          "goal_diff": -1,
-          "points": -1,
-          "eliminated": false
-        }
-      ],
-      "rank": 15
-    },
-    {
       "name": "Emma",
       "teams": [
         "Netherlands",
@@ -767,6 +719,54 @@
           "eliminated": false
         }
       ],
+      "rank": 15
+    },
+    {
+      "name": "Josh",
+      "teams": [
+        "France",
+        "Paraguay",
+        "Cura\u00e7ao"
+      ],
+      "total_points": -3,
+      "breakdown": [
+        {
+          "team": "France",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        },
+        {
+          "team": "Paraguay",
+          "played": 1,
+          "won": 0,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 4,
+          "goal_diff": -3,
+          "points": -3,
+          "eliminated": false
+        },
+        {
+          "team": "Cura\u00e7ao",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        }
+      ],
       "rank": 16
     }
   ],
@@ -806,9 +806,9 @@
       "kickoff_bst": "02:00",
       "home": "USA",
       "away": "Paraguay",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 4,
+      "away_score": 1,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -818,7 +818,7 @@
       "away": "Switzerland",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -828,7 +828,7 @@
       "away": "Morocco",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -838,7 +838,7 @@
       "away": "Scotland",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -848,7 +848,7 @@
       "away": "Turkey",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1826,6 +1826,13 @@
         ]
       },
       {
+        "name": "Dom",
+        "data": [
+          -1,
+          5
+        ]
+      },
+      {
         "name": "Rowan",
         "data": [
           4,
@@ -1882,13 +1889,6 @@
         ]
       },
       {
-        "name": "Josh",
-        "data": [
-          0,
-          0
-        ]
-      },
-      {
         "name": "Maria",
         "data": [
           0,
@@ -1917,17 +1917,17 @@
         ]
       },
       {
-        "name": "Dom",
-        "data": [
-          -1,
-          -1
-        ]
-      },
-      {
         "name": "Emma",
         "data": [
           -2,
           -2
+        ]
+      },
+      {
+        "name": "Josh",
+        "data": [
+          0,
+          -3
         ]
       }
     ]
