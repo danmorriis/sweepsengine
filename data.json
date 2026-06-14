@@ -1,6 +1,54 @@
 {
-  "last_updated": "2026-06-14T17:27:33Z",
+  "last_updated": "2026-06-14T19:51:00Z",
   "players": [
+    {
+      "name": "Maria",
+      "teams": [
+        "Germany",
+        "Egypt",
+        "DR Congo"
+      ],
+      "total_points": 9,
+      "breakdown": [
+        {
+          "team": "Germany",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 7,
+          "goals_against": 1,
+          "goal_diff": 6,
+          "points": 9,
+          "eliminated": false
+        },
+        {
+          "team": "Egypt",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        },
+        {
+          "team": "DR Congo",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        }
+      ],
+      "rank": 1
+    },
     {
       "name": "Chow",
       "teams": [
@@ -47,7 +95,7 @@
           "eliminated": false
         }
       ],
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "Dom",
@@ -95,7 +143,7 @@
           "eliminated": false
         }
       ],
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "Rowan",
@@ -143,7 +191,7 @@
           "eliminated": false
         }
       ],
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "Will",
@@ -191,7 +239,7 @@
           "eliminated": false
         }
       ],
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Anna",
@@ -239,7 +287,7 @@
           "eliminated": false
         }
       ],
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "Anne",
@@ -287,7 +335,7 @@
           "eliminated": false
         }
       ],
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "Ryan",
@@ -335,7 +383,7 @@
           "eliminated": false
         }
       ],
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "Chris",
@@ -383,7 +431,7 @@
           "eliminated": false
         }
       ],
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "Dan",
@@ -431,7 +479,7 @@
           "eliminated": false
         }
       ],
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "Francesca",
@@ -479,7 +527,7 @@
           "eliminated": false
         }
       ],
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "Johnny",
@@ -516,54 +564,6 @@
         },
         {
           "team": "Uzbekistan",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        }
-      ],
-      "rank": 11
-    },
-    {
-      "name": "Maria",
-      "teams": [
-        "Germany",
-        "Egypt",
-        "DR Congo"
-      ],
-      "total_points": 0,
-      "breakdown": [
-        {
-          "team": "Germany",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Egypt",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "DR Congo",
           "played": 0,
           "won": 0,
           "lost": 0,
@@ -728,7 +728,7 @@
         "Paraguay",
         "Cura\u00e7ao"
       ],
-      "total_points": -3,
+      "total_points": -9,
       "breakdown": [
         {
           "team": "France",
@@ -756,14 +756,14 @@
         },
         {
           "team": "Cura\u00e7ao",
-          "played": 0,
+          "played": 1,
           "won": 0,
-          "lost": 0,
+          "lost": 1,
           "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
+          "goals_for": 1,
+          "goals_against": 7,
+          "goal_diff": -6,
+          "points": -6,
           "eliminated": false
         }
       ],
@@ -856,9 +856,9 @@
       "kickoff_bst": "18:00",
       "home": "Germany",
       "away": "Cura\u00e7ao",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 7,
+      "away_score": 1,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1816,13 +1816,24 @@
     "dates": [
       "2026-06-11",
       "2026-06-12",
-      "2026-06-13"
+      "2026-06-13",
+      "2026-06-14"
     ],
     "series": [
+      {
+        "name": "Maria",
+        "data": [
+          0,
+          0,
+          0,
+          9
+        ]
+      },
       {
         "name": "Chow",
         "data": [
           5,
+          6,
           6,
           6
         ]
@@ -1832,6 +1843,7 @@
         "data": [
           -1,
           5,
+          5,
           5
         ]
       },
@@ -1840,6 +1852,7 @@
         "data": [
           4,
           4,
+          5,
           5
         ]
       },
@@ -1848,6 +1861,7 @@
         "data": [
           0,
           0,
+          5,
           5
         ]
       },
@@ -1856,6 +1870,7 @@
         "data": [
           0,
           0,
+          4,
           4
         ]
       },
@@ -1864,6 +1879,7 @@
         "data": [
           0,
           0,
+          1,
           1
         ]
       },
@@ -1872,12 +1888,14 @@
         "data": [
           0,
           0,
+          1,
           1
         ]
       },
       {
         "name": "Chris",
         "data": [
+          0,
           0,
           0,
           0
@@ -1888,6 +1906,7 @@
         "data": [
           0,
           0,
+          0,
           0
         ]
       },
@@ -1896,6 +1915,7 @@
         "data": [
           0,
           1,
+          0,
           0
         ]
       },
@@ -1903,13 +1923,6 @@
         "name": "Johnny",
         "data": [
           0,
-          0,
-          0
-        ]
-      },
-      {
-        "name": "Maria",
-        "data": [
           0,
           0,
           0
@@ -1920,6 +1933,7 @@
         "data": [
           0,
           0,
+          0,
           0
         ]
       },
@@ -1928,12 +1942,14 @@
         "data": [
           0,
           0,
+          -1,
           -1
         ]
       },
       {
         "name": "Emma",
         "data": [
+          -2,
           -2,
           -2,
           -2
@@ -1944,7 +1960,8 @@
         "data": [
           0,
           -3,
-          -3
+          -3,
+          -9
         ]
       }
     ]
