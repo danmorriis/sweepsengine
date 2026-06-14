@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-13T23:14:38Z",
+  "last_updated": "2026-06-14T04:58:02Z",
   "players": [
     {
       "name": "Chow",
@@ -146,16 +146,16 @@
       "rank": 3
     },
     {
-      "name": "Francesca",
+      "name": "Anna",
       "teams": [
-        "Spain",
-        "Canada",
-        "Haiti"
+        "Portugal",
+        "Japan",
+        "Scotland"
       ],
-      "total_points": 1,
+      "total_points": 4,
       "breakdown": [
         {
-          "team": "Spain",
+          "team": "Portugal",
           "played": 0,
           "won": 0,
           "lost": 0,
@@ -167,7 +167,43 @@
           "eliminated": false
         },
         {
-          "team": "Canada",
+          "team": "Japan",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        },
+        {
+          "team": "Scotland",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 0,
+          "goal_diff": 1,
+          "points": 4,
+          "eliminated": false
+        }
+      ],
+      "rank": 4
+    },
+    {
+      "name": "Anne",
+      "teams": [
+        "Brazil",
+        "Austria",
+        "New Zealand"
+      ],
+      "total_points": 1,
+      "breakdown": [
+        {
+          "team": "Brazil",
           "played": 1,
           "won": 0,
           "lost": 0,
@@ -179,7 +215,19 @@
           "eliminated": false
         },
         {
-          "team": "Haiti",
+          "team": "Austria",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        },
+        {
+          "team": "New Zealand",
           "played": 0,
           "won": 0,
           "lost": 0,
@@ -191,7 +239,55 @@
           "eliminated": false
         }
       ],
-      "rank": 4
+      "rank": 5
+    },
+    {
+      "name": "Connor",
+      "teams": [
+        "Morocco",
+        "Turkey",
+        "Saudi Arabia"
+      ],
+      "total_points": 1,
+      "breakdown": [
+        {
+          "team": "Morocco",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 1,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        },
+        {
+          "team": "Turkey",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        },
+        {
+          "team": "Saudi Arabia",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        }
+      ],
+      "rank": 6
     },
     {
       "name": "Ryan",
@@ -228,102 +324,6 @@
         },
         {
           "team": "Ghana",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        }
-      ],
-      "rank": 5
-    },
-    {
-      "name": "Anna",
-      "teams": [
-        "Portugal",
-        "Japan",
-        "Scotland"
-      ],
-      "total_points": 0,
-      "breakdown": [
-        {
-          "team": "Portugal",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Japan",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Scotland",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        }
-      ],
-      "rank": 6
-    },
-    {
-      "name": "Anne",
-      "teams": [
-        "Brazil",
-        "Austria",
-        "New Zealand"
-      ],
-      "total_points": 0,
-      "breakdown": [
-        {
-          "team": "Brazil",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Austria",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "New Zealand",
           "played": 0,
           "won": 0,
           "lost": 0,
@@ -386,54 +386,6 @@
       "rank": 8
     },
     {
-      "name": "Connor",
-      "teams": [
-        "Morocco",
-        "Turkey",
-        "Saudi Arabia"
-      ],
-      "total_points": 0,
-      "breakdown": [
-        {
-          "team": "Morocco",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Turkey",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Saudi Arabia",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        }
-      ],
-      "rank": 9
-    },
-    {
       "name": "Dan",
       "teams": [
         "Senegal",
@@ -476,6 +428,54 @@
           "goals_against": 0,
           "goal_diff": 0,
           "points": 0,
+          "eliminated": false
+        }
+      ],
+      "rank": 9
+    },
+    {
+      "name": "Francesca",
+      "teams": [
+        "Spain",
+        "Canada",
+        "Haiti"
+      ],
+      "total_points": 0,
+      "breakdown": [
+        {
+          "team": "Spain",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        },
+        {
+          "team": "Canada",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 1,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        },
+        {
+          "team": "Haiti",
+          "played": 1,
+          "won": 0,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 1,
+          "goal_diff": -1,
+          "points": -1,
           "eliminated": false
         }
       ],
@@ -826,9 +826,9 @@
       "kickoff_bst": "23:00",
       "home": "Brazil",
       "away": "Morocco",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -836,9 +836,9 @@
       "kickoff_bst": "02:00",
       "home": "Haiti",
       "away": "Scotland",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 0,
+      "away_score": 1,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -848,7 +848,7 @@
       "away": "Turkey",
       "home_score": null,
       "away_score": null,
-      "status": "live",
+      "status": "upcoming",
       "stage": "Group Stage"
     },
     {
@@ -858,7 +858,7 @@
       "away": "Cura\u00e7ao",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -868,7 +868,7 @@
       "away": "Japan",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -878,7 +878,7 @@
       "away": "Ecuador",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -888,7 +888,7 @@
       "away": "Tunisia",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1844,10 +1844,26 @@
         ]
       },
       {
-        "name": "Francesca",
+        "name": "Anna",
         "data": [
           0,
-          1,
+          0,
+          4
+        ]
+      },
+      {
+        "name": "Anne",
+        "data": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "name": "Connor",
+        "data": [
+          0,
+          0,
           1
         ]
       },
@@ -1860,31 +1876,7 @@
         ]
       },
       {
-        "name": "Anna",
-        "data": [
-          0,
-          0,
-          0
-        ]
-      },
-      {
-        "name": "Anne",
-        "data": [
-          0,
-          0,
-          0
-        ]
-      },
-      {
         "name": "Chris",
-        "data": [
-          0,
-          0,
-          0
-        ]
-      },
-      {
-        "name": "Connor",
         "data": [
           0,
           0,
@@ -1896,6 +1888,14 @@
         "data": [
           0,
           0,
+          0
+        ]
+      },
+      {
+        "name": "Francesca",
+        "data": [
+          0,
+          1,
           0
         ]
       },
