@@ -755,7 +755,10 @@ fetch("data.json?_=" + Date.now())
     document.getElementById("last-updated").textContent =
       "Last updated: " + ts.toLocaleString("en-GB", {dateStyle:"medium",timeStyle:"short",timeZone:"Europe/London"}) + " BST";
     const next = new Date(ts);
-    next.setUTCHours(Math.ceil((next.getUTCHours() + 1) / 2) * 2, 0, 0, 0);
+    next.setTime(ts.getTime() + 2 * 60 * 60 * 1000);
+    const mins = next.getUTCMinutes();
+    next.setUTCMinutes(mins < 15 ? 0 : mins < 45 ? 30 : 0, 0, 0);
+    if (mins >= 45) next.setUTCHours(next.getUTCHours() + 1);
     document.getElementById("next-update").textContent =
       "Next update approx: " + next.toLocaleString("en-GB", {timeStyle:"short",timeZone:"Europe/London"}) + " BST";
   })
@@ -1000,12 +1003,53 @@ function renderProgress(data) {
   if (progressChart) { progressChart.destroy(); progressChart = null; }
 
   const ctx = document.getElementById("progress-canvas").getContext("2d");
+  const rightLabelsPlugin = {
+    id: "rightLabels",
+    afterDraw(chart) {
+      const ctx2 = chart.ctx;
+      const xRight = chart.chartArea.right + 6;
+
+      // Group visible datasets by their last value
+      const groups = {};
+      chart.data.datasets.forEach((ds, i) => {
+        const meta = chart.getDatasetMeta(i);
+        if (meta.hidden) return;
+        const lastVal = ds.data[ds.data.length - 1];
+        if (lastVal === undefined || lastVal === null) return;
+        if (!groups[lastVal]) groups[lastVal] = { names: [], color: ds.borderColor, y: null };
+        groups[lastVal].names.push(ds.label);
+        // Use the y pixel of the last visible point
+        const pts = meta.data;
+        if (pts && pts.length > 0) groups[lastVal].y = pts[pts.length - 1].y;
+      });
+
+      ctx2.save();
+      ctx2.font = "600 11px sans-serif";
+      ctx2.textAlign = "left";
+      ctx2.textBaseline = "middle";
+      const lineH = 13;
+      Object.values(groups).forEach(g => {
+        if (g.y === null) return;
+        const startY = g.y - ((g.names.length - 1) * lineH) / 2;
+        g.names.forEach((name, i) => {
+          const ds = chart.data.datasets.find(d => d.label === name);
+          const lastVal = ds ? ds.data[ds.data.length - 1] : null;
+          ctx2.fillStyle = (lastVal === 0) ? "#b0bec5" : (ds ? ds.borderColor : "#b0bec5");
+          ctx2.fillText(name, xRight, startY + i * lineH);
+        });
+      });
+      ctx2.restore();
+    }
+  };
+
   progressChart = new Chart(ctx, {
     type: "line",
     data: { labels, datasets },
+    plugins: [rightLabelsPlugin],
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      layout: { padding: { right: 90 } },
       interaction: { mode: "index", intersect: false },
       plugins: {
         legend: { display: false },
