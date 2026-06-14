@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-14T21:22:48Z",
+  "last_updated": "2026-06-14T23:18:38Z",
   "players": [
     {
       "name": "Maria",
@@ -98,6 +98,54 @@
       "rank": 2
     },
     {
+      "name": "Anna",
+      "teams": [
+        "Portugal",
+        "Japan",
+        "Scotland"
+      ],
+      "total_points": 5,
+      "breakdown": [
+        {
+          "team": "Portugal",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        },
+        {
+          "team": "Japan",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 2,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        },
+        {
+          "team": "Scotland",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 0,
+          "goal_diff": 1,
+          "points": 4,
+          "eliminated": false
+        }
+      ],
+      "rank": 3
+    },
+    {
       "name": "Dom",
       "teams": [
         "USA",
@@ -143,7 +191,7 @@
           "eliminated": false
         }
       ],
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "Rowan",
@@ -191,7 +239,7 @@
           "eliminated": false
         }
       ],
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Will",
@@ -236,54 +284,6 @@
           "goals_against": 0,
           "goal_diff": 0,
           "points": 0,
-          "eliminated": false
-        }
-      ],
-      "rank": 5
-    },
-    {
-      "name": "Anna",
-      "teams": [
-        "Portugal",
-        "Japan",
-        "Scotland"
-      ],
-      "total_points": 4,
-      "breakdown": [
-        {
-          "team": "Portugal",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Japan",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Scotland",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 0,
-          "goal_diff": 1,
-          "points": 4,
           "eliminated": false
         }
       ],
@@ -680,18 +680,18 @@
         "Norway",
         "South Africa"
       ],
-      "total_points": -2,
+      "total_points": -1,
       "breakdown": [
         {
           "team": "Netherlands",
-          "played": 0,
+          "played": 1,
           "won": 0,
           "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 2,
           "goal_diff": 0,
-          "points": 0,
+          "points": 1,
           "eliminated": false
         },
         {
@@ -866,9 +866,9 @@
       "kickoff_bst": "21:00",
       "home": "Netherlands",
       "away": "Japan",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 2,
+      "away_score": 2,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1839,6 +1839,15 @@
         ]
       },
       {
+        "name": "Anna",
+        "data": [
+          0,
+          0,
+          4,
+          5
+        ]
+      },
+      {
         "name": "Dom",
         "data": [
           -1,
@@ -1863,15 +1872,6 @@
           0,
           5,
           5
-        ]
-      },
-      {
-        "name": "Anna",
-        "data": [
-          0,
-          0,
-          4,
-          4
         ]
       },
       {
@@ -1952,7 +1952,7 @@
           -2,
           -2,
           -2,
-          -2
+          -1
         ]
       },
       {
