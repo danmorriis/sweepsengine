@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-14T04:58:02Z",
+  "last_updated": "2026-06-14T09:50:35Z",
   "players": [
     {
       "name": "Chow",
@@ -146,6 +146,54 @@
       "rank": 3
     },
     {
+      "name": "Will",
+      "teams": [
+        "Colombia",
+        "Australia",
+        "Cape Verde"
+      ],
+      "total_points": 5,
+      "breakdown": [
+        {
+          "team": "Colombia",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        },
+        {
+          "team": "Australia",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 0,
+          "goal_diff": 2,
+          "points": 5,
+          "eliminated": false
+        },
+        {
+          "team": "Cape Verde",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        }
+      ],
+      "rank": 4
+    },
+    {
       "name": "Anna",
       "teams": [
         "Portugal",
@@ -191,7 +239,7 @@
           "eliminated": false
         }
       ],
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Anne",
@@ -228,54 +276,6 @@
         },
         {
           "team": "New Zealand",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        }
-      ],
-      "rank": 5
-    },
-    {
-      "name": "Connor",
-      "teams": [
-        "Morocco",
-        "Turkey",
-        "Saudi Arabia"
-      ],
-      "total_points": 1,
-      "breakdown": [
-        {
-          "team": "Morocco",
-          "played": 1,
-          "won": 0,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 1,
-          "goal_diff": 0,
-          "points": 1,
-          "eliminated": false
-        },
-        {
-          "team": "Turkey",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Saudi Arabia",
           "played": 0,
           "won": 0,
           "lost": 0,
@@ -578,54 +578,6 @@
       "rank": 12
     },
     {
-      "name": "Will",
-      "teams": [
-        "Colombia",
-        "Australia",
-        "Cape Verde"
-      ],
-      "total_points": 0,
-      "breakdown": [
-        {
-          "team": "Colombia",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Australia",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Cape Verde",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        }
-      ],
-      "rank": 13
-    },
-    {
       "name": "Yassi",
       "teams": [
         "England",
@@ -660,6 +612,54 @@
         },
         {
           "team": "Tunisia",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        }
+      ],
+      "rank": 13
+    },
+    {
+      "name": "Connor",
+      "teams": [
+        "Morocco",
+        "Turkey",
+        "Saudi Arabia"
+      ],
+      "total_points": -1,
+      "breakdown": [
+        {
+          "team": "Morocco",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 1,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        },
+        {
+          "team": "Turkey",
+          "played": 1,
+          "won": 0,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 2,
+          "goal_diff": -2,
+          "points": -2,
+          "eliminated": false
+        },
+        {
+          "team": "Saudi Arabia",
           "played": 0,
           "won": 0,
           "lost": 0,
@@ -846,9 +846,9 @@
       "kickoff_bst": "05:00",
       "home": "Australia",
       "away": "Turkey",
-      "home_score": null,
-      "away_score": null,
-      "status": "upcoming",
+      "home_score": 2,
+      "away_score": 0,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1844,6 +1844,14 @@
         ]
       },
       {
+        "name": "Will",
+        "data": [
+          0,
+          0,
+          5
+        ]
+      },
+      {
         "name": "Anna",
         "data": [
           0,
@@ -1853,14 +1861,6 @@
       },
       {
         "name": "Anne",
-        "data": [
-          0,
-          0,
-          1
-        ]
-      },
-      {
-        "name": "Connor",
         "data": [
           0,
           0,
@@ -1916,7 +1916,7 @@
         ]
       },
       {
-        "name": "Will",
+        "name": "Yassi",
         "data": [
           0,
           0,
@@ -1924,11 +1924,11 @@
         ]
       },
       {
-        "name": "Yassi",
+        "name": "Connor",
         "data": [
           0,
           0,
-          0
+          -1
         ]
       },
       {
