@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-15T18:45:19Z",
+  "last_updated": "2026-06-15T22:24:47Z",
   "players": [
     {
       "name": "Maria",
@@ -8,7 +8,7 @@
         "Egypt",
         "DR Congo"
       ],
-      "total_points": 9,
+      "total_points": 10,
       "breakdown": [
         {
           "team": "Germany",
@@ -24,14 +24,14 @@
         },
         {
           "team": "Egypt",
-          "played": 0,
+          "played": 1,
           "won": 0,
           "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 1,
           "goal_diff": 0,
-          "points": 0,
+          "points": 1,
           "eliminated": false
         },
         {
@@ -98,6 +98,54 @@
       "rank": 2
     },
     {
+      "name": "Rowan",
+      "teams": [
+        "Belgium",
+        "South Korea",
+        "Qatar"
+      ],
+      "total_points": 6,
+      "breakdown": [
+        {
+          "team": "Belgium",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 1,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        },
+        {
+          "team": "South Korea",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 1,
+          "goal_diff": 1,
+          "points": 4,
+          "eliminated": false
+        },
+        {
+          "team": "Qatar",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 1,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        }
+      ],
+      "rank": 3
+    },
+    {
       "name": "Will",
       "teams": [
         "Colombia",
@@ -143,7 +191,7 @@
           "eliminated": false
         }
       ],
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "Anna",
@@ -191,7 +239,7 @@
           "eliminated": false
         }
       ],
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Dom",
@@ -236,54 +284,6 @@
           "goals_against": 2,
           "goal_diff": -1,
           "points": -1,
-          "eliminated": false
-        }
-      ],
-      "rank": 5
-    },
-    {
-      "name": "Rowan",
-      "teams": [
-        "Belgium",
-        "South Korea",
-        "Qatar"
-      ],
-      "total_points": 5,
-      "breakdown": [
-        {
-          "team": "Belgium",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "South Korea",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 2,
-          "goals_against": 1,
-          "goal_diff": 1,
-          "points": 4,
-          "eliminated": false
-        },
-        {
-          "team": "Qatar",
-          "played": 1,
-          "won": 0,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 1,
-          "goal_diff": 0,
-          "points": 1,
           "eliminated": false
         }
       ],
@@ -906,9 +906,9 @@
       "kickoff_bst": "20:00",
       "home": "Belgium",
       "away": "Egypt",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1828,7 +1828,7 @@
           0,
           0,
           9,
-          9
+          10
         ]
       },
       {
@@ -1838,6 +1838,16 @@
           6,
           6,
           6,
+          6
+        ]
+      },
+      {
+        "name": "Rowan",
+        "data": [
+          4,
+          4,
+          5,
+          5,
           6
         ]
       },
@@ -1866,16 +1876,6 @@
         "data": [
           -1,
           5,
-          5,
-          5,
-          5
-        ]
-      },
-      {
-        "name": "Rowan",
-        "data": [
-          4,
-          4,
           5,
           5,
           5
