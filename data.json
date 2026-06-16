@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-15T22:24:47Z",
+  "last_updated": "2026-06-16T05:20:58Z",
   "players": [
     {
       "name": "Maria",
@@ -56,7 +56,7 @@
         "Iran",
         "Bosnia and Herzegovina"
       ],
-      "total_points": 6,
+      "total_points": 7,
       "breakdown": [
         {
           "team": "Mexico",
@@ -72,14 +72,14 @@
         },
         {
           "team": "Iran",
-          "played": 0,
+          "played": 1,
           "won": 0,
           "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 2,
           "goal_diff": 0,
-          "points": 0,
+          "points": 1,
           "eliminated": false
         },
         {
@@ -392,7 +392,7 @@
         "Austria",
         "New Zealand"
       ],
-      "total_points": 1,
+      "total_points": 2,
       "breakdown": [
         {
           "team": "Brazil",
@@ -420,6 +420,54 @@
         },
         {
           "team": "New Zealand",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 2,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        }
+      ],
+      "rank": 9
+    },
+    {
+      "name": "Ryan",
+      "teams": [
+        "Uruguay",
+        "Switzerland",
+        "Ghana"
+      ],
+      "total_points": 2,
+      "breakdown": [
+        {
+          "team": "Uruguay",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 1,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        },
+        {
+          "team": "Switzerland",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 1,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        },
+        {
+          "team": "Ghana",
           "played": 0,
           "won": 0,
           "lost": 0,
@@ -431,7 +479,7 @@
           "eliminated": false
         }
       ],
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "Francesca",
@@ -479,31 +527,19 @@
           "eliminated": false
         }
       ],
-      "rank": 10
+      "rank": 11
     },
     {
-      "name": "Ryan",
+      "name": "Connor",
       "teams": [
-        "Uruguay",
-        "Switzerland",
-        "Ghana"
+        "Morocco",
+        "Turkey",
+        "Saudi Arabia"
       ],
-      "total_points": 1,
+      "total_points": 0,
       "breakdown": [
         {
-          "team": "Uruguay",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Switzerland",
+          "team": "Morocco",
           "played": 1,
           "won": 0,
           "lost": 0,
@@ -515,19 +551,31 @@
           "eliminated": false
         },
         {
-          "team": "Ghana",
-          "played": 0,
+          "team": "Turkey",
+          "played": 1,
           "won": 0,
-          "lost": 0,
+          "lost": 1,
           "drawn": 0,
           "goals_for": 0,
-          "goals_against": 0,
+          "goals_against": 2,
+          "goal_diff": -2,
+          "points": -2,
+          "eliminated": false
+        },
+        {
+          "team": "Saudi Arabia",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 1,
           "goal_diff": 0,
-          "points": 0,
+          "points": 1,
           "eliminated": false
         }
       ],
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "Johnny",
@@ -564,54 +612,6 @@
         },
         {
           "team": "Uzbekistan",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        }
-      ],
-      "rank": 12
-    },
-    {
-      "name": "Connor",
-      "teams": [
-        "Morocco",
-        "Turkey",
-        "Saudi Arabia"
-      ],
-      "total_points": -1,
-      "breakdown": [
-        {
-          "team": "Morocco",
-          "played": 1,
-          "won": 0,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 1,
-          "goal_diff": 0,
-          "points": 1,
-          "eliminated": false
-        },
-        {
-          "team": "Turkey",
-          "played": 1,
-          "won": 0,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 2,
-          "goal_diff": -2,
-          "points": -2,
-          "eliminated": false
-        },
-        {
-          "team": "Saudi Arabia",
           "played": 0,
           "won": 0,
           "lost": 0,
@@ -916,9 +916,9 @@
       "kickoff_bst": "23:00",
       "home": "Saudi Arabia",
       "away": "Uruguay",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -926,9 +926,9 @@
       "kickoff_bst": "02:00",
       "home": "Iran",
       "away": "New Zealand",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 2,
+      "away_score": 2,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -938,7 +938,7 @@
       "away": "Senegal",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -948,7 +948,7 @@
       "away": "Norway",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -958,7 +958,7 @@
       "away": "Algeria",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -968,7 +968,7 @@
       "away": "Jordan",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1838,7 +1838,7 @@
           6,
           6,
           6,
-          6
+          7
         ]
       },
       {
@@ -1908,7 +1908,17 @@
           0,
           1,
           1,
-          1
+          2
+        ]
+      },
+      {
+        "name": "Ryan",
+        "data": [
+          0,
+          0,
+          1,
+          1,
+          2
         ]
       },
       {
@@ -1922,13 +1932,13 @@
         ]
       },
       {
-        "name": "Ryan",
+        "name": "Connor",
         "data": [
           0,
           0,
-          1,
-          1,
-          1
+          -1,
+          -1,
+          0
         ]
       },
       {
@@ -1939,16 +1949,6 @@
           0,
           0,
           0
-        ]
-      },
-      {
-        "name": "Connor",
-        "data": [
-          0,
-          0,
-          -1,
-          -1,
-          -1
         ]
       },
       {
