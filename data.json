@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-16T17:13:03Z",
+  "last_updated": "2026-06-16T21:13:53Z",
   "players": [
     {
       "name": "Maria",
@@ -626,54 +626,6 @@
       "rank": 13
     },
     {
-      "name": "Dan",
-      "teams": [
-        "Senegal",
-        "Ecuador",
-        "Iraq"
-      ],
-      "total_points": -1,
-      "breakdown": [
-        {
-          "team": "Senegal",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Ecuador",
-          "played": 1,
-          "won": 0,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 1,
-          "goal_diff": -1,
-          "points": -1,
-          "eliminated": false
-        },
-        {
-          "team": "Iraq",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        }
-      ],
-      "rank": 14
-    },
-    {
       "name": "Emma",
       "teams": [
         "Netherlands",
@@ -719,6 +671,54 @@
           "eliminated": false
         }
       ],
+      "rank": 14
+    },
+    {
+      "name": "Dan",
+      "teams": [
+        "Senegal",
+        "Ecuador",
+        "Iraq"
+      ],
+      "total_points": -3,
+      "breakdown": [
+        {
+          "team": "Senegal",
+          "played": 1,
+          "won": 0,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 3,
+          "goal_diff": -2,
+          "points": -2,
+          "eliminated": false
+        },
+        {
+          "team": "Ecuador",
+          "played": 1,
+          "won": 0,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 1,
+          "goal_diff": -1,
+          "points": -1,
+          "eliminated": false
+        },
+        {
+          "team": "Iraq",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
+          "eliminated": false
+        }
+      ],
       "rank": 15
     },
     {
@@ -728,18 +728,18 @@
         "Paraguay",
         "Cura\u00e7ao"
       ],
-      "total_points": -9,
+      "total_points": -4,
       "breakdown": [
         {
           "team": "France",
-          "played": 0,
-          "won": 0,
+          "played": 1,
+          "won": 1,
           "lost": 0,
           "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
+          "goals_for": 3,
+          "goals_against": 1,
+          "goal_diff": 2,
+          "points": 5,
           "eliminated": false
         },
         {
@@ -936,9 +936,9 @@
       "kickoff_bst": "20:00",
       "home": "France",
       "away": "Senegal",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 3,
+      "away_score": 1,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1818,7 +1818,8 @@
       "2026-06-12",
       "2026-06-13",
       "2026-06-14",
-      "2026-06-15"
+      "2026-06-15",
+      "2026-06-16"
     ],
     "series": [
       {
@@ -1828,6 +1829,7 @@
           0,
           0,
           9,
+          10,
           10
         ]
       },
@@ -1838,6 +1840,7 @@
           6,
           6,
           6,
+          7,
           7
         ]
       },
@@ -1848,6 +1851,7 @@
           4,
           5,
           5,
+          6,
           6
         ]
       },
@@ -1858,6 +1862,7 @@
           0,
           5,
           5,
+          6,
           6
         ]
       },
@@ -1868,6 +1873,7 @@
           0,
           4,
           5,
+          5,
           5
         ]
       },
@@ -1875,6 +1881,7 @@
         "name": "Dom",
         "data": [
           -1,
+          5,
           5,
           5,
           5,
@@ -1888,6 +1895,7 @@
           0,
           0,
           4,
+          4,
           4
         ]
       },
@@ -1897,6 +1905,7 @@
           0,
           0,
           0,
+          3,
           3,
           3
         ]
@@ -1908,6 +1917,7 @@
           0,
           1,
           1,
+          2,
           2
         ]
       },
@@ -1918,6 +1928,7 @@
           0,
           1,
           1,
+          2,
           2
         ]
       },
@@ -1928,6 +1939,7 @@
           1,
           0,
           0,
+          1,
           1
         ]
       },
@@ -1938,6 +1950,7 @@
           0,
           -1,
           -1,
+          0,
           0
         ]
       },
@@ -1948,17 +1961,8 @@
           0,
           0,
           0,
+          0,
           0
-        ]
-      },
-      {
-        "name": "Dan",
-        "data": [
-          0,
-          0,
-          0,
-          -1,
-          -1
         ]
       },
       {
@@ -1968,7 +1972,19 @@
           -2,
           -2,
           -1,
+          -1,
           -1
+        ]
+      },
+      {
+        "name": "Dan",
+        "data": [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -3
         ]
       },
       {
@@ -1978,7 +1994,8 @@
           -3,
           -3,
           -9,
-          -9
+          -9,
+          -4
         ]
       }
     ]
