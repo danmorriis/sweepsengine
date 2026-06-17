@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-17T18:27:34Z",
+  "last_updated": "2026-06-17T22:08:11Z",
   "players": [
     {
       "name": "Maria",
@@ -8,7 +8,7 @@
         "Egypt",
         "DR Congo"
       ],
-      "total_points": 10,
+      "total_points": 11,
       "breakdown": [
         {
           "team": "Germany",
@@ -36,14 +36,14 @@
         },
         {
           "team": "DR Congo",
-          "played": 0,
+          "played": 1,
           "won": 0,
           "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 1,
           "goal_diff": 0,
-          "points": 0,
+          "points": 1,
           "eliminated": false
         }
       ],
@@ -98,6 +98,54 @@
       "rank": 2
     },
     {
+      "name": "Yassi",
+      "teams": [
+        "England",
+        "Sweden",
+        "Tunisia"
+      ],
+      "total_points": 8,
+      "breakdown": [
+        {
+          "team": "England",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 4,
+          "goals_against": 2,
+          "goal_diff": 2,
+          "points": 5,
+          "eliminated": false
+        },
+        {
+          "team": "Sweden",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 5,
+          "goals_against": 1,
+          "goal_diff": 4,
+          "points": 7,
+          "eliminated": false
+        },
+        {
+          "team": "Tunisia",
+          "played": 1,
+          "won": 0,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 5,
+          "goal_diff": -4,
+          "points": -4,
+          "eliminated": false
+        }
+      ],
+      "rank": 3
+    },
+    {
       "name": "Anne",
       "teams": [
         "Brazil",
@@ -143,7 +191,7 @@
           "eliminated": false
         }
       ],
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "Chow",
@@ -191,7 +239,55 @@
           "eliminated": false
         }
       ],
-      "rank": 4
+      "rank": 5
+    },
+    {
+      "name": "Anna",
+      "teams": [
+        "Portugal",
+        "Japan",
+        "Scotland"
+      ],
+      "total_points": 6,
+      "breakdown": [
+        {
+          "team": "Portugal",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 1,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        },
+        {
+          "team": "Japan",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 2,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        },
+        {
+          "team": "Scotland",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 0,
+          "goal_diff": 1,
+          "points": 4,
+          "eliminated": false
+        }
+      ],
+      "rank": 6
     },
     {
       "name": "Rowan",
@@ -239,7 +335,7 @@
           "eliminated": false
         }
       ],
-      "rank": 5
+      "rank": 7
     },
     {
       "name": "Will",
@@ -287,55 +383,7 @@
           "eliminated": false
         }
       ],
-      "rank": 6
-    },
-    {
-      "name": "Anna",
-      "teams": [
-        "Portugal",
-        "Japan",
-        "Scotland"
-      ],
-      "total_points": 5,
-      "breakdown": [
-        {
-          "team": "Portugal",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Japan",
-          "played": 1,
-          "won": 0,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 2,
-          "goal_diff": 0,
-          "points": 1,
-          "eliminated": false
-        },
-        {
-          "team": "Scotland",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 0,
-          "goal_diff": 1,
-          "points": 4,
-          "eliminated": false
-        }
-      ],
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "Dom",
@@ -383,7 +431,7 @@
           "eliminated": false
         }
       ],
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "Emma",
@@ -428,54 +476,6 @@
           "goals_against": 2,
           "goal_diff": -2,
           "points": -2,
-          "eliminated": false
-        }
-      ],
-      "rank": 9
-    },
-    {
-      "name": "Yassi",
-      "teams": [
-        "England",
-        "Sweden",
-        "Tunisia"
-      ],
-      "total_points": 3,
-      "breakdown": [
-        {
-          "team": "England",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Sweden",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 5,
-          "goals_against": 1,
-          "goal_diff": 4,
-          "points": 7,
-          "eliminated": false
-        },
-        {
-          "team": "Tunisia",
-          "played": 1,
-          "won": 0,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 5,
-          "goal_diff": -4,
-          "points": -4,
           "eliminated": false
         }
       ],
@@ -626,54 +626,6 @@
       "rank": 13
     },
     {
-      "name": "Johnny",
-      "teams": [
-        "Croatia",
-        "Algeria",
-        "Uzbekistan"
-      ],
-      "total_points": -3,
-      "breakdown": [
-        {
-          "team": "Croatia",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Algeria",
-          "played": 1,
-          "won": 0,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 3,
-          "goal_diff": -3,
-          "points": -3,
-          "eliminated": false
-        },
-        {
-          "team": "Uzbekistan",
-          "played": 0,
-          "won": 0,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 0,
-          "eliminated": false
-        }
-      ],
-      "rank": 14
-    },
-    {
       "name": "Josh",
       "teams": [
         "France",
@@ -716,6 +668,54 @@
           "goals_against": 7,
           "goal_diff": -6,
           "points": -6,
+          "eliminated": false
+        }
+      ],
+      "rank": 14
+    },
+    {
+      "name": "Johnny",
+      "teams": [
+        "Croatia",
+        "Algeria",
+        "Uzbekistan"
+      ],
+      "total_points": -5,
+      "breakdown": [
+        {
+          "team": "Croatia",
+          "played": 1,
+          "won": 0,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 4,
+          "goal_diff": -2,
+          "points": -2,
+          "eliminated": false
+        },
+        {
+          "team": "Algeria",
+          "played": 1,
+          "won": 0,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 3,
+          "goal_diff": -3,
+          "points": -3,
+          "eliminated": false
+        },
+        {
+          "team": "Uzbekistan",
+          "played": 0,
+          "won": 0,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 0,
           "eliminated": false
         }
       ],
@@ -976,9 +976,9 @@
       "kickoff_bst": "18:00",
       "home": "Portugal",
       "away": "DR Congo",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -986,9 +986,9 @@
       "kickoff_bst": "21:00",
       "home": "England",
       "away": "Croatia",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 4,
+      "away_score": 2,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1819,7 +1819,8 @@
       "2026-06-13",
       "2026-06-14",
       "2026-06-15",
-      "2026-06-16"
+      "2026-06-16",
+      "2026-06-17"
     ],
     "series": [
       {
@@ -1830,7 +1831,8 @@
           0,
           9,
           10,
-          10
+          10,
+          11
         ]
       },
       {
@@ -1841,6 +1843,19 @@
           0,
           4,
           4,
+          8,
+          8
+        ]
+      },
+      {
+        "name": "Yassi",
+        "data": [
+          0,
+          0,
+          0,
+          3,
+          3,
+          3,
           8
         ]
       },
@@ -1852,6 +1867,7 @@
           1,
           1,
           2,
+          7,
           7
         ]
       },
@@ -1863,7 +1879,20 @@
           6,
           6,
           7,
+          7,
           7
+        ]
+      },
+      {
+        "name": "Anna",
+        "data": [
+          0,
+          0,
+          4,
+          5,
+          5,
+          5,
+          6
         ]
       },
       {
@@ -1873,6 +1902,7 @@
           4,
           5,
           5,
+          6,
           6,
           6
         ]
@@ -1885,24 +1915,15 @@
           5,
           5,
           6,
+          6,
           6
-        ]
-      },
-      {
-        "name": "Anna",
-        "data": [
-          0,
-          0,
-          4,
-          5,
-          5,
-          5
         ]
       },
       {
         "name": "Dom",
         "data": [
           -1,
+          5,
           5,
           5,
           5,
@@ -1918,18 +1939,8 @@
           -2,
           -1,
           -1,
+          5,
           5
-        ]
-      },
-      {
-        "name": "Yassi",
-        "data": [
-          0,
-          0,
-          0,
-          3,
-          3,
-          3
         ]
       },
       {
@@ -1939,6 +1950,7 @@
           0,
           1,
           1,
+          2,
           2,
           2
         ]
@@ -1951,6 +1963,7 @@
           0,
           0,
           1,
+          1,
           1
         ]
       },
@@ -1962,18 +1975,8 @@
           -1,
           -1,
           0,
+          0,
           0
-        ]
-      },
-      {
-        "name": "Johnny",
-        "data": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          -3
         ]
       },
       {
@@ -1984,7 +1987,20 @@
           -3,
           -9,
           -9,
+          -4,
           -4
+        ]
+      },
+      {
+        "name": "Johnny",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -3,
+          -5
         ]
       },
       {
@@ -1995,6 +2011,7 @@
           0,
           -1,
           -1,
+          -6,
           -6
         ]
       }
