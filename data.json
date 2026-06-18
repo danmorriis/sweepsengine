@@ -1,6 +1,54 @@
 {
-  "last_updated": "2026-06-18T18:32:03Z",
+  "last_updated": "2026-06-18T22:21:56Z",
   "players": [
+    {
+      "name": "Ryan",
+      "teams": [
+        "Uruguay",
+        "Switzerland",
+        "Ghana"
+      ],
+      "total_points": 12,
+      "breakdown": [
+        {
+          "team": "Uruguay",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 1,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        },
+        {
+          "team": "Switzerland",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 5,
+          "goals_against": 2,
+          "goal_diff": 3,
+          "points": 7,
+          "eliminated": false
+        },
+        {
+          "team": "Ghana",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 0,
+          "goal_diff": 1,
+          "points": 4,
+          "eliminated": false
+        }
+      ],
+      "rank": 1
+    },
     {
       "name": "Maria",
       "teams": [
@@ -47,7 +95,7 @@
           "eliminated": false
         }
       ],
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "Will",
@@ -95,7 +143,7 @@
           "eliminated": false
         }
       ],
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "Chris",
@@ -143,7 +191,7 @@
           "eliminated": false
         }
       ],
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "Yassi",
@@ -191,7 +239,7 @@
           "eliminated": false
         }
       ],
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Anne",
@@ -234,54 +282,6 @@
           "drawn": 1,
           "goals_for": 2,
           "goals_against": 2,
-          "goal_diff": 0,
-          "points": 1,
-          "eliminated": false
-        }
-      ],
-      "rank": 5
-    },
-    {
-      "name": "Chow",
-      "teams": [
-        "Mexico",
-        "Iran",
-        "Bosnia and Herzegovina"
-      ],
-      "total_points": 7,
-      "breakdown": [
-        {
-          "team": "Mexico",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 2,
-          "goals_against": 0,
-          "goal_diff": 2,
-          "points": 5,
-          "eliminated": false
-        },
-        {
-          "team": "Iran",
-          "played": 1,
-          "won": 0,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 2,
-          "goal_diff": 0,
-          "points": 1,
-          "eliminated": false
-        },
-        {
-          "team": "Bosnia and Herzegovina",
-          "played": 1,
-          "won": 0,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 1,
           "goal_diff": 0,
           "points": 1,
           "eliminated": false
@@ -434,54 +434,6 @@
       "rank": 9
     },
     {
-      "name": "Ryan",
-      "teams": [
-        "Uruguay",
-        "Switzerland",
-        "Ghana"
-      ],
-      "total_points": 6,
-      "breakdown": [
-        {
-          "team": "Uruguay",
-          "played": 1,
-          "won": 0,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 1,
-          "goal_diff": 0,
-          "points": 1,
-          "eliminated": false
-        },
-        {
-          "team": "Switzerland",
-          "played": 1,
-          "won": 0,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 1,
-          "goal_diff": 0,
-          "points": 1,
-          "eliminated": false
-        },
-        {
-          "team": "Ghana",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 0,
-          "goal_diff": 1,
-          "points": 4,
-          "eliminated": false
-        }
-      ],
-      "rank": 10
-    },
-    {
       "name": "Dom",
       "teams": [
         "USA",
@@ -524,6 +476,54 @@
           "goals_against": 3,
           "goal_diff": -1,
           "points": 0,
+          "eliminated": false
+        }
+      ],
+      "rank": 10
+    },
+    {
+      "name": "Chow",
+      "teams": [
+        "Mexico",
+        "Iran",
+        "Bosnia and Herzegovina"
+      ],
+      "total_points": 4,
+      "breakdown": [
+        {
+          "team": "Mexico",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 0,
+          "goal_diff": 2,
+          "points": 5,
+          "eliminated": false
+        },
+        {
+          "team": "Iran",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 2,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        },
+        {
+          "team": "Bosnia and Herzegovina",
+          "played": 2,
+          "won": 0,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 5,
+          "goal_diff": -3,
+          "points": -2,
           "eliminated": false
         }
       ],
@@ -1026,9 +1026,9 @@
       "kickoff_bst": "20:00",
       "home": "Switzerland",
       "away": "Bosnia and Herzegovina",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 4,
+      "away_score": 1,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1825,6 +1825,19 @@
     ],
     "series": [
       {
+        "name": "Ryan",
+        "data": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2,
+          6,
+          12
+        ]
+      },
+      {
         "name": "Maria",
         "data": [
           0,
@@ -1890,19 +1903,6 @@
         ]
       },
       {
-        "name": "Chow",
-        "data": [
-          5,
-          6,
-          6,
-          6,
-          7,
-          7,
-          7,
-          7
-        ]
-      },
-      {
         "name": "Anna",
         "data": [
           0,
@@ -1942,19 +1942,6 @@
         ]
       },
       {
-        "name": "Ryan",
-        "data": [
-          0,
-          0,
-          1,
-          1,
-          2,
-          2,
-          6,
-          6
-        ]
-      },
-      {
         "name": "Dom",
         "data": [
           -1,
@@ -1965,6 +1952,19 @@
           5,
           4,
           5
+        ]
+      },
+      {
+        "name": "Chow",
+        "data": [
+          5,
+          6,
+          6,
+          6,
+          7,
+          7,
+          7,
+          4
         ]
       },
       {
