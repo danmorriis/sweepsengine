@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-18T15:45:44Z",
+  "last_updated": "2026-06-18T18:32:03Z",
   "players": [
     {
       "name": "Maria",
@@ -338,6 +338,54 @@
       "rank": 7
     },
     {
+      "name": "Emma",
+      "teams": [
+        "Netherlands",
+        "Norway",
+        "South Africa"
+      ],
+      "total_points": 6,
+      "breakdown": [
+        {
+          "team": "Netherlands",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 2,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        },
+        {
+          "team": "Norway",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 4,
+          "goals_against": 1,
+          "goal_diff": 3,
+          "points": 6,
+          "eliminated": false
+        },
+        {
+          "team": "South Africa",
+          "played": 2,
+          "won": 0,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 3,
+          "goal_diff": -2,
+          "points": -1,
+          "eliminated": false
+        }
+      ],
+      "rank": 8
+    },
+    {
       "name": "Rowan",
       "teams": [
         "Belgium",
@@ -383,7 +431,7 @@
           "eliminated": false
         }
       ],
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "Ryan",
@@ -431,54 +479,6 @@
           "eliminated": false
         }
       ],
-      "rank": 9
-    },
-    {
-      "name": "Emma",
-      "teams": [
-        "Netherlands",
-        "Norway",
-        "South Africa"
-      ],
-      "total_points": 5,
-      "breakdown": [
-        {
-          "team": "Netherlands",
-          "played": 1,
-          "won": 0,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 2,
-          "goal_diff": 0,
-          "points": 1,
-          "eliminated": false
-        },
-        {
-          "team": "Norway",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 4,
-          "goals_against": 1,
-          "goal_diff": 3,
-          "points": 6,
-          "eliminated": false
-        },
-        {
-          "team": "South Africa",
-          "played": 1,
-          "won": 0,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 2,
-          "goal_diff": -2,
-          "points": -2,
-          "eliminated": false
-        }
-      ],
       "rank": 10
     },
     {
@@ -488,7 +488,7 @@
         "Panama",
         "Czechia"
       ],
-      "total_points": 4,
+      "total_points": 5,
       "breakdown": [
         {
           "team": "USA",
@@ -516,14 +516,14 @@
         },
         {
           "team": "Czechia",
-          "played": 1,
+          "played": 2,
           "won": 0,
           "lost": 1,
-          "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 2,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 3,
           "goal_diff": -1,
-          "points": -1,
+          "points": 0,
           "eliminated": false
         }
       ],
@@ -1016,9 +1016,9 @@
       "kickoff_bst": "17:00",
       "home": "Czechia",
       "away": "South Africa",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 1,
+      "away_score": 1,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1820,7 +1820,8 @@
       "2026-06-14",
       "2026-06-15",
       "2026-06-16",
-      "2026-06-17"
+      "2026-06-17",
+      "2026-06-18"
     ],
     "series": [
       {
@@ -1832,6 +1833,7 @@
           9,
           10,
           10,
+          11,
           11
         ]
       },
@@ -1844,6 +1846,7 @@
           5,
           6,
           6,
+          11,
           11
         ]
       },
@@ -1855,6 +1858,7 @@
           0,
           4,
           4,
+          8,
           8,
           8
         ]
@@ -1868,6 +1872,7 @@
           3,
           3,
           3,
+          8,
           8
         ]
       },
@@ -1880,6 +1885,7 @@
           1,
           2,
           7,
+          7,
           7
         ]
       },
@@ -1890,6 +1896,7 @@
           6,
           6,
           6,
+          7,
           7,
           7,
           7
@@ -1904,6 +1911,20 @@
           5,
           5,
           5,
+          6,
+          6
+        ]
+      },
+      {
+        "name": "Emma",
+        "data": [
+          -2,
+          -2,
+          -2,
+          -1,
+          -1,
+          5,
+          5,
           6
         ]
       },
@@ -1914,6 +1935,7 @@
           4,
           5,
           5,
+          6,
           6,
           6,
           6
@@ -1928,19 +1950,8 @@
           1,
           2,
           2,
+          6,
           6
-        ]
-      },
-      {
-        "name": "Emma",
-        "data": [
-          -2,
-          -2,
-          -2,
-          -1,
-          -1,
-          5,
-          5
         ]
       },
       {
@@ -1952,7 +1963,8 @@
           5,
           5,
           5,
-          4
+          4,
+          5
         ]
       },
       {
@@ -1962,6 +1974,7 @@
           1,
           0,
           0,
+          1,
           1,
           1,
           1
@@ -1976,6 +1989,7 @@
           -1,
           0,
           0,
+          0,
           0
         ]
       },
@@ -1987,6 +2001,7 @@
           -3,
           -9,
           -9,
+          -4,
           -4,
           -4
         ]
@@ -2000,6 +2015,7 @@
           -1,
           -1,
           -6,
+          -6,
           -6
         ]
       },
@@ -2012,6 +2028,7 @@
           0,
           0,
           -3,
+          -7,
           -7
         ]
       }
