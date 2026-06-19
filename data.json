@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-19T18:04:55Z",
+  "last_updated": "2026-06-19T21:15:10Z",
   "players": [
     {
       "name": "Ryan",
@@ -98,48 +98,48 @@
       "rank": 2
     },
     {
-      "name": "Will",
+      "name": "Dom",
       "teams": [
-        "Colombia",
-        "Australia",
-        "Cape Verde"
+        "USA",
+        "Panama",
+        "Czechia"
       ],
-      "total_points": 11,
+      "total_points": 10,
       "breakdown": [
         {
-          "team": "Colombia",
-          "played": 1,
-          "won": 1,
+          "team": "USA",
+          "played": 2,
+          "won": 2,
           "lost": 0,
           "drawn": 0,
-          "goals_for": 3,
+          "goals_for": 6,
           "goals_against": 1,
-          "goal_diff": 2,
-          "points": 5,
+          "goal_diff": 5,
+          "points": 11,
           "eliminated": false
         },
         {
-          "team": "Australia",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 2,
-          "goals_against": 0,
-          "goal_diff": 2,
-          "points": 5,
-          "eliminated": false
-        },
-        {
-          "team": "Cape Verde",
+          "team": "Panama",
           "played": 1,
           "won": 0,
-          "lost": 0,
-          "drawn": 1,
+          "lost": 1,
+          "drawn": 0,
           "goals_for": 0,
-          "goals_against": 0,
-          "goal_diff": 0,
-          "points": 1,
+          "goals_against": 1,
+          "goal_diff": -1,
+          "points": -1,
+          "eliminated": false
+        },
+        {
+          "team": "Czechia",
+          "played": 2,
+          "won": 0,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 3,
+          "goal_diff": -1,
+          "points": 0,
           "eliminated": false
         }
       ],
@@ -194,6 +194,54 @@
       "rank": 4
     },
     {
+      "name": "Will",
+      "teams": [
+        "Colombia",
+        "Australia",
+        "Cape Verde"
+      ],
+      "total_points": 9,
+      "breakdown": [
+        {
+          "team": "Colombia",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 3,
+          "goals_against": 1,
+          "goal_diff": 2,
+          "points": 5,
+          "eliminated": false
+        },
+        {
+          "team": "Australia",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 2,
+          "goal_diff": 0,
+          "points": 3,
+          "eliminated": false
+        },
+        {
+          "team": "Cape Verde",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 0,
+          "goals_against": 0,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        }
+      ],
+      "rank": 5
+    },
+    {
       "name": "Chow",
       "teams": [
         "Mexico",
@@ -239,7 +287,7 @@
           "eliminated": false
         }
       ],
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "Chris",
@@ -287,7 +335,7 @@
           "eliminated": false
         }
       ],
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "Yassi",
@@ -335,7 +383,7 @@
           "eliminated": false
         }
       ],
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "Anne",
@@ -383,7 +431,7 @@
           "eliminated": false
         }
       ],
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "Anna",
@@ -431,7 +479,7 @@
           "eliminated": false
         }
       ],
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "Emma",
@@ -476,54 +524,6 @@
           "goals_against": 3,
           "goal_diff": -2,
           "points": -1,
-          "eliminated": false
-        }
-      ],
-      "rank": 10
-    },
-    {
-      "name": "Dom",
-      "teams": [
-        "USA",
-        "Panama",
-        "Czechia"
-      ],
-      "total_points": 5,
-      "breakdown": [
-        {
-          "team": "USA",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 4,
-          "goals_against": 1,
-          "goal_diff": 3,
-          "points": 6,
-          "eliminated": false
-        },
-        {
-          "team": "Panama",
-          "played": 1,
-          "won": 0,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 1,
-          "goal_diff": -1,
-          "points": -1,
-          "eliminated": false
-        },
-        {
-          "team": "Czechia",
-          "played": 2,
-          "won": 0,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 3,
-          "goal_diff": -1,
-          "points": 0,
           "eliminated": false
         }
       ],
@@ -1056,9 +1056,9 @@
       "kickoff_bst": "20:00",
       "home": "USA",
       "away": "Australia",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 2,
+      "away_score": 0,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1821,7 +1821,8 @@
       "2026-06-15",
       "2026-06-16",
       "2026-06-17",
-      "2026-06-18"
+      "2026-06-18",
+      "2026-06-19"
     ],
     "series": [
       {
@@ -1834,6 +1835,7 @@
           2,
           2,
           6,
+          12,
           12
         ]
       },
@@ -1847,20 +1849,22 @@
           10,
           10,
           11,
+          11,
           11
         ]
       },
       {
-        "name": "Will",
+        "name": "Dom",
         "data": [
-          0,
-          0,
+          -1,
           5,
           5,
-          6,
-          6,
-          11,
-          11
+          5,
+          5,
+          5,
+          4,
+          5,
+          10
         ]
       },
       {
@@ -1873,7 +1877,22 @@
           1,
           1,
           1,
+          10,
           10
+        ]
+      },
+      {
+        "name": "Will",
+        "data": [
+          0,
+          0,
+          5,
+          5,
+          6,
+          6,
+          11,
+          11,
+          9
         ]
       },
       {
@@ -1886,6 +1905,7 @@
           7,
           7,
           7,
+          8,
           8
         ]
       },
@@ -1897,6 +1917,7 @@
           0,
           4,
           4,
+          8,
           8,
           8,
           8
@@ -1912,6 +1933,7 @@
           3,
           3,
           8,
+          8,
           8
         ]
       },
@@ -1923,6 +1945,7 @@
           1,
           1,
           2,
+          7,
           7,
           7,
           7
@@ -1938,6 +1961,7 @@
           5,
           5,
           6,
+          6,
           6
         ]
       },
@@ -1951,20 +1975,8 @@
           -1,
           5,
           5,
+          6,
           6
-        ]
-      },
-      {
-        "name": "Dom",
-        "data": [
-          -1,
-          5,
-          5,
-          5,
-          5,
-          5,
-          4,
-          5
         ]
       },
       {
@@ -1974,6 +1986,7 @@
           0,
           -1,
           -1,
+          0,
           0,
           0,
           0,
@@ -1990,6 +2003,7 @@
           6,
           6,
           6,
+          -1,
           -1
         ]
       },
@@ -2001,6 +2015,7 @@
           -3,
           -9,
           -9,
+          -4,
           -4,
           -4,
           -4
@@ -2016,6 +2031,7 @@
           -1,
           -6,
           -6,
+          -6,
           -6
         ]
       },
@@ -2028,6 +2044,7 @@
           0,
           0,
           -3,
+          -7,
           -7,
           -7
         ]
