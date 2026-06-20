@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-20T17:41:50Z",
+  "last_updated": "2026-06-20T19:48:39Z",
   "players": [
     {
       "name": "Anne",
@@ -50,6 +50,54 @@
       "rank": 1
     },
     {
+      "name": "Emma",
+      "teams": [
+        "Netherlands",
+        "Norway",
+        "South Africa"
+      ],
+      "total_points": 13,
+      "breakdown": [
+        {
+          "team": "Netherlands",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 7,
+          "goals_against": 3,
+          "goal_diff": 4,
+          "points": 8,
+          "eliminated": false
+        },
+        {
+          "team": "Norway",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 4,
+          "goals_against": 1,
+          "goal_diff": 3,
+          "points": 6,
+          "eliminated": false
+        },
+        {
+          "team": "South Africa",
+          "played": 2,
+          "won": 0,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 3,
+          "goal_diff": -2,
+          "points": -1,
+          "eliminated": false
+        }
+      ],
+      "rank": 2
+    },
+    {
       "name": "Ryan",
       "teams": [
         "Uruguay",
@@ -95,7 +143,7 @@
           "eliminated": false
         }
       ],
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "Maria",
@@ -143,7 +191,7 @@
           "eliminated": false
         }
       ],
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "Dom",
@@ -191,7 +239,7 @@
           "eliminated": false
         }
       ],
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Will",
@@ -239,7 +287,7 @@
           "eliminated": false
         }
       ],
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "Chow",
@@ -287,7 +335,7 @@
           "eliminated": false
         }
       ],
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "Chris",
@@ -332,54 +380,6 @@
           "goals_against": 3,
           "goal_diff": -2,
           "points": -2,
-          "eliminated": false
-        }
-      ],
-      "rank": 7
-    },
-    {
-      "name": "Yassi",
-      "teams": [
-        "England",
-        "Sweden",
-        "Tunisia"
-      ],
-      "total_points": 8,
-      "breakdown": [
-        {
-          "team": "England",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 4,
-          "goals_against": 2,
-          "goal_diff": 2,
-          "points": 5,
-          "eliminated": false
-        },
-        {
-          "team": "Sweden",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 5,
-          "goals_against": 1,
-          "goal_diff": 4,
-          "points": 7,
-          "eliminated": false
-        },
-        {
-          "team": "Tunisia",
-          "played": 1,
-          "won": 0,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 5,
-          "goal_diff": -4,
-          "points": -4,
           "eliminated": false
         }
       ],
@@ -434,54 +434,6 @@
       "rank": 9
     },
     {
-      "name": "Emma",
-      "teams": [
-        "Netherlands",
-        "Norway",
-        "South Africa"
-      ],
-      "total_points": 6,
-      "breakdown": [
-        {
-          "team": "Netherlands",
-          "played": 1,
-          "won": 0,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 2,
-          "goal_diff": 0,
-          "points": 1,
-          "eliminated": false
-        },
-        {
-          "team": "Norway",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 4,
-          "goals_against": 1,
-          "goal_diff": 3,
-          "points": 6,
-          "eliminated": false
-        },
-        {
-          "team": "South Africa",
-          "played": 2,
-          "won": 0,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 3,
-          "goal_diff": -2,
-          "points": -1,
-          "eliminated": false
-        }
-      ],
-      "rank": 10
-    },
-    {
       "name": "Anna",
       "teams": [
         "Portugal",
@@ -524,6 +476,54 @@
           "goals_against": 1,
           "goal_diff": 0,
           "points": 3,
+          "eliminated": false
+        }
+      ],
+      "rank": 10
+    },
+    {
+      "name": "Yassi",
+      "teams": [
+        "England",
+        "Sweden",
+        "Tunisia"
+      ],
+      "total_points": 4,
+      "breakdown": [
+        {
+          "team": "England",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 4,
+          "goals_against": 2,
+          "goal_diff": 2,
+          "points": 5,
+          "eliminated": false
+        },
+        {
+          "team": "Sweden",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 6,
+          "goals_against": 6,
+          "goal_diff": 0,
+          "points": 3,
+          "eliminated": false
+        },
+        {
+          "team": "Tunisia",
+          "played": 1,
+          "won": 0,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 5,
+          "goal_diff": -4,
+          "points": -4,
           "eliminated": false
         }
       ],
@@ -1096,9 +1096,9 @@
       "kickoff_bst": "18:00",
       "home": "Netherlands",
       "away": "Sweden",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 5,
+      "away_score": 1,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1822,7 +1822,8 @@
       "2026-06-16",
       "2026-06-17",
       "2026-06-18",
-      "2026-06-19"
+      "2026-06-19",
+      "2026-06-20"
     ],
     "series": [
       {
@@ -1836,6 +1837,22 @@
           7,
           7,
           7,
+          13,
+          13
+        ]
+      },
+      {
+        "name": "Emma",
+        "data": [
+          -2,
+          -2,
+          -2,
+          -1,
+          -1,
+          5,
+          5,
+          6,
+          6,
           13
         ]
       },
@@ -1850,6 +1867,7 @@
           2,
           6,
           12,
+          12,
           12
         ]
       },
@@ -1862,6 +1880,7 @@
           9,
           10,
           10,
+          11,
           11,
           11,
           11
@@ -1878,6 +1897,7 @@
           5,
           4,
           5,
+          10,
           10
         ]
       },
@@ -1892,6 +1912,7 @@
           6,
           11,
           11,
+          9,
           9
         ]
       },
@@ -1906,6 +1927,7 @@
           7,
           7,
           8,
+          8,
           8
         ]
       },
@@ -1919,19 +1941,6 @@
           4,
           8,
           8,
-          8,
-          8
-        ]
-      },
-      {
-        "name": "Yassi",
-        "data": [
-          0,
-          0,
-          0,
-          3,
-          3,
-          3,
           8,
           8,
           8
@@ -1948,21 +1957,8 @@
           1,
           1,
           10,
+          7,
           7
-        ]
-      },
-      {
-        "name": "Emma",
-        "data": [
-          -2,
-          -2,
-          -2,
-          -1,
-          -1,
-          5,
-          5,
-          6,
-          6
         ]
       },
       {
@@ -1976,7 +1972,23 @@
           5,
           6,
           6,
+          5,
           5
+        ]
+      },
+      {
+        "name": "Yassi",
+        "data": [
+          0,
+          0,
+          0,
+          3,
+          3,
+          3,
+          8,
+          8,
+          8,
+          4
         ]
       },
       {
@@ -1990,6 +2002,7 @@
           0,
           0,
           0,
+          3,
           3
         ]
       },
@@ -2004,6 +2017,7 @@
           -4,
           -4,
           -4,
+          0,
           0
         ]
       },
@@ -2017,6 +2031,7 @@
           6,
           6,
           6,
+          -1,
           -1,
           -1
         ]
@@ -2032,6 +2047,7 @@
           -6,
           -6,
           -6,
+          -6,
           -6
         ]
       },
@@ -2044,6 +2060,7 @@
           0,
           0,
           -3,
+          -7,
           -7,
           -7,
           -7
