@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-21T05:07:10Z",
+  "last_updated": "2026-06-21T10:01:27Z",
   "players": [
     {
       "name": "Maria",
@@ -146,6 +146,54 @@
       "rank": 3
     },
     {
+      "name": "Anna",
+      "teams": [
+        "Portugal",
+        "Japan",
+        "Scotland"
+      ],
+      "total_points": 12,
+      "breakdown": [
+        {
+          "team": "Portugal",
+          "played": 1,
+          "won": 0,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 1,
+          "goal_diff": 0,
+          "points": 1,
+          "eliminated": false
+        },
+        {
+          "team": "Japan",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 6,
+          "goals_against": 2,
+          "goal_diff": 4,
+          "points": 8,
+          "eliminated": false
+        },
+        {
+          "team": "Scotland",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 1,
+          "goal_diff": 0,
+          "points": 3,
+          "eliminated": false
+        }
+      ],
+      "rank": 4
+    },
+    {
       "name": "Ryan",
       "teams": [
         "Uruguay",
@@ -191,7 +239,7 @@
           "eliminated": false
         }
       ],
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Dom",
@@ -239,7 +287,7 @@
           "eliminated": false
         }
       ],
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "Will",
@@ -287,7 +335,7 @@
           "eliminated": false
         }
       ],
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "Chow",
@@ -335,7 +383,7 @@
           "eliminated": false
         }
       ],
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "Chris",
@@ -383,7 +431,7 @@
           "eliminated": false
         }
       ],
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "Francesca",
@@ -431,103 +479,7 @@
           "eliminated": false
         }
       ],
-      "rank": 9
-    },
-    {
-      "name": "Anna",
-      "teams": [
-        "Portugal",
-        "Japan",
-        "Scotland"
-      ],
-      "total_points": 5,
-      "breakdown": [
-        {
-          "team": "Portugal",
-          "played": 1,
-          "won": 0,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 1,
-          "goal_diff": 0,
-          "points": 1,
-          "eliminated": false
-        },
-        {
-          "team": "Japan",
-          "played": 1,
-          "won": 0,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 2,
-          "goal_diff": 0,
-          "points": 1,
-          "eliminated": false
-        },
-        {
-          "team": "Scotland",
-          "played": 2,
-          "won": 1,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 1,
-          "goal_diff": 0,
-          "points": 3,
-          "eliminated": false
-        }
-      ],
       "rank": 10
-    },
-    {
-      "name": "Yassi",
-      "teams": [
-        "England",
-        "Sweden",
-        "Tunisia"
-      ],
-      "total_points": 4,
-      "breakdown": [
-        {
-          "team": "England",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 4,
-          "goals_against": 2,
-          "goal_diff": 2,
-          "points": 5,
-          "eliminated": false
-        },
-        {
-          "team": "Sweden",
-          "played": 2,
-          "won": 1,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 6,
-          "goals_against": 6,
-          "goal_diff": 0,
-          "points": 3,
-          "eliminated": false
-        },
-        {
-          "team": "Tunisia",
-          "played": 1,
-          "won": 0,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 5,
-          "goal_diff": -4,
-          "points": -4,
-          "eliminated": false
-        }
-      ],
-      "rank": 11
     },
     {
       "name": "Connor",
@@ -575,7 +527,7 @@
           "eliminated": false
         }
       ],
-      "rank": 12
+      "rank": 11
     },
     {
       "name": "Josh",
@@ -620,6 +572,54 @@
           "goals_against": 7,
           "goal_diff": -6,
           "points": -5,
+          "eliminated": false
+        }
+      ],
+      "rank": 12
+    },
+    {
+      "name": "Yassi",
+      "teams": [
+        "England",
+        "Sweden",
+        "Tunisia"
+      ],
+      "total_points": 0,
+      "breakdown": [
+        {
+          "team": "England",
+          "played": 1,
+          "won": 1,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 4,
+          "goals_against": 2,
+          "goal_diff": 2,
+          "points": 5,
+          "eliminated": false
+        },
+        {
+          "team": "Sweden",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 6,
+          "goals_against": 6,
+          "goal_diff": 0,
+          "points": 3,
+          "eliminated": false
+        },
+        {
+          "team": "Tunisia",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 9,
+          "goal_diff": -8,
+          "points": -8,
           "eliminated": false
         }
       ],
@@ -1126,9 +1126,9 @@
       "kickoff_bst": "05:00",
       "home": "Tunisia",
       "away": "Japan",
-      "home_score": null,
-      "away_score": null,
-      "status": "upcoming",
+      "home_score": 0,
+      "away_score": 4,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1872,6 +1872,21 @@
         ]
       },
       {
+        "name": "Anna",
+        "data": [
+          0,
+          0,
+          4,
+          5,
+          5,
+          5,
+          6,
+          6,
+          5,
+          12
+        ]
+      },
+      {
         "name": "Ryan",
         "data": [
           0,
@@ -1962,36 +1977,6 @@
         ]
       },
       {
-        "name": "Anna",
-        "data": [
-          0,
-          0,
-          4,
-          5,
-          5,
-          5,
-          6,
-          6,
-          5,
-          5
-        ]
-      },
-      {
-        "name": "Yassi",
-        "data": [
-          0,
-          0,
-          0,
-          3,
-          3,
-          3,
-          8,
-          8,
-          8,
-          4
-        ]
-      },
-      {
         "name": "Connor",
         "data": [
           0,
@@ -2019,6 +2004,21 @@
           -4,
           0,
           1
+        ]
+      },
+      {
+        "name": "Yassi",
+        "data": [
+          0,
+          0,
+          0,
+          3,
+          3,
+          3,
+          8,
+          8,
+          8,
+          0
         ]
       },
       {
