@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-20T23:18:02Z",
+  "last_updated": "2026-06-21T05:07:10Z",
   "players": [
     {
       "name": "Maria",
@@ -584,7 +584,7 @@
         "Paraguay",
         "Cura\u00e7ao"
       ],
-      "total_points": 0,
+      "total_points": 1,
       "breakdown": [
         {
           "team": "France",
@@ -612,14 +612,14 @@
         },
         {
           "team": "Cura\u00e7ao",
-          "played": 1,
+          "played": 2,
           "won": 0,
           "lost": 1,
-          "drawn": 0,
+          "drawn": 1,
           "goals_for": 1,
           "goals_against": 7,
           "goal_diff": -6,
-          "points": -6,
+          "points": -5,
           "eliminated": false
         }
       ],
@@ -680,7 +680,7 @@
         "Ecuador",
         "Iraq"
       ],
-      "total_points": -6,
+      "total_points": -5,
       "breakdown": [
         {
           "team": "Senegal",
@@ -696,14 +696,14 @@
         },
         {
           "team": "Ecuador",
-          "played": 1,
+          "played": 2,
           "won": 0,
           "lost": 1,
-          "drawn": 0,
+          "drawn": 1,
           "goals_for": 0,
           "goals_against": 1,
           "goal_diff": -1,
-          "points": -1,
+          "points": 0,
           "eliminated": false
         },
         {
@@ -1116,9 +1116,9 @@
       "kickoff_bst": "01:00",
       "home": "Ecuador",
       "away": "Cura\u00e7ao",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 0,
+      "away_score": 0,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1128,7 +1128,7 @@
       "away": "Japan",
       "home_score": null,
       "away_score": null,
-      "status": "live",
+      "status": "upcoming",
       "stage": "Group Stage"
     },
     {
@@ -1138,7 +1138,7 @@
       "away": "Saudi Arabia",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1148,7 +1148,7 @@
       "away": "Iran",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1158,7 +1158,7 @@
       "away": "Cape Verde",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1168,7 +1168,7 @@
       "away": "Egypt",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -2018,7 +2018,7 @@
           -4,
           -4,
           0,
-          0
+          1
         ]
       },
       {
@@ -2048,7 +2048,7 @@
           -6,
           -6,
           -6,
-          -6
+          -5
         ]
       },
       {
