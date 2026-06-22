@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-22T18:16:00Z",
+  "last_updated": "2026-06-22T22:10:52Z",
   "players": [
     {
       "name": "Maria",
@@ -242,48 +242,48 @@
       "rank": 5
     },
     {
-      "name": "Anne",
+      "name": "Chris",
       "teams": [
-        "Brazil",
-        "Austria",
-        "New Zealand"
+        "Argentina",
+        "Ivory Coast",
+        "Jordan"
       ],
-      "total_points": 11,
+      "total_points": 12,
       "breakdown": [
         {
-          "team": "Brazil",
+          "team": "Argentina",
           "played": 2,
-          "won": 1,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 4,
-          "goals_against": 1,
-          "goal_diff": 3,
-          "points": 7,
-          "eliminated": false
-        },
-        {
-          "team": "Austria",
-          "played": 1,
-          "won": 1,
+          "won": 2,
           "lost": 0,
           "drawn": 0,
-          "goals_for": 3,
-          "goals_against": 1,
-          "goal_diff": 2,
-          "points": 5,
+          "goals_for": 5,
+          "goals_against": 0,
+          "goal_diff": 5,
+          "points": 11,
           "eliminated": false
         },
         {
-          "team": "New Zealand",
+          "team": "Ivory Coast",
           "played": 2,
+          "won": 1,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 2,
+          "goal_diff": 0,
+          "points": 3,
+          "eliminated": false
+        },
+        {
+          "team": "Jordan",
+          "played": 1,
           "won": 0,
           "lost": 1,
-          "drawn": 1,
-          "goals_for": 3,
-          "goals_against": 5,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 3,
           "goal_diff": -2,
-          "points": -1,
+          "points": -2,
           "eliminated": false
         }
       ],
@@ -386,6 +386,54 @@
       "rank": 8
     },
     {
+      "name": "Anne",
+      "teams": [
+        "Brazil",
+        "Austria",
+        "New Zealand"
+      ],
+      "total_points": 9,
+      "breakdown": [
+        {
+          "team": "Brazil",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 4,
+          "goals_against": 1,
+          "goal_diff": 3,
+          "points": 7,
+          "eliminated": false
+        },
+        {
+          "team": "Austria",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 3,
+          "goals_against": 3,
+          "goal_diff": 0,
+          "points": 3,
+          "eliminated": false
+        },
+        {
+          "team": "New Zealand",
+          "played": 2,
+          "won": 0,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 3,
+          "goals_against": 5,
+          "goal_diff": -2,
+          "points": -1,
+          "eliminated": false
+        }
+      ],
+      "rank": 9
+    },
+    {
       "name": "Chow",
       "teams": [
         "Mexico",
@@ -427,54 +475,6 @@
           "goals_for": 2,
           "goals_against": 5,
           "goal_diff": -3,
-          "points": -2,
-          "eliminated": false
-        }
-      ],
-      "rank": 9
-    },
-    {
-      "name": "Chris",
-      "teams": [
-        "Argentina",
-        "Ivory Coast",
-        "Jordan"
-      ],
-      "total_points": 7,
-      "breakdown": [
-        {
-          "team": "Argentina",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 3,
-          "goals_against": 0,
-          "goal_diff": 3,
-          "points": 6,
-          "eliminated": false
-        },
-        {
-          "team": "Ivory Coast",
-          "played": 2,
-          "won": 1,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 2,
-          "goals_against": 2,
-          "goal_diff": 0,
-          "points": 3,
-          "eliminated": false
-        },
-        {
-          "team": "Jordan",
-          "played": 1,
-          "won": 0,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 3,
-          "goal_diff": -2,
           "points": -2,
           "eliminated": false
         }
@@ -1176,9 +1176,9 @@
       "kickoff_bst": "18:00",
       "home": "Argentina",
       "away": "Austria",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 2,
+      "away_score": 0,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1824,7 +1824,8 @@
       "2026-06-18",
       "2026-06-19",
       "2026-06-20",
-      "2026-06-21"
+      "2026-06-21",
+      "2026-06-22"
     ],
     "series": [
       {
@@ -1840,6 +1841,7 @@
           11,
           11,
           15,
+          20,
           20
         ]
       },
@@ -1856,6 +1858,7 @@
           10,
           7,
           7,
+          14,
           14
         ]
       },
@@ -1871,6 +1874,7 @@
           5,
           6,
           6,
+          13,
           13,
           13
         ]
@@ -1888,6 +1892,7 @@
           12,
           12,
           12,
+          13,
           13
         ]
       },
@@ -1904,23 +1909,25 @@
           6,
           5,
           12,
+          12,
           12
         ]
       },
       {
-        "name": "Anne",
+        "name": "Chris",
         "data": [
           0,
           0,
-          1,
-          1,
-          2,
+          0,
+          4,
+          4,
+          8,
+          8,
+          8,
+          8,
           7,
           7,
-          7,
-          13,
-          13,
-          11
+          12
         ]
       },
       {
@@ -1934,6 +1941,7 @@
           5,
           4,
           5,
+          10,
           10,
           10,
           10
@@ -1952,7 +1960,25 @@
           11,
           9,
           9,
+          10,
           10
+        ]
+      },
+      {
+        "name": "Anne",
+        "data": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          7,
+          7,
+          7,
+          13,
+          13,
+          11,
+          9
         ]
       },
       {
@@ -1968,23 +1994,8 @@
           8,
           8,
           8,
+          9,
           9
-        ]
-      },
-      {
-        "name": "Chris",
-        "data": [
-          0,
-          0,
-          0,
-          4,
-          4,
-          8,
-          8,
-          8,
-          8,
-          7,
-          7
         ]
       },
       {
@@ -1999,6 +2010,7 @@
           -4,
           -4,
           0,
+          1,
           1,
           1
         ]
@@ -2016,6 +2028,7 @@
           -1,
           -1,
           -1,
+          0,
           0
         ]
       },
@@ -2031,6 +2044,7 @@
           8,
           8,
           8,
+          0,
           0,
           0
         ]
@@ -2048,6 +2062,7 @@
           0,
           3,
           3,
+          -1,
           -1
         ]
       },
@@ -2064,6 +2079,7 @@
           -6,
           -6,
           -5,
+          -5,
           -5
         ]
       },
@@ -2076,6 +2092,7 @@
           0,
           0,
           -3,
+          -7,
           -7,
           -7,
           -7,
