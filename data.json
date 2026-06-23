@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-23T04:12:21Z",
+  "last_updated": "2026-06-23T09:58:53Z",
   "players": [
     {
       "name": "Maria",
@@ -248,7 +248,7 @@
         "Ivory Coast",
         "Jordan"
       ],
-      "total_points": 12,
+      "total_points": 11,
       "breakdown": [
         {
           "team": "Argentina",
@@ -276,14 +276,14 @@
         },
         {
           "team": "Jordan",
-          "played": 1,
+          "played": 2,
           "won": 0,
-          "lost": 1,
+          "lost": 2,
           "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 3,
-          "goal_diff": -2,
-          "points": -2,
+          "goals_for": 2,
+          "goals_against": 5,
+          "goal_diff": -3,
+          "points": -3,
           "eliminated": false
         }
       ],
@@ -680,7 +680,7 @@
         "Algeria",
         "Uzbekistan"
       ],
-      "total_points": -7,
+      "total_points": -3,
       "breakdown": [
         {
           "team": "Croatia",
@@ -696,14 +696,14 @@
         },
         {
           "team": "Algeria",
-          "played": 1,
-          "won": 0,
+          "played": 2,
+          "won": 1,
           "lost": 1,
           "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 3,
-          "goal_diff": -3,
-          "points": -3,
+          "goals_for": 2,
+          "goals_against": 4,
+          "goal_diff": -2,
+          "points": 1,
           "eliminated": false
         },
         {
@@ -1206,9 +1206,9 @@
       "kickoff_bst": "04:00",
       "home": "Jordan",
       "away": "Algeria",
-      "home_score": null,
-      "away_score": null,
-      "status": "upcoming",
+      "home_score": 1,
+      "away_score": 2,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1927,7 +1927,7 @@
           8,
           7,
           7,
-          12
+          11
         ]
       },
       {
@@ -2080,7 +2080,7 @@
           -7,
           -7,
           -7,
-          -7
+          -3
         ]
       },
       {
