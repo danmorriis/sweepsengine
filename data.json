@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-22T22:10:52Z",
+  "last_updated": "2026-06-23T04:12:21Z",
   "players": [
     {
       "name": "Maria",
@@ -50,6 +50,54 @@
       "rank": 1
     },
     {
+      "name": "Emma",
+      "teams": [
+        "Netherlands",
+        "Norway",
+        "South Africa"
+      ],
+      "total_points": 17,
+      "breakdown": [
+        {
+          "team": "Netherlands",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 7,
+          "goals_against": 3,
+          "goal_diff": 4,
+          "points": 8,
+          "eliminated": false
+        },
+        {
+          "team": "Norway",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 7,
+          "goals_against": 3,
+          "goal_diff": 4,
+          "points": 10,
+          "eliminated": false
+        },
+        {
+          "team": "South Africa",
+          "played": 2,
+          "won": 0,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 3,
+          "goal_diff": -2,
+          "points": -1,
+          "eliminated": false
+        }
+      ],
+      "rank": 2
+    },
+    {
       "name": "Francesca",
       "teams": [
         "Spain",
@@ -92,54 +140,6 @@
           "goals_against": 4,
           "goal_diff": -4,
           "points": -4,
-          "eliminated": false
-        }
-      ],
-      "rank": 2
-    },
-    {
-      "name": "Emma",
-      "teams": [
-        "Netherlands",
-        "Norway",
-        "South Africa"
-      ],
-      "total_points": 13,
-      "breakdown": [
-        {
-          "team": "Netherlands",
-          "played": 2,
-          "won": 1,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 7,
-          "goals_against": 3,
-          "goal_diff": 4,
-          "points": 8,
-          "eliminated": false
-        },
-        {
-          "team": "Norway",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 4,
-          "goals_against": 1,
-          "goal_diff": 3,
-          "points": 6,
-          "eliminated": false
-        },
-        {
-          "team": "South Africa",
-          "played": 2,
-          "won": 0,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 3,
-          "goal_diff": -2,
-          "points": -1,
           "eliminated": false
         }
       ],
@@ -488,18 +488,18 @@
         "Paraguay",
         "Cura\u00e7ao"
       ],
-      "total_points": 1,
+      "total_points": 7,
       "breakdown": [
         {
           "team": "France",
-          "played": 1,
-          "won": 1,
+          "played": 2,
+          "won": 2,
           "lost": 0,
           "drawn": 0,
-          "goals_for": 3,
+          "goals_for": 6,
           "goals_against": 1,
-          "goal_diff": 2,
-          "points": 5,
+          "goal_diff": 5,
+          "points": 11,
           "eliminated": false
         },
         {
@@ -674,54 +674,6 @@
       "rank": 14
     },
     {
-      "name": "Dan",
-      "teams": [
-        "Senegal",
-        "Ecuador",
-        "Iraq"
-      ],
-      "total_points": -5,
-      "breakdown": [
-        {
-          "team": "Senegal",
-          "played": 1,
-          "won": 0,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 3,
-          "goal_diff": -2,
-          "points": -2,
-          "eliminated": false
-        },
-        {
-          "team": "Ecuador",
-          "played": 2,
-          "won": 0,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 0,
-          "goals_against": 1,
-          "goal_diff": -1,
-          "points": 0,
-          "eliminated": false
-        },
-        {
-          "team": "Iraq",
-          "played": 1,
-          "won": 0,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 4,
-          "goal_diff": -3,
-          "points": -3,
-          "eliminated": false
-        }
-      ],
-      "rank": 15
-    },
-    {
       "name": "Johnny",
       "teams": [
         "Croatia",
@@ -764,6 +716,54 @@
           "goals_against": 3,
           "goal_diff": -2,
           "points": -2,
+          "eliminated": false
+        }
+      ],
+      "rank": 15
+    },
+    {
+      "name": "Dan",
+      "teams": [
+        "Senegal",
+        "Ecuador",
+        "Iraq"
+      ],
+      "total_points": -9,
+      "breakdown": [
+        {
+          "team": "Senegal",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "drawn": 0,
+          "goals_for": 3,
+          "goals_against": 6,
+          "goal_diff": -3,
+          "points": -3,
+          "eliminated": false
+        },
+        {
+          "team": "Ecuador",
+          "played": 2,
+          "won": 0,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 0,
+          "goals_against": 1,
+          "goal_diff": -1,
+          "points": 0,
+          "eliminated": false
+        },
+        {
+          "team": "Iraq",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 7,
+          "goal_diff": -6,
+          "points": -6,
           "eliminated": false
         }
       ],
@@ -1186,9 +1186,9 @@
       "kickoff_bst": "22:00",
       "home": "France",
       "away": "Iraq",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 3,
+      "away_score": 0,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1196,9 +1196,9 @@
       "kickoff_bst": "01:00",
       "home": "Norway",
       "away": "Senegal",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 3,
+      "away_score": 2,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1208,7 +1208,7 @@
       "away": "Algeria",
       "home_score": null,
       "away_score": null,
-      "status": "live",
+      "status": "upcoming",
       "stage": "Group Stage"
     },
     {
@@ -1218,7 +1218,7 @@
       "away": "Uzbekistan",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1228,7 +1228,7 @@
       "away": "Ghana",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1238,7 +1238,7 @@
       "away": "Croatia",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1248,7 +1248,7 @@
       "away": "DR Congo",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1846,6 +1846,23 @@
         ]
       },
       {
+        "name": "Emma",
+        "data": [
+          -2,
+          -2,
+          -2,
+          -1,
+          -1,
+          5,
+          5,
+          6,
+          6,
+          13,
+          13,
+          17
+        ]
+      },
+      {
         "name": "Francesca",
         "data": [
           0,
@@ -1860,23 +1877,6 @@
           7,
           14,
           14
-        ]
-      },
-      {
-        "name": "Emma",
-        "data": [
-          -2,
-          -2,
-          -2,
-          -1,
-          -1,
-          5,
-          5,
-          6,
-          6,
-          13,
-          13,
-          13
         ]
       },
       {
@@ -2012,7 +2012,7 @@
           0,
           1,
           1,
-          1
+          7
         ]
       },
       {
@@ -2067,23 +2067,6 @@
         ]
       },
       {
-        "name": "Dan",
-        "data": [
-          0,
-          0,
-          0,
-          -1,
-          -1,
-          -6,
-          -6,
-          -6,
-          -6,
-          -5,
-          -5,
-          -5
-        ]
-      },
-      {
         "name": "Johnny",
         "data": [
           0,
@@ -2098,6 +2081,23 @@
           -7,
           -7,
           -7
+        ]
+      },
+      {
+        "name": "Dan",
+        "data": [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -6,
+          -6,
+          -6,
+          -6,
+          -5,
+          -5,
+          -9
         ]
       }
     ]
