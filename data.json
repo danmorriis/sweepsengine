@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-24T19:58:09Z",
+  "last_updated": "2026-06-24T21:40:35Z",
   "players": [
     {
       "name": "Anna",
@@ -98,6 +98,54 @@
       "rank": 2
     },
     {
+      "name": "Ryan",
+      "teams": [
+        "Uruguay",
+        "Switzerland",
+        "Ghana"
+      ],
+      "total_points": 18,
+      "breakdown": [
+        {
+          "team": "Uruguay",
+          "played": 2,
+          "won": 0,
+          "lost": 0,
+          "drawn": 2,
+          "goals_for": 3,
+          "goals_against": 3,
+          "goal_diff": 0,
+          "points": 2,
+          "eliminated": false
+        },
+        {
+          "team": "Switzerland",
+          "played": 3,
+          "won": 2,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 7,
+          "goals_against": 3,
+          "goal_diff": 4,
+          "points": 11,
+          "eliminated": false
+        },
+        {
+          "team": "Ghana",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 0,
+          "goal_diff": 1,
+          "points": 5,
+          "eliminated": false
+        }
+      ],
+      "rank": 3
+    },
+    {
       "name": "Emma",
       "teams": [
         "Netherlands",
@@ -143,99 +191,51 @@
           "eliminated": false
         }
       ],
-      "rank": 3
-    },
-    {
-      "name": "Francesca",
-      "teams": [
-        "Spain",
-        "Canada",
-        "Haiti"
-      ],
-      "total_points": 14,
-      "breakdown": [
-        {
-          "team": "Spain",
-          "played": 2,
-          "won": 1,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 4,
-          "goals_against": 0,
-          "goal_diff": 4,
-          "points": 8,
-          "eliminated": false
-        },
-        {
-          "team": "Canada",
-          "played": 2,
-          "won": 1,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 7,
-          "goals_against": 1,
-          "goal_diff": 6,
-          "points": 10,
-          "eliminated": false
-        },
-        {
-          "team": "Haiti",
-          "played": 2,
-          "won": 0,
-          "lost": 2,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 4,
-          "goal_diff": -4,
-          "points": -4,
-          "eliminated": false
-        }
-      ],
       "rank": 4
     },
     {
-      "name": "Ryan",
+      "name": "Chow",
       "teams": [
-        "Uruguay",
-        "Switzerland",
-        "Ghana"
+        "Mexico",
+        "Iran",
+        "Bosnia and Herzegovina"
       ],
       "total_points": 14,
       "breakdown": [
         {
-          "team": "Uruguay",
+          "team": "Mexico",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 3,
+          "goals_against": 0,
+          "goal_diff": 3,
+          "points": 9,
+          "eliminated": false
+        },
+        {
+          "team": "Iran",
           "played": 2,
           "won": 0,
           "lost": 0,
           "drawn": 2,
-          "goals_for": 3,
-          "goals_against": 3,
+          "goals_for": 2,
+          "goals_against": 2,
           "goal_diff": 0,
           "points": 2,
           "eliminated": false
         },
         {
-          "team": "Switzerland",
-          "played": 2,
+          "team": "Bosnia and Herzegovina",
+          "played": 3,
           "won": 1,
-          "lost": 0,
+          "lost": 1,
           "drawn": 1,
           "goals_for": 5,
-          "goals_against": 2,
-          "goal_diff": 3,
-          "points": 7,
-          "eliminated": false
-        },
-        {
-          "team": "Ghana",
-          "played": 2,
-          "won": 1,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 0,
-          "goal_diff": 1,
-          "points": 5,
+          "goals_against": 6,
+          "goal_diff": -1,
+          "points": 3,
           "eliminated": false
         }
       ],
@@ -290,6 +290,54 @@
       "rank": 6
     },
     {
+      "name": "Francesca",
+      "teams": [
+        "Spain",
+        "Canada",
+        "Haiti"
+      ],
+      "total_points": 13,
+      "breakdown": [
+        {
+          "team": "Spain",
+          "played": 2,
+          "won": 1,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 4,
+          "goals_against": 0,
+          "goal_diff": 4,
+          "points": 8,
+          "eliminated": false
+        },
+        {
+          "team": "Canada",
+          "played": 3,
+          "won": 1,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 8,
+          "goals_against": 3,
+          "goal_diff": 5,
+          "points": 9,
+          "eliminated": false
+        },
+        {
+          "team": "Haiti",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 4,
+          "goal_diff": -4,
+          "points": -4,
+          "eliminated": false
+        }
+      ],
+      "rank": 7
+    },
+    {
       "name": "Chris",
       "teams": [
         "Argentina",
@@ -335,7 +383,7 @@
           "eliminated": false
         }
       ],
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "Anne",
@@ -380,54 +428,6 @@
           "goals_against": 5,
           "goal_diff": -2,
           "points": -1,
-          "eliminated": false
-        }
-      ],
-      "rank": 8
-    },
-    {
-      "name": "Chow",
-      "teams": [
-        "Mexico",
-        "Iran",
-        "Bosnia and Herzegovina"
-      ],
-      "total_points": 9,
-      "breakdown": [
-        {
-          "team": "Mexico",
-          "played": 2,
-          "won": 2,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 3,
-          "goals_against": 0,
-          "goal_diff": 3,
-          "points": 9,
-          "eliminated": false
-        },
-        {
-          "team": "Iran",
-          "played": 2,
-          "won": 0,
-          "lost": 0,
-          "drawn": 2,
-          "goals_for": 2,
-          "goals_against": 2,
-          "goal_diff": 0,
-          "points": 2,
-          "eliminated": false
-        },
-        {
-          "team": "Bosnia and Herzegovina",
-          "played": 2,
-          "won": 0,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 5,
-          "goal_diff": -3,
-          "points": -2,
           "eliminated": false
         }
       ],
@@ -578,54 +578,6 @@
       "rank": 12
     },
     {
-      "name": "Rowan",
-      "teams": [
-        "Belgium",
-        "South Korea",
-        "Qatar"
-      ],
-      "total_points": 0,
-      "breakdown": [
-        {
-          "team": "Belgium",
-          "played": 2,
-          "won": 0,
-          "lost": 0,
-          "drawn": 2,
-          "goals_for": 1,
-          "goals_against": 1,
-          "goal_diff": 0,
-          "points": 2,
-          "eliminated": false
-        },
-        {
-          "team": "South Korea",
-          "played": 2,
-          "won": 1,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 2,
-          "goals_against": 2,
-          "goal_diff": 0,
-          "points": 3,
-          "eliminated": false
-        },
-        {
-          "team": "Qatar",
-          "played": 2,
-          "won": 0,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 7,
-          "goal_diff": -6,
-          "points": -5,
-          "eliminated": false
-        }
-      ],
-      "rank": 13
-    },
-    {
       "name": "Connor",
       "teams": [
         "Morocco",
@@ -668,6 +620,54 @@
           "goals_against": 5,
           "goal_diff": -4,
           "points": -3,
+          "eliminated": false
+        }
+      ],
+      "rank": 13
+    },
+    {
+      "name": "Rowan",
+      "teams": [
+        "Belgium",
+        "South Korea",
+        "Qatar"
+      ],
+      "total_points": -2,
+      "breakdown": [
+        {
+          "team": "Belgium",
+          "played": 2,
+          "won": 0,
+          "lost": 0,
+          "drawn": 2,
+          "goals_for": 1,
+          "goals_against": 1,
+          "goal_diff": 0,
+          "points": 2,
+          "eliminated": false
+        },
+        {
+          "team": "South Korea",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 2,
+          "goal_diff": 0,
+          "points": 3,
+          "eliminated": false
+        },
+        {
+          "team": "Qatar",
+          "played": 3,
+          "won": 0,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 10,
+          "goal_diff": -8,
+          "points": -7,
           "eliminated": false
         }
       ],
@@ -1256,9 +1256,9 @@
       "kickoff_bst": "20:00",
       "home": "Switzerland",
       "away": "Canada",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 2,
+      "away_score": 1,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1266,9 +1266,9 @@
       "kickoff_bst": "20:00",
       "home": "Bosnia and Herzegovina",
       "away": "Qatar",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 3,
+      "away_score": 1,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1826,7 +1826,8 @@
       "2026-06-20",
       "2026-06-21",
       "2026-06-22",
-      "2026-06-23"
+      "2026-06-23",
+      "2026-06-24"
     ],
     "series": [
       {
@@ -1844,6 +1845,7 @@
           12,
           12,
           12,
+          20,
           20
         ]
       },
@@ -1862,43 +1864,8 @@
           15,
           20,
           20,
+          19,
           19
-        ]
-      },
-      {
-        "name": "Emma",
-        "data": [
-          -2,
-          -2,
-          -2,
-          -1,
-          -1,
-          5,
-          5,
-          6,
-          6,
-          13,
-          13,
-          17,
-          17
-        ]
-      },
-      {
-        "name": "Francesca",
-        "data": [
-          0,
-          1,
-          0,
-          0,
-          1,
-          1,
-          1,
-          10,
-          7,
-          7,
-          14,
-          14,
-          14
         ]
       },
       {
@@ -1916,6 +1883,45 @@
           12,
           13,
           13,
+          14,
+          18
+        ]
+      },
+      {
+        "name": "Emma",
+        "data": [
+          -2,
+          -2,
+          -2,
+          -1,
+          -1,
+          5,
+          5,
+          6,
+          6,
+          13,
+          13,
+          17,
+          17,
+          17
+        ]
+      },
+      {
+        "name": "Chow",
+        "data": [
+          5,
+          6,
+          6,
+          6,
+          7,
+          7,
+          7,
+          8,
+          8,
+          8,
+          9,
+          9,
+          9,
           14
         ]
       },
@@ -1934,7 +1940,27 @@
           9,
           10,
           10,
+          14,
           14
+        ]
+      },
+      {
+        "name": "Francesca",
+        "data": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          10,
+          7,
+          7,
+          14,
+          14,
+          14,
+          13
         ]
       },
       {
@@ -1951,6 +1977,7 @@
           8,
           7,
           7,
+          11,
           11,
           11
         ]
@@ -1969,23 +1996,6 @@
           13,
           13,
           11,
-          9,
-          9
-        ]
-      },
-      {
-        "name": "Chow",
-        "data": [
-          5,
-          6,
-          6,
-          6,
-          7,
-          7,
-          7,
-          8,
-          8,
-          8,
           9,
           9,
           9
@@ -2006,6 +2016,7 @@
           10,
           10,
           10,
+          9,
           9
         ]
       },
@@ -2023,6 +2034,7 @@
           0,
           1,
           1,
+          7,
           7,
           7
         ]
@@ -2042,25 +2054,8 @@
           0,
           0,
           0,
+          1,
           1
-        ]
-      },
-      {
-        "name": "Rowan",
-        "data": [
-          4,
-          4,
-          5,
-          5,
-          6,
-          6,
-          6,
-          -1,
-          -1,
-          -1,
-          0,
-          0,
-          0
         ]
       },
       {
@@ -2078,7 +2073,27 @@
           3,
           -1,
           -1,
+          -1,
           -1
+        ]
+      },
+      {
+        "name": "Rowan",
+        "data": [
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          6,
+          -1,
+          -1,
+          -1,
+          0,
+          0,
+          0,
+          -2
         ]
       },
       {
@@ -2096,6 +2111,7 @@
           -7,
           -7,
           -3,
+          -4,
           -4
         ]
       },
@@ -2113,6 +2129,7 @@
           -6,
           -5,
           -5,
+          -9,
           -9,
           -9
         ]
