@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-23T23:14:29Z",
+  "last_updated": "2026-06-24T04:15:32Z",
   "players": [
     {
       "name": "Anna",
@@ -56,7 +56,7 @@
         "Egypt",
         "DR Congo"
       ],
-      "total_points": 20,
+      "total_points": 19,
       "breakdown": [
         {
           "team": "Germany",
@@ -84,14 +84,14 @@
         },
         {
           "team": "DR Congo",
-          "played": 1,
+          "played": 2,
           "won": 0,
-          "lost": 0,
+          "lost": 1,
           "drawn": 1,
           "goals_for": 1,
-          "goals_against": 1,
-          "goal_diff": 0,
-          "points": 1,
+          "goals_against": 2,
+          "goal_diff": -1,
+          "points": 0,
           "eliminated": false
         }
       ],
@@ -242,6 +242,54 @@
       "rank": 5
     },
     {
+      "name": "Will",
+      "teams": [
+        "Colombia",
+        "Australia",
+        "Cape Verde"
+      ],
+      "total_points": 14,
+      "breakdown": [
+        {
+          "team": "Colombia",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 4,
+          "goals_against": 1,
+          "goal_diff": 3,
+          "points": 9,
+          "eliminated": false
+        },
+        {
+          "team": "Australia",
+          "played": 2,
+          "won": 1,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 2,
+          "goal_diff": 0,
+          "points": 3,
+          "eliminated": false
+        },
+        {
+          "team": "Cape Verde",
+          "played": 2,
+          "won": 0,
+          "lost": 0,
+          "drawn": 2,
+          "goals_for": 2,
+          "goals_against": 2,
+          "goal_diff": 0,
+          "points": 2,
+          "eliminated": false
+        }
+      ],
+      "rank": 6
+    },
+    {
       "name": "Chris",
       "teams": [
         "Argentina",
@@ -287,103 +335,7 @@
           "eliminated": false
         }
       ],
-      "rank": 6
-    },
-    {
-      "name": "Dom",
-      "teams": [
-        "USA",
-        "Panama",
-        "Czechia"
-      ],
-      "total_points": 10,
-      "breakdown": [
-        {
-          "team": "USA",
-          "played": 2,
-          "won": 2,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 6,
-          "goals_against": 1,
-          "goal_diff": 5,
-          "points": 11,
-          "eliminated": false
-        },
-        {
-          "team": "Panama",
-          "played": 1,
-          "won": 0,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 0,
-          "goals_against": 1,
-          "goal_diff": -1,
-          "points": -1,
-          "eliminated": false
-        },
-        {
-          "team": "Czechia",
-          "played": 2,
-          "won": 0,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 3,
-          "goal_diff": -1,
-          "points": 0,
-          "eliminated": false
-        }
-      ],
       "rank": 7
-    },
-    {
-      "name": "Will",
-      "teams": [
-        "Colombia",
-        "Australia",
-        "Cape Verde"
-      ],
-      "total_points": 10,
-      "breakdown": [
-        {
-          "team": "Colombia",
-          "played": 1,
-          "won": 1,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 3,
-          "goals_against": 1,
-          "goal_diff": 2,
-          "points": 5,
-          "eliminated": false
-        },
-        {
-          "team": "Australia",
-          "played": 2,
-          "won": 1,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 2,
-          "goals_against": 2,
-          "goal_diff": 0,
-          "points": 3,
-          "eliminated": false
-        },
-        {
-          "team": "Cape Verde",
-          "played": 2,
-          "won": 0,
-          "lost": 0,
-          "drawn": 2,
-          "goals_for": 2,
-          "goals_against": 2,
-          "goal_diff": 0,
-          "points": 2,
-          "eliminated": false
-        }
-      ],
-      "rank": 8
     },
     {
       "name": "Anne",
@@ -431,7 +383,7 @@
           "eliminated": false
         }
       ],
-      "rank": 9
+      "rank": 8
     },
     {
       "name": "Chow",
@@ -476,6 +428,54 @@
           "goals_against": 5,
           "goal_diff": -3,
           "points": -2,
+          "eliminated": false
+        }
+      ],
+      "rank": 9
+    },
+    {
+      "name": "Dom",
+      "teams": [
+        "USA",
+        "Panama",
+        "Czechia"
+      ],
+      "total_points": 9,
+      "breakdown": [
+        {
+          "team": "USA",
+          "played": 2,
+          "won": 2,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 6,
+          "goals_against": 1,
+          "goal_diff": 5,
+          "points": 11,
+          "eliminated": false
+        },
+        {
+          "team": "Panama",
+          "played": 2,
+          "won": 0,
+          "lost": 2,
+          "drawn": 0,
+          "goals_for": 0,
+          "goals_against": 2,
+          "goal_diff": -2,
+          "points": -2,
+          "eliminated": false
+        },
+        {
+          "team": "Czechia",
+          "played": 2,
+          "won": 0,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 3,
+          "goal_diff": -1,
+          "points": 0,
           "eliminated": false
         }
       ],
@@ -680,18 +680,18 @@
         "Algeria",
         "Uzbekistan"
       ],
-      "total_points": -8,
+      "total_points": -4,
       "breakdown": [
         {
           "team": "Croatia",
-          "played": 1,
-          "won": 0,
+          "played": 2,
+          "won": 1,
           "lost": 1,
           "drawn": 0,
-          "goals_for": 2,
+          "goals_for": 3,
           "goals_against": 4,
-          "goal_diff": -2,
-          "points": -2,
+          "goal_diff": -1,
+          "points": 2,
           "eliminated": false
         },
         {
@@ -1236,9 +1236,9 @@
       "kickoff_bst": "00:00",
       "home": "Panama",
       "away": "Croatia",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 0,
+      "away_score": 1,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1246,9 +1246,9 @@
       "kickoff_bst": "03:00",
       "home": "Colombia",
       "away": "DR Congo",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 1,
+      "away_score": 0,
+      "status": "played",
       "stage": "Group Stage"
     },
     {
@@ -1258,7 +1258,7 @@
       "away": "Canada",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1268,7 +1268,7 @@
       "away": "Qatar",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1278,7 +1278,7 @@
       "away": "Brazil",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1288,7 +1288,7 @@
       "away": "Haiti",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1298,7 +1298,7 @@
       "away": "Mexico",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1308,7 +1308,7 @@
       "away": "South Korea",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Group Stage"
     },
     {
@@ -1862,7 +1862,7 @@
           15,
           20,
           20,
-          20
+          19
         ]
       },
       {
@@ -1920,6 +1920,24 @@
         ]
       },
       {
+        "name": "Will",
+        "data": [
+          0,
+          0,
+          5,
+          5,
+          6,
+          6,
+          11,
+          11,
+          9,
+          9,
+          10,
+          10,
+          14
+        ]
+      },
+      {
         "name": "Chris",
         "data": [
           0,
@@ -1935,42 +1953,6 @@
           7,
           11,
           11
-        ]
-      },
-      {
-        "name": "Dom",
-        "data": [
-          -1,
-          5,
-          5,
-          5,
-          5,
-          5,
-          4,
-          5,
-          10,
-          10,
-          10,
-          10,
-          10
-        ]
-      },
-      {
-        "name": "Will",
-        "data": [
-          0,
-          0,
-          5,
-          5,
-          6,
-          6,
-          11,
-          11,
-          9,
-          9,
-          10,
-          10,
-          10
         ]
       },
       {
@@ -2006,6 +1988,24 @@
           8,
           9,
           9,
+          9
+        ]
+      },
+      {
+        "name": "Dom",
+        "data": [
+          -1,
+          5,
+          5,
+          5,
+          5,
+          5,
+          4,
+          5,
+          10,
+          10,
+          10,
+          10,
           9
         ]
       },
@@ -2096,7 +2096,7 @@
           -7,
           -7,
           -3,
-          -8
+          -4
         ]
       },
       {
