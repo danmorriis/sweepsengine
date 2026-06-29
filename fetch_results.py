@@ -12,7 +12,7 @@ Scheduled:     GitHub Actions (.github/workflows/daily_update.yml)
 import json
 import os
 import urllib.request
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 import openpyxl
 
 # ── Config ────────────────────────────────────────────────────────────────────
@@ -34,11 +34,10 @@ ESPN_TO_SHEET = {
 # ── ESPN API helpers ──────────────────────────────────────────────────────────
 BASE_URL = "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard"
 
-def fetch_scores_for_date(d: date) -> list[dict]:
+def fetch_matches_for_date(d: date) -> list[dict]:
     """
-    Returns a list of completed matches for the given date:
-    [{"home": "Mexico", "away": "South Africa", "home_score": 2, "away_score": 0}, ...]
-    Only includes matches whose status is 'Final'.
+    Returns all matches for the given date (completed and upcoming).
+    Completed matches include scores; upcoming matches have scores as None.
     """
     url = f"{BASE_URL}?dates={d.strftime('%Y%m%d')}"
     try:
@@ -52,8 +51,7 @@ def fetch_scores_for_date(d: date) -> list[dict]:
     for event in data.get("events", []):
         comp = event["competitions"][0]
         status = comp["status"]["type"]["name"]  # e.g. "STATUS_FINAL", "STATUS_SCHEDULED"
-        if status not in ("STATUS_FINAL", "STATUS_FULL_TIME"):
-            continue
+        finished = status in ("STATUS_FINAL", "STATUS_FULL_TIME")
 
         home_comp = next((t for t in comp["competitors"] if t["homeAway"] == "home"), None)
         away_comp = next((t for t in comp["competitors"] if t["homeAway"] == "away"), None)
@@ -63,17 +61,21 @@ def fetch_scores_for_date(d: date) -> list[dict]:
         home_name = ESPN_TO_SHEET.get(home_comp["team"]["displayName"], home_comp["team"]["displayName"])
         away_name = ESPN_TO_SHEET.get(away_comp["team"]["displayName"], away_comp["team"]["displayName"])
 
-        try:
-            home_score = int(home_comp["score"])
-            away_score = int(away_comp["score"])
-        except (KeyError, ValueError, TypeError):
-            continue
+        home_score = None
+        away_score = None
+        if finished:
+            try:
+                home_score = int(home_comp["score"])
+                away_score = int(away_comp["score"])
+            except (KeyError, ValueError, TypeError):
+                continue
 
         results.append({
             "home":       home_name,
             "away":       away_name,
             "home_score": home_score,
             "away_score": away_score,
+            "finished":   finished,
         })
 
     return results
@@ -87,45 +89,76 @@ def main():
 
     # Build index: (home_team, away_team) → row number
     fixture_index: dict[tuple[str, str], int] = {}
+    # Secondary index: date → list of rows with no team names (knockout placeholders)
+    empty_rows_by_date: dict[date, list[int]] = {}
     for row in range(3, 200):
+        raw_date = ws.cell(row, 1).value
+        if not raw_date:
+            break
         home = ws.cell(row, 3).value  # col C
         away = ws.cell(row, 6).value  # col F
         if home and away:
             fixture_index[(home, away)] = row
+        elif not home and not away and raw_date:
+            d = raw_date.date() if isinstance(raw_date, datetime) else raw_date
+            empty_rows_by_date.setdefault(d, []).append(row)
 
     print(f"Indexed {len(fixture_index)} fixtures in the sheet.")
+    empty_count = sum(len(v) for v in empty_rows_by_date.values())
+    if empty_count:
+        print(f"Found {empty_count} empty knockout placeholder rows.")
 
-    # Fetch results for every day from tournament start to today (or end)
-    today = min(date.today(), TOURNAMENT_END)
+    # Fetch all matches from tournament start through end (scores + upcoming fixtures)
     fetch_date = TOURNAMENT_START
     updated = 0
     skipped = 0
+    filled = 0
 
-    while fetch_date <= today:
-        scores = fetch_scores_for_date(fetch_date)
-        if scores:
-            print(f"  {fetch_date}: {len(scores)} completed match(es)")
-        for s in scores:
-            key = (s["home"], s["away"])
-            if key not in fixture_index:
-                print(f"    !! No row found for: {s['home']} vs {s['away']}")
+    while fetch_date <= TOURNAMENT_END:
+        matches = fetch_matches_for_date(fetch_date)
+        completed = [m for m in matches if m["finished"]]
+        upcoming  = [m for m in matches if not m["finished"]]
+        if completed:
+            print(f"  {fetch_date}: {len(completed)} completed match(es)")
+        if upcoming:
+            print(f"  {fetch_date}: {len(upcoming)} upcoming match(es)")
+
+        for m in matches:
+            key = (m["home"], m["away"])
+
+            if key in fixture_index:
+                row = fixture_index[key]
+            elif fetch_date in empty_rows_by_date and empty_rows_by_date[fetch_date]:
+                # Knockout placeholder: assign team names to the first available empty row
+                row = empty_rows_by_date[fetch_date].pop(0)
+                ws.cell(row, 1).value = datetime(fetch_date.year, fetch_date.month, fetch_date.day)
+                ws.cell(row, 3).value = m["home"]
+                ws.cell(row, 6).value = m["away"]
+                fixture_index[key] = row
+                print(f"    Filled knockout row {row}: {m['home']} vs {m['away']}")
+                filled += 1
+            else:
+                print(f"    !! No row found for: {m['home']} vs {m['away']}")
                 skipped += 1
                 continue
-            row = fixture_index[key]
+
+            # Only write scores for completed matches
+            if not m["finished"]:
+                continue
             existing_d = ws.cell(row, 4).value
             existing_e = ws.cell(row, 5).value
-            if existing_d == s["home_score"] and existing_e == s["away_score"]:
+            if existing_d == m["home_score"] and existing_e == m["away_score"]:
                 continue  # already up to date
-            ws.cell(row, 4).value = s["home_score"]
-            ws.cell(row, 5).value = s["away_score"]
-            print(f"    Updated row {row}: {s['home']} {s['home_score']}-{s['away_score']} {s['away']}")
+            ws.cell(row, 4).value = m["home_score"]
+            ws.cell(row, 5).value = m["away_score"]
+            print(f"    Updated row {row}: {m['home']} {m['home_score']}-{m['away_score']} {m['away']}")
             updated += 1
 
         fetch_date += timedelta(days=1)
 
-    if updated > 0:
+    if updated > 0 or filled > 0:
         wb.save(XLSX_PATH)
-        print(f"\nSaved. {updated} score(s) written.")
+        print(f"\nSaved. {updated} score(s) written, {filled} knockout fixture(s) filled.")
     else:
         print(f"\nNo changes needed. ({skipped} unmatched)")
 

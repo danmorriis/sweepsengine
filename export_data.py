@@ -171,6 +171,30 @@ def main():
             else:
                 s["drawn"] += 1
 
+    # Mark teams eliminated in knockout stages (loser of a played KO match)
+    for fx in fixtures:
+        if fx["home_score"] is None or fx["stage"] == "Group Stage":
+            continue
+        hs, as_ = fx["home_score"], fx["away_score"]
+        loser = fx["away"] if hs > as_ else fx["home"] if as_ > hs else None
+        if loser and loser in team_stats:
+            team_stats[loser]["eliminated"] = True
+
+    # Mark teams eliminated in the group stage (not in any knockout fixture)
+    ko_teams = set()
+    has_ko_fixtures = False
+    for fx in fixtures:
+        if fx["stage"] != "Group Stage":
+            if fx["home"] != "TBD":
+                ko_teams.add(fx["home"])
+            if fx["away"] != "TBD":
+                ko_teams.add(fx["away"])
+            has_ko_fixtures = True
+    if has_ko_fixtures:
+        for team in team_stats:
+            if team not in ko_teams and not team_stats[team]["eliminated"]:
+                team_stats[team]["eliminated"] = True
+
     # ── 4. Per-player aggregation ─────────────────────────────────────────────
     player_data = []
     for player in players_order:

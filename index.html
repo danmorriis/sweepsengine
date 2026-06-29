@@ -612,6 +612,32 @@
     .bc-upcoming { background: transparent; border: 2px solid var(--border); }
     .bc-ko       { background: transparent; border: 2px dashed #3d5a72; color: #3d5a72;
                    font-size: 0.9rem; font-weight: 700; }
+    .bc-out      { background: transparent; border: 2px solid #ef535055; color: #ef535066;
+                   font-size: 0.9rem; font-weight: 700; }
+
+    /* Eliminated team flag overlay */
+    .detail-flag-item.eliminated .detail-flag-emoji { opacity: 0.4; }
+    .detail-flag-item.eliminated .detail-flag-name  { opacity: 0.5; }
+    .detail-flag-item.eliminated::after {
+      content: "✕";
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      font-size: 3.5rem;
+      color: #ef5350;
+      font-weight: 900;
+      line-height: 1;
+      pointer-events: none;
+    }
+    .eliminated-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #ef5350;
+      margin-top: 2px;
+    }
 
     /* ── Loading / error ─────────────────────────────────── */
     #loading {
@@ -769,9 +795,19 @@ fetch("data.json?_=" + Date.now())
 
 // ── Team → player lookup ──────────────────────────────────────────────────────
 let teamToPlayer = {};
+let eliminatedTeams = new Set();
 function buildTeamToPlayer(data) {
-  data.players.forEach(p => p.teams.forEach(t => teamToPlayer[t] = p.name));
+  data.players.forEach(p => {
+    p.teams.forEach(t => teamToPlayer[t] = p.name);
+    p.breakdown.forEach(b => { if (b.eliminated) eliminatedTeams.add(b.team); });
+  });
 }
+const isTBD = t => t === "TBD" || t === "TBC" || !FLAGS[t];
+const teamDisplay = t => {
+  if (isTBD(t)) return `<span style="color:var(--muted);font-style:italic">🏳️ TBC</span>`;
+  const s = eliminatedTeams.has(t) ? ' style="text-decoration:line-through 3px;text-decoration-color:#ef5350"' : '';
+  return `<span${s}>${flag(t)} ${t}</span>`;
+};
 
 // ── Leaderboard ───────────────────────────────────────────────────────────────
 function renderLeaderboard(data) {
@@ -781,7 +817,10 @@ function renderLeaderboard(data) {
   const rows = sorted.map((p, i) => {
     const rankClass = i === 0 ? "rank-1" : i === 1 ? "rank-2" : i === 2 ? "rank-3" : "rank-other";
     const ptsClass  = p.total_points > 0 ? "points-big" : "points-big points-zero";
-    const chips = p.teams.map(t => `<span class="team-chip">${flag(t)} ${t}</span>`).join("");
+    const chips = p.teams.map(t => {
+      const s = eliminatedTeams.has(t) ? ' style="text-decoration:line-through 3px;text-decoration-color:#ef5350"' : '';
+      return `<span class="team-chip"${s}>${flag(t)} ${t}</span>`;
+    }).join("");
     return `
       <tr>
         <td><span class="rank-badge ${rankClass}">${p.rank}</span></td>
@@ -825,37 +864,20 @@ function renderFixtures(data, filter) {
   if (filter === "played")   fixtures = fixtures.filter(f => f.status === "played");
   if (filter === "upcoming") fixtures = fixtures.filter(f => f.status === "upcoming");
 
-  const KO_STAGES = ["Round of 32","Round of 16","Quarter-finals","Semi-finals","Third Place","Final"];
-
-  // Group by stage for KO, by date for group stage
+  // Group all fixtures by date
   const grouped = {};
   fixtures.forEach(f => {
-    const key = KO_STAGES.includes(f.stage) ? f.stage : f.date;
-    if (!grouped[key]) grouped[key] = [];
-    grouped[key].push(f);
+    if (!grouped[f.date]) grouped[f.date] = [];
+    grouped[f.date].push(f);
   });
 
-  // Preserve correct order: dates first, then KO stages in order
-  const allKeys = [...new Set(fixtures.map(f =>
-    KO_STAGES.includes(f.stage) ? f.stage : f.date
-  ))];
+  const allDates = [...new Set(fixtures.map(f => f.date))];
 
-  const groups = allKeys.map(key => {
+  const groups = allDates.map(key => {
     const matches = grouped[key];
-    const isKO = KO_STAGES.includes(key);
-    let label, stagePill;
-    if (isKO) {
-      label = key;
-      const dates = [...new Set(matches.map(m => m.date))];
-      const fmtDate = d => new Date(d+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short"});
-      stagePill = dates.length === 1
-        ? fmtDate(dates[0])
-        : fmtDate(dates[0]) + " – " + fmtDate(dates[dates.length-1]);
-    } else {
-      const d = new Date(key + "T00:00:00");
-      label = d.toLocaleDateString("en-GB", {weekday:"long", day:"numeric", month:"long"});
-      stagePill = matches[0].stage;
-    }
+    const d = new Date(key + "T00:00:00");
+    const label = d.toLocaleDateString("en-GB", {weekday:"long", day:"numeric", month:"long"});
+    const stagePill = matches[0].stage;
     const cards = matches.map(m => matchCard(m)).join("");
     return `
       <div class="date-group">
@@ -895,20 +917,16 @@ function matchCard(m) {
     scoreHtml = `<div class="score-upcoming">vs</div>${time}`;
   }
 
-  const homeTBD = m.home === "TBD";
-  const awayTBD = m.away === "TBD";
-  const tbdStyle = 'style="color:var(--muted);font-style:italic"';
-
   return `
     <div class="${cardClass}">
       ${homePtsHtml}
       <div class="match-team home">
-        <div ${homeTBD ? tbdStyle : ""}>${homeTBD ? "🏳️ TBD" : flag(m.home) + " " + m.home}</div>
+        <div>${teamDisplay(m.home)}</div>
         ${homeOwner ? `<div class="owner-tag">${homeOwner}</div>` : ""}
       </div>
       <div class="match-score">${scoreHtml}</div>
       <div class="match-team away">
-        <div ${awayTBD ? tbdStyle : ""}>${awayTBD ? "🏳️ TBD" : flag(m.away) + " " + m.away}</div>
+        <div>${teamDisplay(m.away)}</div>
         ${awayOwner ? `<div class="owner-tag">${awayOwner}</div>` : ""}
       </div>
       ${awayPtsHtml}
@@ -927,7 +945,7 @@ function renderPlayers(data) {
       const goals  = t.played ? `${t.goals_for}:${t.goals_against}` : "—";
       return `
         <div class="team-row">
-          <div class="team-row-name">${flag(t.team)} ${t.team}</div>
+          <div class="team-row-name"${t.eliminated ? ' style="text-decoration:line-through 3px;text-decoration-color:#ef5350"' : ''}>${flag(t.team)} ${t.team}</div>
           <div class="team-row-stat">${record}</div>
           <div class="team-row-stat">${goals}</div>
           <div class="team-row-stat">${t.played ? (t.goal_diff >= 0 ? "+" : "") + t.goal_diff : "—"}</div>
@@ -980,17 +998,21 @@ function renderProgress(data) {
     return dt.toLocaleDateString("en-GB", {day:"numeric", month:"short"});
   })];
 
-  const datasets = ds.series.map((s, i) => ({
-    label:           s.name,
-    data:            [0, ...s.data],
-    borderColor:     PLAYER_COLOURS[i % PLAYER_COLOURS.length],
-    backgroundColor: PLAYER_COLOURS[i % PLAYER_COLOURS.length] + "22",
-    borderWidth:     2.5,
-    pointRadius:     4,
-    pointHoverRadius:7,
-    tension:         0.3,
-    fill:            false,
-  }));
+  const datasets = ds.series.map((s, i) => {
+    const pts = [0, ...s.data];
+    const radii = pts.map((_, j) => j === pts.length - 1 ? 4 : 0);
+    return {
+      label:           s.name,
+      data:            pts,
+      borderColor:     PLAYER_COLOURS[i % PLAYER_COLOURS.length],
+      backgroundColor: PLAYER_COLOURS[i % PLAYER_COLOURS.length] + "22",
+      borderWidth:     2.5,
+      pointRadius:     radii,
+      pointHoverRadius:7,
+      tension:         0.3,
+      fill:            false,
+    };
+  });
 
   el.innerHTML = `
     <div class="chart-wrap">
@@ -1202,11 +1224,15 @@ function openPlayer(name) {
 
   document.getElementById("detail-flags").innerHTML =
     `<span class="detail-bg-name">${name}</span>` +
-    player.teams.map(t => `
-    <div class="detail-flag-item">
+    player.teams.map(t => {
+      const elim = player.breakdown.find(b => b.team === t)?.eliminated;
+      return `
+    <div class="detail-flag-item${elim ? ' eliminated' : ''}">
       <span class="detail-flag-emoji">${flag(t)}</span>
       <span class="detail-flag-name">${t}</span>
-    </div>`).join("");
+      ${elim ? '<span class="eliminated-tag">Eliminated</span>' : ''}
+    </div>`;
+    }).join("");
   document.getElementById("detail-pts").textContent = player.total_points;
 
   const gf    = player.breakdown.reduce((s,t) => s + t.goals_for, 0);
@@ -1340,13 +1366,36 @@ function openPlayer(name) {
       return `<div class="bc-col">${circle}</div>`;
     }).join("");
 
-    const koCols = KO_STAGES_DEF.map(s =>
-      `<div class="bc-col"><span class="bc-circle bc-ko" title="${s.key}">?</span></div>`
-    ).join("");
+    const isEliminated = t.eliminated;
+    let eliminatedAtStage = null;
+
+    const koCols = KO_STAGES_DEF.map(s => {
+      // Find a played KO fixture for this team at this stage
+      const koFix = DATA.fixtures.find(f =>
+        f.stage === s.key && (f.home === t.team || f.away === t.team) && f.status === "played"
+      );
+      let circle;
+      if (koFix) {
+        const isHome = koFix.home === t.team;
+        const gf = isHome ? koFix.home_score : koFix.away_score;
+        const ga = isHome ? koFix.away_score : koFix.home_score;
+        const opp = isHome ? koFix.away : koFix.home;
+        if (gf > ga)       circle = `<span class="bc-circle bc-win"  title="W ${gf}-${ga} vs ${opp}">✓</span>`;
+        else if (gf < ga) { circle = `<span class="bc-circle bc-loss" title="L ${gf}-${ga} vs ${opp}">✕</span>`; eliminatedAtStage = s.key; }
+        else               circle = `<span class="bc-circle bc-draw" title="D ${gf}-${ga} vs ${opp}">–</span>`;
+      } else if (eliminatedAtStage || (isEliminated && !koFix)) {
+        // Team was already knocked out — nullify remaining circles
+        if (!eliminatedAtStage) eliminatedAtStage = s.key;
+        circle = `<span class="bc-circle bc-out" title="Eliminated">–</span>`;
+      } else {
+        circle = `<span class="bc-circle bc-ko" title="${s.key}">?</span>`;
+      }
+      return `<div class="bc-col">${circle}</div>`;
+    }).join("");
 
     return `
       <div class="bc-row">
-        <div class="bc-team-label">${flag(t.team)} ${t.team}</div>
+        <div class="bc-team-label"${t.eliminated ? ' style="text-decoration:line-through 3px;text-decoration-color:#ef5350"' : ''}>${flag(t.team)} ${t.team}</div>
         <div class="bc-cols">${groupCols}${koCols}</div>
       </div>`;
   }).join("");

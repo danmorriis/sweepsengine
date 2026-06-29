@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-29T11:18:15Z",
+  "last_updated": "2026-06-29T12:23:36Z",
   "players": [
     {
       "name": "Maria",
@@ -56,7 +56,7 @@
         "Norway",
         "South Africa"
       ],
-      "total_points": 23,
+      "total_points": 22,
       "breakdown": [
         {
           "team": "Netherlands",
@@ -84,15 +84,15 @@
         },
         {
           "team": "South Africa",
-          "played": 3,
+          "played": 4,
           "won": 1,
-          "lost": 1,
+          "lost": 2,
           "drawn": 1,
           "goals_for": 2,
-          "goals_against": 3,
-          "goal_diff": -1,
-          "points": 3,
-          "eliminated": false
+          "goals_against": 4,
+          "goal_diff": -2,
+          "points": 2,
+          "eliminated": true
         }
       ],
       "rank": 2
@@ -128,7 +128,7 @@
           "goals_against": 3,
           "goal_diff": 0,
           "points": 3,
-          "eliminated": false
+          "eliminated": true
         },
         {
           "team": "Bosnia and Herzegovina",
@@ -188,7 +188,7 @@
           "goals_against": 4,
           "goal_diff": -3,
           "points": 0,
-          "eliminated": false
+          "eliminated": true
         }
       ],
       "rank": 4
@@ -236,10 +236,58 @@
           "goals_against": 8,
           "goal_diff": -5,
           "points": -5,
-          "eliminated": false
+          "eliminated": true
         }
       ],
       "rank": 5
+    },
+    {
+      "name": "Francesca",
+      "teams": [
+        "Spain",
+        "Canada",
+        "Haiti"
+      ],
+      "total_points": 19,
+      "breakdown": [
+        {
+          "team": "Spain",
+          "played": 3,
+          "won": 2,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 5,
+          "goals_against": 0,
+          "goal_diff": 5,
+          "points": 12,
+          "eliminated": false
+        },
+        {
+          "team": "Canada",
+          "played": 4,
+          "won": 2,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 9,
+          "goals_against": 3,
+          "goal_diff": 6,
+          "points": 13,
+          "eliminated": false
+        },
+        {
+          "team": "Haiti",
+          "played": 3,
+          "won": 0,
+          "lost": 3,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 8,
+          "goal_diff": -6,
+          "points": -6,
+          "eliminated": true
+        }
+      ],
+      "rank": 6
     },
     {
       "name": "Will",
@@ -287,7 +335,7 @@
           "eliminated": false
         }
       ],
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "Ryan",
@@ -308,7 +356,7 @@
           "goals_against": 4,
           "goal_diff": -1,
           "points": 1,
-          "eliminated": false
+          "eliminated": true
         },
         {
           "team": "Switzerland",
@@ -332,54 +380,6 @@
           "goals_against": 2,
           "goal_diff": 0,
           "points": 4,
-          "eliminated": false
-        }
-      ],
-      "rank": 7
-    },
-    {
-      "name": "Francesca",
-      "teams": [
-        "Spain",
-        "Canada",
-        "Haiti"
-      ],
-      "total_points": 15,
-      "breakdown": [
-        {
-          "team": "Spain",
-          "played": 3,
-          "won": 2,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 5,
-          "goals_against": 0,
-          "goal_diff": 5,
-          "points": 12,
-          "eliminated": false
-        },
-        {
-          "team": "Canada",
-          "played": 3,
-          "won": 1,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 8,
-          "goals_against": 3,
-          "goal_diff": 5,
-          "points": 9,
-          "eliminated": false
-        },
-        {
-          "team": "Haiti",
-          "played": 3,
-          "won": 0,
-          "lost": 3,
-          "drawn": 0,
-          "goals_for": 2,
-          "goals_against": 8,
-          "goal_diff": -6,
-          "points": -6,
           "eliminated": false
         }
       ],
@@ -428,7 +428,7 @@
           "goals_against": 10,
           "goal_diff": -6,
           "points": -5,
-          "eliminated": false
+          "eliminated": true
         }
       ],
       "rank": 9
@@ -476,7 +476,7 @@
           "goals_against": 9,
           "goal_diff": -8,
           "points": -7,
-          "eliminated": false
+          "eliminated": true
         }
       ],
       "rank": 10
@@ -512,7 +512,7 @@
           "goals_against": 5,
           "goal_diff": -2,
           "points": 1,
-          "eliminated": false
+          "eliminated": true
         },
         {
           "team": "Saudi Arabia",
@@ -524,7 +524,7 @@
           "goals_against": 5,
           "goal_diff": -4,
           "points": -2,
-          "eliminated": false
+          "eliminated": true
         }
       ],
       "rank": 11
@@ -572,7 +572,7 @@
           "goals_against": 12,
           "goal_diff": -10,
           "points": -10,
-          "eliminated": false
+          "eliminated": true
         }
       ],
       "rank": 12
@@ -608,7 +608,7 @@
           "goals_against": 3,
           "goal_diff": -1,
           "points": 2,
-          "eliminated": false
+          "eliminated": true
         },
         {
           "team": "Qatar",
@@ -620,7 +620,7 @@
           "goals_against": 10,
           "goal_diff": -8,
           "points": -7,
-          "eliminated": false
+          "eliminated": true
         }
       ],
       "rank": 13
@@ -656,7 +656,7 @@
           "goals_against": 4,
           "goal_diff": -4,
           "points": -4,
-          "eliminated": false
+          "eliminated": true
         },
         {
           "team": "Czechia",
@@ -668,7 +668,7 @@
           "goals_against": 6,
           "goal_diff": -4,
           "points": -3,
-          "eliminated": false
+          "eliminated": true
         }
       ],
       "rank": 14
@@ -716,7 +716,7 @@
           "goals_against": 11,
           "goal_diff": -9,
           "points": -9,
-          "eliminated": false
+          "eliminated": true
         }
       ],
       "rank": 15
@@ -764,7 +764,7 @@
           "goals_against": 12,
           "goal_diff": -11,
           "points": -11,
-          "eliminated": false
+          "eliminated": true
         }
       ],
       "rank": 16
@@ -1493,39 +1493,19 @@
     },
     {
       "date": "2026-06-28",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
-      "home_score": null,
-      "away_score": null,
-      "status": "upcoming",
-      "stage": "Round of 32"
-    },
-    {
-      "date": "2026-06-28",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
-      "home_score": null,
-      "away_score": null,
-      "status": "upcoming",
-      "stage": "Round of 32"
-    },
-    {
-      "date": "2026-06-28",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
-      "home_score": null,
-      "away_score": null,
-      "status": "upcoming",
+      "kickoff_bst": "20:00",
+      "home": "South Africa",
+      "away": "Canada",
+      "home_score": 0,
+      "away_score": 1,
+      "status": "played",
       "stage": "Round of 32"
     },
     {
       "date": "2026-06-29",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "18:00",
+      "home": "Brazil",
+      "away": "Japan",
       "home_score": null,
       "away_score": null,
       "status": "live",
@@ -1533,9 +1513,9 @@
     },
     {
       "date": "2026-06-29",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "21:30",
+      "home": "Germany",
+      "away": "Paraguay",
       "home_score": null,
       "away_score": null,
       "status": "live",
@@ -1543,9 +1523,9 @@
     },
     {
       "date": "2026-06-29",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "02:00",
+      "home": "Netherlands",
+      "away": "Morocco",
       "home_score": null,
       "away_score": null,
       "status": "live",
@@ -1553,9 +1533,9 @@
     },
     {
       "date": "2026-06-30",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "18:00",
+      "home": "Ivory Coast",
+      "away": "Norway",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1563,9 +1543,9 @@
     },
     {
       "date": "2026-06-30",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "22:00",
+      "home": "France",
+      "away": "Sweden",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1573,9 +1553,9 @@
     },
     {
       "date": "2026-06-30",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "02:00",
+      "home": "Mexico",
+      "away": "Ecuador",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1583,9 +1563,9 @@
     },
     {
       "date": "2026-07-01",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "17:00",
+      "home": "England",
+      "away": "DR Congo",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1593,9 +1573,9 @@
     },
     {
       "date": "2026-07-01",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "21:00",
+      "home": "Belgium",
+      "away": "Senegal",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1603,9 +1583,9 @@
     },
     {
       "date": "2026-07-01",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "01:00",
+      "home": "USA",
+      "away": "Bosnia and Herzegovina",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1613,9 +1593,9 @@
     },
     {
       "date": "2026-07-02",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "20:00",
+      "home": "Spain",
+      "away": "Austria",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1623,9 +1603,19 @@
     },
     {
       "date": "2026-07-02",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "00:00",
+      "home": "Portugal",
+      "away": "Croatia",
+      "home_score": null,
+      "away_score": null,
+      "status": "upcoming",
+      "stage": "Round of 32"
+    },
+    {
+      "date": "2026-07-02",
+      "kickoff_bst": "04:00",
+      "home": "Switzerland",
+      "away": "Algeria",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1633,9 +1623,9 @@
     },
     {
       "date": "2026-07-03",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "19:00",
+      "home": "Australia",
+      "away": "Egypt",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1643,9 +1633,19 @@
     },
     {
       "date": "2026-07-03",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "23:00",
+      "home": "Argentina",
+      "away": "Cape Verde",
+      "home_score": null,
+      "away_score": null,
+      "status": "upcoming",
+      "stage": "Round of 32"
+    },
+    {
+      "date": "2026-07-03",
+      "kickoff_bst": "02:30",
+      "home": "Colombia",
+      "away": "Ghana",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1653,9 +1653,9 @@
     },
     {
       "date": "2026-07-04",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "18:00",
+      "home": "Canada",
+      "away": "Round of 32 3 Winner",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1663,9 +1663,9 @@
     },
     {
       "date": "2026-07-04",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "22:00",
+      "home": "Round of 32 2 Winner",
+      "away": "Round of 32 5 Winner",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1673,9 +1673,9 @@
     },
     {
       "date": "2026-07-05",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "21:00",
+      "home": "Round of 32 4 Winner",
+      "away": "Round of 32 6 Winner",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1683,9 +1683,9 @@
     },
     {
       "date": "2026-07-05",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "01:00",
+      "home": "Round of 32 7 Winner",
+      "away": "Round of 32 8 Winner",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1693,9 +1693,9 @@
     },
     {
       "date": "2026-07-06",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "20:00",
+      "home": "Round of 32 11 Winner",
+      "away": "Round of 32 12 Winner",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1703,9 +1703,9 @@
     },
     {
       "date": "2026-07-06",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "01:00",
+      "home": "Round of 32 9 Winner",
+      "away": "Round of 32 10 Winner",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1713,9 +1713,9 @@
     },
     {
       "date": "2026-07-07",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "17:00",
+      "home": "Round of 32 14 Winner",
+      "away": "Round of 32 16 Winner",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1723,9 +1723,9 @@
     },
     {
       "date": "2026-07-07",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "21:00",
+      "home": "Round of 32 13 Winner",
+      "away": "Round of 32 15 Winner",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1733,29 +1733,19 @@
     },
     {
       "date": "2026-07-09",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "21:00",
+      "home": "Round of 16 1 Winner",
+      "away": "Round of 16 2 Winner",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
       "stage": "Quarter-finals"
     },
     {
-      "date": "2026-07-09",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
-      "home_score": null,
-      "away_score": null,
-      "status": "upcoming",
-      "stage": "Quarter-finals"
-    },
-    {
-      "date": "2026-07-11",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "date": "2026-07-10",
+      "kickoff_bst": "20:00",
+      "home": "Round of 16 5 Winner",
+      "away": "Round of 16 6 Winner",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1763,9 +1753,19 @@
     },
     {
       "date": "2026-07-11",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "22:00",
+      "home": "Round of 16 3 Winner",
+      "away": "Round of 16 4 Winner",
+      "home_score": null,
+      "away_score": null,
+      "status": "upcoming",
+      "stage": "Quarter-finals"
+    },
+    {
+      "date": "2026-07-11",
+      "kickoff_bst": "02:00",
+      "home": "Round of 16 7 Winner",
+      "away": "Round of 16 8 Winner",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1773,9 +1773,9 @@
     },
     {
       "date": "2026-07-14",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "20:00",
+      "home": "Quarterfinal 1 Winner",
+      "away": "Quarterfinal 2 Winner",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1783,9 +1783,9 @@
     },
     {
       "date": "2026-07-15",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "20:00",
+      "home": "Quarterfinal 3 Winner",
+      "away": "Quarterfinal 4 Winner",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1793,9 +1793,9 @@
     },
     {
       "date": "2026-07-18",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "22:00",
+      "home": "Semifinal 1 Loser",
+      "away": "Semifinal 2 Loser",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1803,9 +1803,9 @@
     },
     {
       "date": "2026-07-19",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
+      "kickoff_bst": "20:00",
+      "home": "Semifinal 1 Winner",
+      "away": "Semifinal 2 Winner",
       "home_score": null,
       "away_score": null,
       "status": "upcoming",
@@ -1830,7 +1830,8 @@
       "2026-06-24",
       "2026-06-25",
       "2026-06-26",
-      "2026-06-27"
+      "2026-06-27",
+      "2026-06-28"
     ],
     "series": [
       {
@@ -1852,6 +1853,7 @@
           19,
           18,
           19,
+          24,
           24
         ]
       },
@@ -1874,7 +1876,8 @@
           21,
           26,
           23,
-          23
+          23,
+          22
         ]
       },
       {
@@ -1895,6 +1898,7 @@
           9,
           20,
           20,
+          21,
           21,
           21
         ]
@@ -1918,6 +1922,7 @@
           17,
           18,
           18,
+          19,
           19
         ]
       },
@@ -1940,6 +1945,30 @@
           11,
           16,
           16,
+          19,
+          19
+        ]
+      },
+      {
+        "name": "Francesca",
+        "data": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          10,
+          7,
+          7,
+          14,
+          14,
+          14,
+          11,
+          11,
+          15,
+          15,
           19
         ]
       },
@@ -1962,6 +1991,7 @@
           14,
           15,
           16,
+          17,
           17
         ]
       },
@@ -1984,29 +2014,8 @@
           18,
           18,
           17,
+          16,
           16
-        ]
-      },
-      {
-        "name": "Francesca",
-        "data": [
-          0,
-          1,
-          0,
-          0,
-          1,
-          1,
-          1,
-          10,
-          7,
-          7,
-          14,
-          14,
-          14,
-          11,
-          11,
-          15,
-          15
         ]
       },
       {
@@ -2028,6 +2037,7 @@
           15,
           15,
           11,
+          12,
           12
         ]
       },
@@ -2049,6 +2059,7 @@
           7,
           7,
           6,
+          12,
           12,
           12
         ]
@@ -2072,6 +2083,7 @@
           4,
           8,
           9,
+          9,
           9
         ]
       },
@@ -2094,6 +2106,7 @@
           1,
           0,
           0,
+          5,
           5
         ]
       },
@@ -2115,6 +2128,7 @@
           0,
           -3,
           -3,
+          4,
           4,
           4
         ]
@@ -2138,6 +2152,7 @@
           6,
           5,
           5,
+          3,
           3
         ]
       },
@@ -2160,6 +2175,7 @@
           -4,
           -4,
           -4,
+          -1,
           -1
         ]
       },
@@ -2181,6 +2197,7 @@
           -9,
           -9,
           -5,
+          -2,
           -2,
           -2
         ]
