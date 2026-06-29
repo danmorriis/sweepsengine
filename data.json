@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-29T16:02:18Z",
+  "last_updated": "2026-06-29T20:10:09Z",
   "players": [
     {
       "name": "Maria",
@@ -146,54 +146,6 @@
       "rank": 3
     },
     {
-      "name": "Anna",
-      "teams": [
-        "Portugal",
-        "Japan",
-        "Scotland"
-      ],
-      "total_points": 19,
-      "breakdown": [
-        {
-          "team": "Portugal",
-          "played": 3,
-          "won": 1,
-          "lost": 0,
-          "drawn": 2,
-          "goals_for": 6,
-          "goals_against": 1,
-          "goal_diff": 5,
-          "points": 10,
-          "eliminated": false
-        },
-        {
-          "team": "Japan",
-          "played": 3,
-          "won": 1,
-          "lost": 0,
-          "drawn": 2,
-          "goals_for": 7,
-          "goals_against": 3,
-          "goal_diff": 4,
-          "points": 9,
-          "eliminated": false
-        },
-        {
-          "team": "Scotland",
-          "played": 3,
-          "won": 1,
-          "lost": 2,
-          "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 4,
-          "goal_diff": -3,
-          "points": 0,
-          "eliminated": true
-        }
-      ],
-      "rank": 4
-    },
-    {
       "name": "Chris",
       "teams": [
         "Argentina",
@@ -239,7 +191,7 @@
           "eliminated": true
         }
       ],
-      "rank": 5
+      "rank": 4
     },
     {
       "name": "Francesca",
@@ -284,6 +236,54 @@
           "goals_against": 8,
           "goal_diff": -6,
           "points": -6,
+          "eliminated": true
+        }
+      ],
+      "rank": 5
+    },
+    {
+      "name": "Anna",
+      "teams": [
+        "Portugal",
+        "Japan",
+        "Scotland"
+      ],
+      "total_points": 18,
+      "breakdown": [
+        {
+          "team": "Portugal",
+          "played": 3,
+          "won": 1,
+          "lost": 0,
+          "drawn": 2,
+          "goals_for": 6,
+          "goals_against": 1,
+          "goal_diff": 5,
+          "points": 10,
+          "eliminated": false
+        },
+        {
+          "team": "Japan",
+          "played": 4,
+          "won": 1,
+          "lost": 1,
+          "drawn": 2,
+          "goals_for": 8,
+          "goals_against": 5,
+          "goal_diff": 3,
+          "points": 8,
+          "eliminated": true
+        },
+        {
+          "team": "Scotland",
+          "played": 3,
+          "won": 1,
+          "lost": 2,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 4,
+          "goal_diff": -3,
+          "points": 0,
           "eliminated": true
         }
       ],
@@ -338,6 +338,54 @@
       "rank": 7
     },
     {
+      "name": "Anne",
+      "teams": [
+        "Brazil",
+        "Austria",
+        "New Zealand"
+      ],
+      "total_points": 16,
+      "breakdown": [
+        {
+          "team": "Brazil",
+          "played": 4,
+          "won": 3,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 9,
+          "goals_against": 2,
+          "goal_diff": 7,
+          "points": 17,
+          "eliminated": false
+        },
+        {
+          "team": "Austria",
+          "played": 3,
+          "won": 1,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 6,
+          "goals_against": 6,
+          "goal_diff": 0,
+          "points": 4,
+          "eliminated": false
+        },
+        {
+          "team": "New Zealand",
+          "played": 3,
+          "won": 0,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 4,
+          "goals_against": 10,
+          "goal_diff": -6,
+          "points": -5,
+          "eliminated": true
+        }
+      ],
+      "rank": 8
+    },
+    {
       "name": "Ryan",
       "teams": [
         "Uruguay",
@@ -381,54 +429,6 @@
           "goal_diff": 0,
           "points": 4,
           "eliminated": false
-        }
-      ],
-      "rank": 8
-    },
-    {
-      "name": "Anne",
-      "teams": [
-        "Brazil",
-        "Austria",
-        "New Zealand"
-      ],
-      "total_points": 12,
-      "breakdown": [
-        {
-          "team": "Brazil",
-          "played": 3,
-          "won": 2,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 7,
-          "goals_against": 1,
-          "goal_diff": 6,
-          "points": 13,
-          "eliminated": false
-        },
-        {
-          "team": "Austria",
-          "played": 3,
-          "won": 1,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 6,
-          "goals_against": 6,
-          "goal_diff": 0,
-          "points": 4,
-          "eliminated": false
-        },
-        {
-          "team": "New Zealand",
-          "played": 3,
-          "won": 0,
-          "lost": 2,
-          "drawn": 1,
-          "goals_for": 4,
-          "goals_against": 10,
-          "goal_diff": -6,
-          "points": -5,
-          "eliminated": true
         }
       ],
       "rank": 9
@@ -1506,9 +1506,9 @@
       "kickoff_bst": "18:00",
       "home": "Brazil",
       "away": "Japan",
-      "home_score": null,
-      "away_score": null,
-      "status": "live",
+      "home_score": 2,
+      "away_score": 1,
+      "status": "played",
       "stage": "Round of 32"
     },
     {
@@ -1673,7 +1673,7 @@
     },
     {
       "date": "2026-07-05",
-      "kickoff_bst": "21:00",
+      "kickoff_bst": null,
       "home": "Round of 32 4 Winner",
       "away": "Round of 32 6 Winner",
       "home_score": null,
@@ -1831,7 +1831,8 @@
       "2026-06-25",
       "2026-06-26",
       "2026-06-27",
-      "2026-06-28"
+      "2026-06-28",
+      "2026-06-29"
     ],
     "series": [
       {
@@ -1853,6 +1854,7 @@
           19,
           18,
           19,
+          24,
           24,
           24
         ]
@@ -1877,6 +1879,7 @@
           26,
           23,
           23,
+          22,
           22
         ]
       },
@@ -1900,30 +1903,8 @@
           20,
           21,
           21,
+          21,
           21
-        ]
-      },
-      {
-        "name": "Anna",
-        "data": [
-          0,
-          0,
-          4,
-          5,
-          5,
-          5,
-          6,
-          6,
-          5,
-          12,
-          12,
-          12,
-          20,
-          17,
-          18,
-          18,
-          19,
-          19
         ]
       },
       {
@@ -1945,6 +1926,7 @@
           11,
           16,
           16,
+          19,
           19,
           19
         ]
@@ -1969,7 +1951,32 @@
           11,
           15,
           15,
+          19,
           19
+        ]
+      },
+      {
+        "name": "Anna",
+        "data": [
+          0,
+          0,
+          4,
+          5,
+          5,
+          5,
+          6,
+          6,
+          5,
+          12,
+          12,
+          12,
+          20,
+          17,
+          18,
+          18,
+          19,
+          19,
+          18
         ]
       },
       {
@@ -1992,30 +1999,8 @@
           15,
           16,
           17,
-          17
-        ]
-      },
-      {
-        "name": "Ryan",
-        "data": [
-          0,
-          0,
-          1,
-          1,
-          2,
-          2,
-          6,
-          12,
-          12,
-          12,
-          13,
-          13,
-          14,
-          18,
-          18,
           17,
-          16,
-          16
+          17
         ]
       },
       {
@@ -2038,7 +2023,32 @@
           15,
           11,
           12,
-          12
+          12,
+          16
+        ]
+      },
+      {
+        "name": "Ryan",
+        "data": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2,
+          6,
+          12,
+          12,
+          12,
+          13,
+          13,
+          14,
+          18,
+          18,
+          17,
+          16,
+          16,
+          16
         ]
       },
       {
@@ -2059,6 +2069,7 @@
           7,
           7,
           6,
+          12,
           12,
           12,
           12
@@ -2084,6 +2095,7 @@
           8,
           9,
           9,
+          9,
           9
         ]
       },
@@ -2107,6 +2119,7 @@
           0,
           0,
           5,
+          5,
           5
         ]
       },
@@ -2128,6 +2141,7 @@
           0,
           -3,
           -3,
+          4,
           4,
           4,
           4
@@ -2153,6 +2167,7 @@
           5,
           5,
           3,
+          3,
           3
         ]
       },
@@ -2176,6 +2191,7 @@
           -4,
           -4,
           -1,
+          -1,
           -1
         ]
       },
@@ -2197,6 +2213,7 @@
           -9,
           -9,
           -5,
+          -2,
           -2,
           -2,
           -2
