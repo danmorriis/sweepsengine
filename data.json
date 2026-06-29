@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-28T23:12:11Z",
+  "last_updated": "2026-06-29T04:50:11Z",
   "players": [
     {
       "name": "Maria",
@@ -1498,7 +1498,7 @@
       "away": "TBD",
       "home_score": null,
       "away_score": null,
-      "status": "live",
+      "status": "upcoming",
       "stage": "Round of 32"
     },
     {
@@ -1508,7 +1508,7 @@
       "away": "TBD",
       "home_score": null,
       "away_score": null,
-      "status": "live",
+      "status": "upcoming",
       "stage": "Round of 32"
     },
     {
@@ -1518,6 +1518,16 @@
       "away": "TBD",
       "home_score": null,
       "away_score": null,
+      "status": "upcoming",
+      "stage": "Round of 32"
+    },
+    {
+      "date": "2026-06-29",
+      "kickoff_bst": null,
+      "home": "TBD",
+      "away": "TBD",
+      "home_score": null,
+      "away_score": null,
       "status": "live",
       "stage": "Round of 32"
     },
@@ -1528,7 +1538,7 @@
       "away": "TBD",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 32"
     },
     {
@@ -1538,17 +1548,7 @@
       "away": "TBD",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
-      "stage": "Round of 32"
-    },
-    {
-      "date": "2026-06-29",
-      "kickoff_bst": null,
-      "home": "TBD",
-      "away": "TBD",
-      "home_score": null,
-      "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 32"
     },
     {
