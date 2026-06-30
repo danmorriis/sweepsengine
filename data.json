@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30T20:09:11Z",
+  "last_updated": "2026-06-30T23:20:27Z",
   "players": [
     {
       "name": "Emma",
@@ -98,6 +98,54 @@
       "rank": 2
     },
     {
+      "name": "Josh",
+      "teams": [
+        "France",
+        "Paraguay",
+        "Cura\u00e7ao"
+      ],
+      "total_points": 22,
+      "breakdown": [
+        {
+          "team": "France",
+          "played": 4,
+          "won": 4,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 13,
+          "goals_against": 2,
+          "goal_diff": 11,
+          "points": 23,
+          "eliminated": false
+        },
+        {
+          "team": "Paraguay",
+          "played": 4,
+          "won": 2,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 7,
+          "goals_against": 8,
+          "goal_diff": -1,
+          "points": 6,
+          "eliminated": false
+        },
+        {
+          "team": "Cura\u00e7ao",
+          "played": 3,
+          "won": 0,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 9,
+          "goal_diff": -8,
+          "points": -7,
+          "eliminated": true
+        }
+      ],
+      "rank": 3
+    },
+    {
       "name": "Chow",
       "teams": [
         "Mexico",
@@ -143,7 +191,7 @@
           "eliminated": false
         }
       ],
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "Francesca",
@@ -191,7 +239,7 @@
           "eliminated": true
         }
       ],
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Anna",
@@ -239,7 +287,7 @@
           "eliminated": true
         }
       ],
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "Chris",
@@ -287,7 +335,7 @@
           "eliminated": true
         }
       ],
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "Will",
@@ -335,7 +383,7 @@
           "eliminated": false
         }
       ],
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "Anne",
@@ -380,54 +428,6 @@
           "goals_against": 10,
           "goal_diff": -6,
           "points": -5,
-          "eliminated": true
-        }
-      ],
-      "rank": 8
-    },
-    {
-      "name": "Josh",
-      "teams": [
-        "France",
-        "Paraguay",
-        "Cura\u00e7ao"
-      ],
-      "total_points": 16,
-      "breakdown": [
-        {
-          "team": "France",
-          "played": 3,
-          "won": 3,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 10,
-          "goals_against": 2,
-          "goal_diff": 8,
-          "points": 17,
-          "eliminated": false
-        },
-        {
-          "team": "Paraguay",
-          "played": 4,
-          "won": 2,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 7,
-          "goals_against": 8,
-          "goal_diff": -1,
-          "points": 6,
-          "eliminated": false
-        },
-        {
-          "team": "Cura\u00e7ao",
-          "played": 3,
-          "won": 0,
-          "lost": 2,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 9,
-          "goal_diff": -8,
-          "points": -7,
           "eliminated": true
         }
       ],
@@ -530,54 +530,6 @@
       "rank": 11
     },
     {
-      "name": "Yassi",
-      "teams": [
-        "England",
-        "Sweden",
-        "Tunisia"
-      ],
-      "total_points": 5,
-      "breakdown": [
-        {
-          "team": "England",
-          "played": 3,
-          "won": 2,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 6,
-          "goals_against": 2,
-          "goal_diff": 4,
-          "points": 11,
-          "eliminated": false
-        },
-        {
-          "team": "Sweden",
-          "played": 3,
-          "won": 1,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 7,
-          "goals_against": 7,
-          "goal_diff": 0,
-          "points": 4,
-          "eliminated": false
-        },
-        {
-          "team": "Tunisia",
-          "played": 3,
-          "won": 0,
-          "lost": 3,
-          "drawn": 0,
-          "goals_for": 2,
-          "goals_against": 12,
-          "goal_diff": -10,
-          "points": -10,
-          "eliminated": true
-        }
-      ],
-      "rank": 12
-    },
-    {
       "name": "Rowan",
       "teams": [
         "Belgium",
@@ -623,7 +575,7 @@
           "eliminated": true
         }
       ],
-      "rank": 13
+      "rank": 12
     },
     {
       "name": "Dom",
@@ -668,6 +620,54 @@
           "goals_against": 6,
           "goal_diff": -4,
           "points": -3,
+          "eliminated": true
+        }
+      ],
+      "rank": 13
+    },
+    {
+      "name": "Yassi",
+      "teams": [
+        "England",
+        "Sweden",
+        "Tunisia"
+      ],
+      "total_points": 2,
+      "breakdown": [
+        {
+          "team": "England",
+          "played": 3,
+          "won": 2,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 6,
+          "goals_against": 2,
+          "goal_diff": 4,
+          "points": 11,
+          "eliminated": false
+        },
+        {
+          "team": "Sweden",
+          "played": 4,
+          "won": 1,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 7,
+          "goals_against": 10,
+          "goal_diff": -3,
+          "points": 1,
+          "eliminated": true
+        },
+        {
+          "team": "Tunisia",
+          "played": 3,
+          "won": 0,
+          "lost": 3,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 12,
+          "goal_diff": -10,
+          "points": -10,
           "eliminated": true
         }
       ],
@@ -1809,12 +1809,12 @@
       "kickoff_bst": "22:00",
       "home": "France",
       "away": "Sweden",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 0,
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "live",
+      "status": "played",
       "stage": "Round of 32"
     },
     {
@@ -1964,7 +1964,7 @@
       "date": "2026-07-04",
       "kickoff_bst": "22:00",
       "home": "Paraguay",
-      "away": "Round of 32 5 Winner",
+      "away": "France",
       "home_score": null,
       "away_score": null,
       "home_pen": null,
@@ -2231,6 +2231,31 @@
         ]
       },
       {
+        "name": "Josh",
+        "data": [
+          0,
+          -3,
+          -3,
+          -9,
+          -9,
+          -4,
+          -4,
+          -4,
+          0,
+          1,
+          1,
+          7,
+          7,
+          7,
+          6,
+          12,
+          12,
+          12,
+          16,
+          22
+        ]
+      },
+      {
         "name": "Chow",
         "data": [
           5,
@@ -2381,31 +2406,6 @@
         ]
       },
       {
-        "name": "Josh",
-        "data": [
-          0,
-          -3,
-          -3,
-          -9,
-          -9,
-          -4,
-          -4,
-          -4,
-          0,
-          1,
-          1,
-          7,
-          7,
-          7,
-          6,
-          12,
-          12,
-          12,
-          16,
-          16
-        ]
-      },
-      {
         "name": "Ryan",
         "data": [
           0,
@@ -2456,31 +2456,6 @@
         ]
       },
       {
-        "name": "Yassi",
-        "data": [
-          0,
-          0,
-          0,
-          3,
-          3,
-          3,
-          8,
-          8,
-          8,
-          0,
-          0,
-          0,
-          1,
-          1,
-          0,
-          0,
-          5,
-          5,
-          5,
-          5
-        ]
-      },
-      {
         "name": "Rowan",
         "data": [
           4,
@@ -2528,6 +2503,31 @@
           3,
           3,
           3
+        ]
+      },
+      {
+        "name": "Yassi",
+        "data": [
+          0,
+          0,
+          0,
+          3,
+          3,
+          3,
+          8,
+          8,
+          8,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          5,
+          5,
+          5,
+          2
         ]
       },
       {
