@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-29T23:06:14Z",
+  "last_updated": "2026-06-30T04:16:45Z",
   "players": [
     {
       "name": "Maria",
@@ -843,7 +843,7 @@
     },
     {
       "date": "2026-06-13",
-      "kickoff_bst": "05:00",
+      "kickoff_bst": null,
       "home": "Australia",
       "away": "Turkey",
       "home_score": 2,
@@ -853,7 +853,7 @@
     },
     {
       "date": "2026-06-14",
-      "kickoff_bst": "18:00",
+      "kickoff_bst": null,
       "home": "Germany",
       "away": "Cura\u00e7ao",
       "home_score": 7,
@@ -863,7 +863,7 @@
     },
     {
       "date": "2026-06-14",
-      "kickoff_bst": "21:00",
+      "kickoff_bst": null,
       "home": "Netherlands",
       "away": "Japan",
       "home_score": 2,
@@ -873,7 +873,7 @@
     },
     {
       "date": "2026-06-14",
-      "kickoff_bst": "00:00",
+      "kickoff_bst": null,
       "home": "Ivory Coast",
       "away": "Ecuador",
       "home_score": 1,
@@ -883,7 +883,7 @@
     },
     {
       "date": "2026-06-14",
-      "kickoff_bst": "03:00",
+      "kickoff_bst": null,
       "home": "Sweden",
       "away": "Tunisia",
       "home_score": 5,
@@ -1518,7 +1518,7 @@
       "away": "Paraguay",
       "home_score": null,
       "away_score": null,
-      "status": "live",
+      "status": "upcoming",
       "stage": "Round of 32"
     },
     {
@@ -1528,7 +1528,7 @@
       "away": "Morocco",
       "home_score": null,
       "away_score": null,
-      "status": "live",
+      "status": "upcoming",
       "stage": "Round of 32"
     },
     {
@@ -1538,7 +1538,7 @@
       "away": "Norway",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 32"
     },
     {
@@ -1548,7 +1548,7 @@
       "away": "Sweden",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 32"
     },
     {
@@ -1558,7 +1558,7 @@
       "away": "Ecuador",
       "home_score": null,
       "away_score": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 32"
     },
     {
@@ -1653,7 +1653,7 @@
     },
     {
       "date": "2026-07-04",
-      "kickoff_bst": "18:00",
+      "kickoff_bst": null,
       "home": "Canada",
       "away": "Round of 32 3 Winner",
       "home_score": null,
@@ -1663,7 +1663,7 @@
     },
     {
       "date": "2026-07-04",
-      "kickoff_bst": "22:00",
+      "kickoff_bst": null,
       "home": "Round of 32 2 Winner",
       "away": "Round of 32 5 Winner",
       "home_score": null,
