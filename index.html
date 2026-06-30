@@ -230,10 +230,8 @@
     }
     .match-team.home .match-team-inner { justify-content: flex-end; }
     .match-team.away .match-team-inner { justify-content: flex-start; }
-    .match-team-inner .team-name-label { width: 130px; flex-shrink: 0; }
     .match-team.home .team-name-label { text-align: right; }
     .match-team.away .team-name-label { text-align: left; }
-    .match-team-inner .pen-dots { flex: 1; }
     .match-score {
       text-align: center;
       min-width: 70px;
@@ -243,24 +241,11 @@
       font-weight: 800;
       letter-spacing: 2px;
     }
-    .pen-dots {
-      display: flex;
-      gap: 2px;
-      align-items: center;
+    .pen-score {
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-top: 2px;
     }
-    .pen-dots.home-pens { justify-content: flex-start; direction: rtl; }
-    .pen-dots.away-pens { justify-content: flex-start; }
-    .pen-dot {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 14px; height: 14px;
-      border-radius: 50%;
-      font-size: 0.5rem;
-      font-weight: 700;
-    }
-    .pen-scored { background: #00c853; color: #fff; }
-    .pen-missed { background: #ef5350; color: #fff; }
     .score-upcoming {
       font-size: 0.8rem;
       color: var(--muted);
@@ -954,7 +939,8 @@ function matchCard(m) {
     const cls = totalH > totalA ? "home-win" : totalH < totalA ? "away-win" : "draw";
     cardClass += " " + cls;
     const scoreColor = totalH === totalA ? "score-draw" : "";
-    scoreHtml = `<div class="score-played ${scoreColor}">${hs} – ${as_}</div>`;
+    const penLine = hasPens ? `<div class="pen-score">(${hPen} – ${aPen} pens)</div>` : "";
+    scoreHtml = `<div class="score-played ${scoreColor}">${hs} – ${as_}</div>${penLine}`;
     const [hp, ap] = matchPts(totalH, totalA);
     const pCls = p => p > 0 ? "match-pts pos" : p < 0 ? "match-pts neg" : "match-pts zero";
     const pFmt = p => p > 0 ? `+${p}` : `${p}`;
@@ -965,26 +951,16 @@ function matchCard(m) {
     scoreHtml = `<div class="score-upcoming">vs</div>${time}`;
   }
 
-  let homePenHtml = "", awayPenHtml = "";
-  if (m.shootout) {
-    const kickDots = kicks => kicks.map(k =>
-      k ? `<span class="pen-dot pen-scored">✓</span>`
-        : `<span class="pen-dot pen-missed">✕</span>`
-    ).join("");
-    homePenHtml = `<div class="pen-dots home-pens">${kickDots(m.shootout.home_kicks)}</div>`;
-    awayPenHtml = `<div class="pen-dots away-pens">${kickDots(m.shootout.away_kicks)}</div>`;
-  }
-
   return `
     <div class="${cardClass}">
       ${homePtsHtml}
       <div class="match-team home">
-        <div class="match-team-inner">${homePenHtml}<span class="team-name-label">${teamDisplay(m.home)}</span></div>
+        <div class="match-team-inner"><span class="team-name-label">${teamDisplay(m.home)}</span></div>
         ${homeOwner ? `<div class="owner-tag">${homeOwner}</div>` : ""}
       </div>
       <div class="match-score">${scoreHtml}</div>
       <div class="match-team away">
-        <div class="match-team-inner"><span class="team-name-label">${teamDisplay(m.away)}</span>${awayPenHtml}</div>
+        <div class="match-team-inner"><span class="team-name-label">${teamDisplay(m.away)}</span></div>
         ${awayOwner ? `<div class="owner-tag">${awayOwner}</div>` : ""}
       </div>
       ${awayPtsHtml}
