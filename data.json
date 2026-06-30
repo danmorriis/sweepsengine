@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30T04:16:45Z",
+  "last_updated": "2026-06-30T09:55:33Z",
   "players": [
     {
       "name": "Maria",
@@ -843,7 +843,7 @@
     },
     {
       "date": "2026-06-13",
-      "kickoff_bst": null,
+      "kickoff_bst": "05:00",
       "home": "Australia",
       "away": "Turkey",
       "home_score": 2,
@@ -853,7 +853,7 @@
     },
     {
       "date": "2026-06-14",
-      "kickoff_bst": null,
+      "kickoff_bst": "18:00",
       "home": "Germany",
       "away": "Cura\u00e7ao",
       "home_score": 7,
@@ -863,7 +863,7 @@
     },
     {
       "date": "2026-06-14",
-      "kickoff_bst": null,
+      "kickoff_bst": "21:00",
       "home": "Netherlands",
       "away": "Japan",
       "home_score": 2,
@@ -873,7 +873,7 @@
     },
     {
       "date": "2026-06-14",
-      "kickoff_bst": null,
+      "kickoff_bst": "00:00",
       "home": "Ivory Coast",
       "away": "Ecuador",
       "home_score": 1,
@@ -883,7 +883,7 @@
     },
     {
       "date": "2026-06-14",
-      "kickoff_bst": null,
+      "kickoff_bst": "03:00",
       "home": "Sweden",
       "away": "Tunisia",
       "home_score": 5,
