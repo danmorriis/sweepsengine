@@ -223,6 +223,17 @@
     }
     .match-team.home { text-align: right; }
     .match-team.away { text-align: left; }
+    .match-team-inner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .match-team.home .match-team-inner { justify-content: flex-end; }
+    .match-team.away .match-team-inner { justify-content: flex-start; }
+    .match-team-inner .team-name-label { width: 130px; flex-shrink: 0; }
+    .match-team.home .team-name-label { text-align: right; }
+    .match-team.away .team-name-label { text-align: left; }
+    .match-team-inner .pen-dots { flex: 1; }
     .match-score {
       text-align: center;
       min-width: 70px;
@@ -232,6 +243,24 @@
       font-weight: 800;
       letter-spacing: 2px;
     }
+    .pen-dots {
+      display: flex;
+      gap: 2px;
+      align-items: center;
+    }
+    .pen-dots.home-pens { justify-content: flex-start; direction: rtl; }
+    .pen-dots.away-pens { justify-content: flex-start; }
+    .pen-dot {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      font-size: 0.5rem;
+      font-weight: 700;
+    }
+    .pen-scored { background: #00c853; color: #fff; }
+    .pen-missed { background: #ef5350; color: #fff; }
     .score-upcoming {
       font-size: 0.8rem;
       color: var(--muted);
@@ -761,6 +790,22 @@ function showTab(name) {
   document.getElementById("tab-" + name).classList.add("active");
   activeTab = name;
   if (name === "progress" && DATA) renderProgress(DATA);
+  if (name === "fixtures") scrollFixturesToToday();
+}
+
+function scrollFixturesToToday() {
+  const today = new Date().toISOString().slice(0, 10);
+  const groups = document.querySelectorAll("#tab-fixtures .date-group[data-date]");
+  if (!groups.length) return;
+  // Find today's group, or the closest future date, or fall back to the last group
+  let target = null;
+  for (const g of groups) {
+    if (g.dataset.date >= today) { target = g; break; }
+  }
+  if (!target) target = groups[groups.length - 1];
+  requestAnimationFrame(() => {
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 }
 
 // ── Fetch data ────────────────────────────────────────────────────────────────
@@ -880,7 +925,7 @@ function renderFixtures(data, filter) {
     const stagePill = matches[0].stage;
     const cards = matches.map(m => matchCard(m)).join("");
     return `
-      <div class="date-group">
+      <div class="date-group" data-date="${key}">
         <div class="date-label">${label}<span class="stage-pill">${stagePill}</span></div>
         ${cards}
       </div>`;
@@ -903,11 +948,14 @@ function matchCard(m) {
   let homePtsHtml = `<div class="match-pts"></div>`, awayPtsHtml = `<div class="match-pts"></div>`;
   if (m.status === "played") {
     const hs = m.home_score, as_ = m.away_score;
-    const cls = hs > as_ ? "home-win" : hs < as_ ? "away-win" : "draw";
+    const hPen = m.home_pen, aPen = m.away_pen;
+    const hasPens = hPen != null;
+    const totalH = hs + (hPen || 0), totalA = as_ + (aPen || 0);
+    const cls = totalH > totalA ? "home-win" : totalH < totalA ? "away-win" : "draw";
     cardClass += " " + cls;
-    const scoreColor = hs === as_ ? "score-draw" : "";
+    const scoreColor = totalH === totalA ? "score-draw" : "";
     scoreHtml = `<div class="score-played ${scoreColor}">${hs} – ${as_}</div>`;
-    const [hp, ap] = matchPts(hs, as_);
+    const [hp, ap] = matchPts(totalH, totalA);
     const pCls = p => p > 0 ? "match-pts pos" : p < 0 ? "match-pts neg" : "match-pts zero";
     const pFmt = p => p > 0 ? `+${p}` : `${p}`;
     homePtsHtml = `<div class="${pCls(hp)}">${pFmt(hp)}</div>`;
@@ -917,16 +965,26 @@ function matchCard(m) {
     scoreHtml = `<div class="score-upcoming">vs</div>${time}`;
   }
 
+  let homePenHtml = "", awayPenHtml = "";
+  if (m.shootout) {
+    const kickDots = kicks => kicks.map(k =>
+      k ? `<span class="pen-dot pen-scored">✓</span>`
+        : `<span class="pen-dot pen-missed">✕</span>`
+    ).join("");
+    homePenHtml = `<div class="pen-dots home-pens">${kickDots(m.shootout.home_kicks)}</div>`;
+    awayPenHtml = `<div class="pen-dots away-pens">${kickDots(m.shootout.away_kicks)}</div>`;
+  }
+
   return `
     <div class="${cardClass}">
       ${homePtsHtml}
       <div class="match-team home">
-        <div>${teamDisplay(m.home)}</div>
+        <div class="match-team-inner">${homePenHtml}<span class="team-name-label">${teamDisplay(m.home)}</span></div>
         ${homeOwner ? `<div class="owner-tag">${homeOwner}</div>` : ""}
       </div>
       <div class="match-score">${scoreHtml}</div>
       <div class="match-team away">
-        <div>${teamDisplay(m.away)}</div>
+        <div class="match-team-inner"><span class="team-name-label">${teamDisplay(m.away)}</span>${awayPenHtml}</div>
         ${awayOwner ? `<div class="owner-tag">${awayOwner}</div>` : ""}
       </div>
       ${awayPtsHtml}
@@ -1377,12 +1435,18 @@ function openPlayer(name) {
       let circle;
       if (koFix) {
         const isHome = koFix.home === t.team;
-        const gf = isHome ? koFix.home_score : koFix.away_score;
-        const ga = isHome ? koFix.away_score : koFix.home_score;
+        const regGf = isHome ? koFix.home_score : koFix.away_score;
+        const regGa = isHome ? koFix.away_score : koFix.home_score;
+        const hPen = koFix.home_pen, aPen = koFix.away_pen;
+        const hasPens = hPen != null;
+        const penGf = isHome ? (hPen||0) : (aPen||0);
+        const penGa = isHome ? (aPen||0) : (hPen||0);
+        const gf = regGf + penGf, ga = regGa + penGa;
         const opp = isHome ? koFix.away : koFix.home;
-        if (gf > ga)       circle = `<span class="bc-circle bc-win"  title="W ${gf}-${ga} vs ${opp}">✓</span>`;
-        else if (gf < ga) { circle = `<span class="bc-circle bc-loss" title="L ${gf}-${ga} vs ${opp}">✕</span>`; eliminatedAtStage = s.key; }
-        else               circle = `<span class="bc-circle bc-draw" title="D ${gf}-${ga} vs ${opp}">–</span>`;
+        const penSuffix = hasPens ? ` (${penGf}-${penGa} pens)` : '';
+        if (gf > ga)       circle = `<span class="bc-circle bc-win"  title="W ${regGf}-${regGa}${penSuffix} vs ${opp}">✓</span>`;
+        else if (gf < ga) { circle = `<span class="bc-circle bc-loss" title="L ${regGf}-${regGa}${penSuffix} vs ${opp}">✕</span>`; eliminatedAtStage = s.key; }
+        else               circle = `<span class="bc-circle bc-draw" title="D ${regGf}-${regGa} vs ${opp}">–</span>`;
       } else if (eliminatedAtStage || (isEliminated && !koFix)) {
         // Team was already knocked out — nullify remaining circles
         if (!eliminatedAtStage) eliminatedAtStage = s.key;

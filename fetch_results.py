@@ -51,7 +51,8 @@ def fetch_matches_for_date(d: date) -> list[dict]:
     for event in data.get("events", []):
         comp = event["competitions"][0]
         status = comp["status"]["type"]["name"]  # e.g. "STATUS_FINAL", "STATUS_SCHEDULED"
-        finished = status in ("STATUS_FINAL", "STATUS_FULL_TIME")
+        finished = status in ("STATUS_FINAL", "STATUS_FULL_TIME",
+                              "STATUS_FINAL_PEN", "STATUS_FINAL_AET")
 
         home_comp = next((t for t in comp["competitors"] if t["homeAway"] == "home"), None)
         away_comp = next((t for t in comp["competitors"] if t["homeAway"] == "away"), None)
@@ -70,12 +71,26 @@ def fetch_matches_for_date(d: date) -> list[dict]:
             except (KeyError, ValueError, TypeError):
                 continue
 
+        # Penalty shootout scores (only present for STATUS_FINAL_PEN)
+        home_pen = home_comp.get("shootoutScore")
+        away_pen = away_comp.get("shootoutScore")
+        if home_pen is not None:
+            home_pen = int(home_pen)
+        if away_pen is not None:
+            away_pen = int(away_pen)
+
         results.append({
             "home":       home_name,
             "away":       away_name,
             "home_score": home_score,
             "away_score": away_score,
             "finished":   finished,
+            "home_winner": home_comp.get("winner", None),
+            "away_winner": away_comp.get("winner", None),
+            "home_pen":   home_pen,
+            "away_pen":   away_pen,
+            "event_id":   event.get("id"),
+            "home_team_id": home_comp["team"].get("id"),
         })
 
     return results
@@ -97,9 +112,11 @@ def main():
             break
         home = ws.cell(row, 3).value  # col C
         away = ws.cell(row, 6).value  # col F
-        if home and away:
+        # Treat placeholder names (e.g. "Round of 32 3 Winner") as empty/fillable
+        is_placeholder = lambda v: not v or (isinstance(v, str) and "Winner" in v)
+        if home and away and not is_placeholder(home) and not is_placeholder(away):
             fixture_index[(home, away)] = row
-        elif not home and not away and raw_date:
+        elif raw_date and (is_placeholder(home) or is_placeholder(away)):
             d = raw_date.date() if isinstance(raw_date, datetime) else raw_date
             empty_rows_by_date.setdefault(d, []).append(row)
 
@@ -145,13 +162,27 @@ def main():
             # Only write scores for completed matches
             if not m["finished"]:
                 continue
+            # Always write event ID if available
+            if m.get("event_id") and not ws.cell(row, 12).value:
+                ws.cell(row, 12).value = m["event_id"]
+                ws.cell(row, 13).value = m["home_team_id"]
+                filled += 1  # ensure save happens
+
             existing_d = ws.cell(row, 4).value
             existing_e = ws.cell(row, 5).value
-            if existing_d == m["home_score"] and existing_e == m["away_score"]:
+            existing_hp = ws.cell(row, 8).value
+            existing_ap = ws.cell(row, 9).value
+            scores_match = (existing_d == m["home_score"] and existing_e == m["away_score"])
+            pens_match = (existing_hp == m["home_pen"] and existing_ap == m["away_pen"])
+            if scores_match and pens_match:
                 continue  # already up to date
             ws.cell(row, 4).value = m["home_score"]
             ws.cell(row, 5).value = m["away_score"]
-            print(f"    Updated row {row}: {m['home']} {m['home_score']}-{m['away_score']} {m['away']}")
+            if m["home_pen"] is not None:
+                ws.cell(row, 8).value = m["home_pen"]
+                ws.cell(row, 9).value = m["away_pen"]
+            print(f"    Updated row {row}: {m['home']} {m['home_score']}-{m['away_score']} {m['away']}" +
+                  (f" (pens {m['home_pen']}-{m['away_pen']})" if m["home_pen"] is not None else ""))
             updated += 1
 
         fetch_date += timedelta(days=1)

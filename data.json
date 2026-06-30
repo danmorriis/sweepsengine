@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30T09:55:33Z",
+  "last_updated": "2026-06-30T10:14:57Z",
   "players": [
     {
       "name": "Maria",
@@ -8,19 +8,19 @@
         "Egypt",
         "DR Congo"
       ],
-      "total_points": 24,
+      "total_points": 23,
       "breakdown": [
         {
           "team": "Germany",
-          "played": 3,
+          "played": 4,
           "won": 2,
-          "lost": 1,
+          "lost": 2,
           "drawn": 0,
-          "goals_for": 10,
-          "goals_against": 4,
-          "goal_diff": 6,
-          "points": 12,
-          "eliminated": false
+          "goals_for": 14,
+          "goals_against": 9,
+          "goal_diff": 5,
+          "points": 11,
+          "eliminated": true
         },
         {
           "team": "Egypt",
@@ -48,54 +48,6 @@
         }
       ],
       "rank": 1
-    },
-    {
-      "name": "Emma",
-      "teams": [
-        "Netherlands",
-        "Norway",
-        "South Africa"
-      ],
-      "total_points": 22,
-      "breakdown": [
-        {
-          "team": "Netherlands",
-          "played": 3,
-          "won": 2,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 10,
-          "goals_against": 4,
-          "goal_diff": 6,
-          "points": 13,
-          "eliminated": false
-        },
-        {
-          "team": "Norway",
-          "played": 3,
-          "won": 2,
-          "lost": 1,
-          "drawn": 0,
-          "goals_for": 8,
-          "goals_against": 7,
-          "goal_diff": 1,
-          "points": 7,
-          "eliminated": false
-        },
-        {
-          "team": "South Africa",
-          "played": 4,
-          "won": 1,
-          "lost": 2,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 4,
-          "goal_diff": -2,
-          "points": 2,
-          "eliminated": true
-        }
-      ],
-      "rank": 2
     },
     {
       "name": "Chow",
@@ -141,6 +93,54 @@
           "goal_diff": -1,
           "points": 3,
           "eliminated": false
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "name": "Emma",
+      "teams": [
+        "Netherlands",
+        "Norway",
+        "South Africa"
+      ],
+      "total_points": 21,
+      "breakdown": [
+        {
+          "team": "Netherlands",
+          "played": 4,
+          "won": 2,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 13,
+          "goals_against": 8,
+          "goal_diff": 5,
+          "points": 12,
+          "eliminated": true
+        },
+        {
+          "team": "Norway",
+          "played": 3,
+          "won": 2,
+          "lost": 1,
+          "drawn": 0,
+          "goals_for": 8,
+          "goals_against": 7,
+          "goal_diff": 1,
+          "points": 7,
+          "eliminated": false
+        },
+        {
+          "team": "South Africa",
+          "played": 4,
+          "won": 1,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 4,
+          "goal_diff": -2,
+          "points": 2,
+          "eliminated": true
         }
       ],
       "rank": 3
@@ -386,6 +386,54 @@
       "rank": 8
     },
     {
+      "name": "Josh",
+      "teams": [
+        "France",
+        "Paraguay",
+        "Cura\u00e7ao"
+      ],
+      "total_points": 16,
+      "breakdown": [
+        {
+          "team": "France",
+          "played": 3,
+          "won": 3,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 10,
+          "goals_against": 2,
+          "goal_diff": 8,
+          "points": 17,
+          "eliminated": false
+        },
+        {
+          "team": "Paraguay",
+          "played": 4,
+          "won": 2,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 7,
+          "goals_against": 8,
+          "goal_diff": -1,
+          "points": 6,
+          "eliminated": false
+        },
+        {
+          "team": "Cura\u00e7ao",
+          "played": 3,
+          "won": 0,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 9,
+          "goal_diff": -8,
+          "points": -7,
+          "eliminated": true
+        }
+      ],
+      "rank": 9
+    },
+    {
       "name": "Ryan",
       "teams": [
         "Uruguay",
@@ -431,54 +479,6 @@
           "eliminated": false
         }
       ],
-      "rank": 9
-    },
-    {
-      "name": "Josh",
-      "teams": [
-        "France",
-        "Paraguay",
-        "Cura\u00e7ao"
-      ],
-      "total_points": 12,
-      "breakdown": [
-        {
-          "team": "France",
-          "played": 3,
-          "won": 3,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 10,
-          "goals_against": 2,
-          "goal_diff": 8,
-          "points": 17,
-          "eliminated": false
-        },
-        {
-          "team": "Paraguay",
-          "played": 3,
-          "won": 1,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 4,
-          "goal_diff": -2,
-          "points": 2,
-          "eliminated": false
-        },
-        {
-          "team": "Cura\u00e7ao",
-          "played": 3,
-          "won": 0,
-          "lost": 2,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 9,
-          "goal_diff": -8,
-          "points": -7,
-          "eliminated": true
-        }
-      ],
       "rank": 10
     },
     {
@@ -488,18 +488,18 @@
         "Turkey",
         "Saudi Arabia"
       ],
-      "total_points": 9,
+      "total_points": 13,
       "breakdown": [
         {
           "team": "Morocco",
-          "played": 3,
-          "won": 2,
+          "played": 4,
+          "won": 3,
           "lost": 0,
           "drawn": 1,
-          "goals_for": 6,
-          "goals_against": 3,
-          "goal_diff": 3,
-          "points": 10,
+          "goals_for": 10,
+          "goals_against": 6,
+          "goal_diff": 4,
+          "points": 14,
           "eliminated": false
         },
         {
@@ -778,6 +778,9 @@
       "away": "South Africa",
       "home_score": 2,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -788,6 +791,9 @@
       "away": "Czechia",
       "home_score": 2,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -798,6 +804,9 @@
       "away": "Bosnia and Herzegovina",
       "home_score": 1,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -808,6 +817,9 @@
       "away": "Paraguay",
       "home_score": 4,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -818,6 +830,9 @@
       "away": "Switzerland",
       "home_score": 1,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -828,6 +843,9 @@
       "away": "Morocco",
       "home_score": 1,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -838,6 +856,9 @@
       "away": "Scotland",
       "home_score": 0,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -848,6 +869,9 @@
       "away": "Turkey",
       "home_score": 2,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -858,6 +882,9 @@
       "away": "Cura\u00e7ao",
       "home_score": 7,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -868,6 +895,9 @@
       "away": "Japan",
       "home_score": 2,
       "away_score": 2,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -878,6 +908,9 @@
       "away": "Ecuador",
       "home_score": 1,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -888,6 +921,9 @@
       "away": "Tunisia",
       "home_score": 5,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -898,6 +934,9 @@
       "away": "Cape Verde",
       "home_score": 0,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -908,6 +947,9 @@
       "away": "Egypt",
       "home_score": 1,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -918,6 +960,9 @@
       "away": "Uruguay",
       "home_score": 1,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -928,6 +973,9 @@
       "away": "New Zealand",
       "home_score": 2,
       "away_score": 2,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -938,6 +986,9 @@
       "away": "Senegal",
       "home_score": 3,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -948,6 +999,9 @@
       "away": "Norway",
       "home_score": 1,
       "away_score": 4,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -958,6 +1012,9 @@
       "away": "Algeria",
       "home_score": 3,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -968,6 +1025,9 @@
       "away": "Jordan",
       "home_score": 3,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -978,6 +1038,9 @@
       "away": "DR Congo",
       "home_score": 1,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -988,6 +1051,9 @@
       "away": "Croatia",
       "home_score": 4,
       "away_score": 2,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -998,6 +1064,9 @@
       "away": "Panama",
       "home_score": 1,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1008,6 +1077,9 @@
       "away": "Colombia",
       "home_score": 1,
       "away_score": 3,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1018,6 +1090,9 @@
       "away": "South Africa",
       "home_score": 1,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1028,6 +1103,9 @@
       "away": "Bosnia and Herzegovina",
       "home_score": 4,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1038,6 +1116,9 @@
       "away": "Qatar",
       "home_score": 6,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1048,6 +1129,9 @@
       "away": "South Korea",
       "home_score": 1,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1058,6 +1142,9 @@
       "away": "Australia",
       "home_score": 2,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1068,6 +1155,9 @@
       "away": "Morocco",
       "home_score": 0,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1078,6 +1168,9 @@
       "away": "Haiti",
       "home_score": 3,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1088,6 +1181,9 @@
       "away": "Paraguay",
       "home_score": 0,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1098,6 +1194,9 @@
       "away": "Sweden",
       "home_score": 5,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1108,6 +1207,9 @@
       "away": "Ivory Coast",
       "home_score": 2,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1118,6 +1220,9 @@
       "away": "Cura\u00e7ao",
       "home_score": 0,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1128,6 +1233,9 @@
       "away": "Japan",
       "home_score": 0,
       "away_score": 4,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1138,6 +1246,9 @@
       "away": "Saudi Arabia",
       "home_score": 4,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1148,6 +1259,9 @@
       "away": "Iran",
       "home_score": 0,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1158,6 +1272,9 @@
       "away": "Cape Verde",
       "home_score": 2,
       "away_score": 2,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1168,6 +1285,9 @@
       "away": "Egypt",
       "home_score": 1,
       "away_score": 3,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1178,6 +1298,9 @@
       "away": "Austria",
       "home_score": 2,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1188,6 +1311,9 @@
       "away": "Iraq",
       "home_score": 3,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1198,6 +1324,9 @@
       "away": "Senegal",
       "home_score": 3,
       "away_score": 2,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1208,6 +1337,9 @@
       "away": "Algeria",
       "home_score": 1,
       "away_score": 2,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1218,6 +1350,9 @@
       "away": "Uzbekistan",
       "home_score": 5,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1228,6 +1363,9 @@
       "away": "Ghana",
       "home_score": 0,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1238,6 +1376,9 @@
       "away": "Croatia",
       "home_score": 0,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1248,6 +1389,9 @@
       "away": "DR Congo",
       "home_score": 1,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1258,6 +1402,9 @@
       "away": "Canada",
       "home_score": 2,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1268,6 +1415,9 @@
       "away": "Qatar",
       "home_score": 3,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1278,6 +1428,9 @@
       "away": "Brazil",
       "home_score": 0,
       "away_score": 3,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1288,6 +1441,9 @@
       "away": "Haiti",
       "home_score": 4,
       "away_score": 2,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1298,6 +1454,9 @@
       "away": "Mexico",
       "home_score": 0,
       "away_score": 3,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1308,6 +1467,9 @@
       "away": "South Korea",
       "home_score": 1,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1318,6 +1480,9 @@
       "away": "Germany",
       "home_score": 2,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1328,6 +1493,9 @@
       "away": "Ivory Coast",
       "home_score": 0,
       "away_score": 2,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1338,6 +1506,9 @@
       "away": "Sweden",
       "home_score": 1,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1348,6 +1519,9 @@
       "away": "Netherlands",
       "home_score": 1,
       "away_score": 3,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1358,6 +1532,9 @@
       "away": "USA",
       "home_score": 3,
       "away_score": 2,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1368,6 +1545,9 @@
       "away": "Australia",
       "home_score": 0,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1378,6 +1558,9 @@
       "away": "France",
       "home_score": 1,
       "away_score": 4,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1388,6 +1571,9 @@
       "away": "Iraq",
       "home_score": 5,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1398,6 +1584,9 @@
       "away": "Saudi Arabia",
       "home_score": 0,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1408,6 +1597,9 @@
       "away": "Spain",
       "home_score": 0,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1418,6 +1610,9 @@
       "away": "Iran",
       "home_score": 1,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1428,6 +1623,9 @@
       "away": "Belgium",
       "home_score": 1,
       "away_score": 5,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1438,6 +1636,9 @@
       "away": "England",
       "home_score": 0,
       "away_score": 2,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1448,6 +1649,9 @@
       "away": "Ghana",
       "home_score": 2,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1458,6 +1662,9 @@
       "away": "Portugal",
       "home_score": 0,
       "away_score": 0,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1468,6 +1675,9 @@
       "away": "Uzbekistan",
       "home_score": 3,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1478,6 +1688,9 @@
       "away": "Austria",
       "home_score": 3,
       "away_score": 3,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1488,6 +1701,9 @@
       "away": "Argentina",
       "home_score": 1,
       "away_score": 3,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Group Stage"
     },
@@ -1498,6 +1714,9 @@
       "away": "Canada",
       "home_score": 0,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Round of 32"
     },
@@ -1508,6 +1727,9 @@
       "away": "Japan",
       "home_score": 2,
       "away_score": 1,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "played",
       "stage": "Round of 32"
     },
@@ -1516,9 +1738,29 @@
       "kickoff_bst": "21:30",
       "home": "Germany",
       "away": "Paraguay",
-      "home_score": null,
-      "away_score": null,
-      "status": "upcoming",
+      "home_score": 1,
+      "away_score": 1,
+      "home_pen": 3,
+      "away_pen": 4,
+      "shootout": {
+        "home_kicks": [
+          false,
+          true,
+          true,
+          false,
+          true,
+          false
+        ],
+        "away_kicks": [
+          true,
+          true,
+          true,
+          false,
+          false,
+          true
+        ]
+      },
+      "status": "played",
       "stage": "Round of 32"
     },
     {
@@ -1526,9 +1768,27 @@
       "kickoff_bst": "02:00",
       "home": "Netherlands",
       "away": "Morocco",
-      "home_score": null,
-      "away_score": null,
-      "status": "upcoming",
+      "home_score": 1,
+      "away_score": 1,
+      "home_pen": 2,
+      "away_pen": 3,
+      "shootout": {
+        "home_kicks": [
+          true,
+          false,
+          true,
+          false,
+          false
+        ],
+        "away_kicks": [
+          false,
+          true,
+          true,
+          false,
+          true
+        ]
+      },
+      "status": "played",
       "stage": "Round of 32"
     },
     {
@@ -1538,6 +1798,9 @@
       "away": "Norway",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "live",
       "stage": "Round of 32"
     },
@@ -1548,6 +1811,9 @@
       "away": "Sweden",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "live",
       "stage": "Round of 32"
     },
@@ -1558,6 +1824,9 @@
       "away": "Ecuador",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "live",
       "stage": "Round of 32"
     },
@@ -1568,6 +1837,9 @@
       "away": "DR Congo",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 32"
     },
@@ -1578,6 +1850,9 @@
       "away": "Senegal",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 32"
     },
@@ -1588,6 +1863,9 @@
       "away": "Bosnia and Herzegovina",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 32"
     },
@@ -1598,6 +1876,9 @@
       "away": "Austria",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 32"
     },
@@ -1608,6 +1889,9 @@
       "away": "Croatia",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 32"
     },
@@ -1618,6 +1902,9 @@
       "away": "Algeria",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 32"
     },
@@ -1628,6 +1915,9 @@
       "away": "Egypt",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 32"
     },
@@ -1638,6 +1928,9 @@
       "away": "Cape Verde",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 32"
     },
@@ -1648,36 +1941,48 @@
       "away": "Ghana",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 32"
     },
     {
       "date": "2026-07-04",
-      "kickoff_bst": null,
+      "kickoff_bst": "18:00",
       "home": "Canada",
-      "away": "Round of 32 3 Winner",
+      "away": "Morocco",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 16"
     },
     {
       "date": "2026-07-04",
-      "kickoff_bst": null,
-      "home": "Round of 32 2 Winner",
+      "kickoff_bst": "22:00",
+      "home": "Paraguay",
       "away": "Round of 32 5 Winner",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 16"
     },
     {
       "date": "2026-07-05",
-      "kickoff_bst": null,
-      "home": "Round of 32 4 Winner",
+      "kickoff_bst": "21:00",
+      "home": "Brazil",
       "away": "Round of 32 6 Winner",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 16"
     },
@@ -1688,6 +1993,9 @@
       "away": "Round of 32 8 Winner",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 16"
     },
@@ -1698,6 +2006,9 @@
       "away": "Round of 32 12 Winner",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 16"
     },
@@ -1708,6 +2019,9 @@
       "away": "Round of 32 10 Winner",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 16"
     },
@@ -1718,6 +2032,9 @@
       "away": "Round of 32 16 Winner",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 16"
     },
@@ -1728,6 +2045,9 @@
       "away": "Round of 32 15 Winner",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Round of 16"
     },
@@ -1738,6 +2058,9 @@
       "away": "Round of 16 2 Winner",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Quarter-finals"
     },
@@ -1748,6 +2071,9 @@
       "away": "Round of 16 6 Winner",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Quarter-finals"
     },
@@ -1758,6 +2084,9 @@
       "away": "Round of 16 4 Winner",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Quarter-finals"
     },
@@ -1768,6 +2097,9 @@
       "away": "Round of 16 8 Winner",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Quarter-finals"
     },
@@ -1778,6 +2110,9 @@
       "away": "Quarterfinal 2 Winner",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Semi-finals"
     },
@@ -1788,6 +2123,9 @@
       "away": "Quarterfinal 4 Winner",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Semi-finals"
     },
@@ -1798,6 +2136,9 @@
       "away": "Semifinal 2 Loser",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Third Place"
     },
@@ -1808,6 +2149,9 @@
       "away": "Semifinal 2 Winner",
       "home_score": null,
       "away_score": null,
+      "home_pen": null,
+      "away_pen": null,
+      "shootout": null,
       "status": "upcoming",
       "stage": "Final"
     }
@@ -1856,31 +2200,7 @@
           19,
           24,
           24,
-          24
-        ]
-      },
-      {
-        "name": "Emma",
-        "data": [
-          -2,
-          -2,
-          -2,
-          -1,
-          -1,
-          5,
-          5,
-          6,
-          6,
-          13,
-          13,
-          17,
-          17,
-          21,
-          26,
-          23,
-          23,
-          22,
-          22
+          23
         ]
       },
       {
@@ -1904,6 +2224,30 @@
           21,
           21,
           21,
+          21
+        ]
+      },
+      {
+        "name": "Emma",
+        "data": [
+          -2,
+          -2,
+          -2,
+          -1,
+          -1,
+          5,
+          5,
+          6,
+          6,
+          13,
+          13,
+          17,
+          17,
+          21,
+          26,
+          23,
+          23,
+          22,
           21
         ]
       },
@@ -2028,6 +2372,30 @@
         ]
       },
       {
+        "name": "Josh",
+        "data": [
+          0,
+          -3,
+          -3,
+          -9,
+          -9,
+          -4,
+          -4,
+          -4,
+          0,
+          1,
+          1,
+          7,
+          7,
+          7,
+          6,
+          12,
+          12,
+          12,
+          16
+        ]
+      },
+      {
         "name": "Ryan",
         "data": [
           0,
@@ -2052,30 +2420,6 @@
         ]
       },
       {
-        "name": "Josh",
-        "data": [
-          0,
-          -3,
-          -3,
-          -9,
-          -9,
-          -4,
-          -4,
-          -4,
-          0,
-          1,
-          1,
-          7,
-          7,
-          7,
-          6,
-          12,
-          12,
-          12,
-          12
-        ]
-      },
-      {
         "name": "Connor",
         "data": [
           0,
@@ -2096,7 +2440,7 @@
           9,
           9,
           9,
-          9
+          13
         ]
       },
       {

@@ -58,6 +58,48 @@ def fetch_kickoff_times() -> dict[tuple[str, str], str]:
         fetch_date += timedelta(days=1)
     return times
 
+def fetch_shootout_plays(event_id: str, home_team_id: str) -> dict:
+    """
+    Fetches kick-by-kick penalty shootout data from ESPN play-by-play API.
+    Returns {"home_kicks": [True/False, ...], "away_kicks": [True/False, ...]}
+    where True = scored, False = missed/saved. Kicks are in order taken.
+    """
+    PLAYS_BASE = f"https://sports.core.api.espn.com/v2/sports/soccer/leagues/fifa.world/events/{event_id}/competitions/{event_id}/plays"
+    try:
+        # First get page count with a reasonable limit
+        with urllib.request.urlopen(f"{PLAYS_BASE}?limit=200", timeout=10) as r:
+            meta = json.load(r)
+        page_count = meta.get("pageCount", 1)
+        # Shootout plays are on the last page
+        with urllib.request.urlopen(f"{PLAYS_BASE}?limit=200&page={page_count}", timeout=10) as r:
+            data = json.load(r)
+    except Exception as e:
+        print(f"  Warning: could not fetch shootout plays for event {event_id} — {e}")
+        return None
+
+    home_kicks = []
+    away_kicks = []
+    for item in data.get("items", []):
+        if not item.get("shootout"):
+            continue
+        scored = item.get("scoringPlay", False)
+        # Determine which team took the kick from participants
+        team_ref = ""
+        for p in item.get("participants", []):
+            if p.get("type") in ("shooter", "scorer"):
+                team_ref = p.get("team", {}).get("$ref", "")
+                break
+        is_home = f"teams/{home_team_id}" in team_ref
+        if is_home:
+            home_kicks.append(scored)
+        else:
+            away_kicks.append(scored)
+
+    if not home_kicks and not away_kicks:
+        return None
+    return {"home_kicks": home_kicks, "away_kicks": away_kicks}
+
+
 XLSX_PATH = os.environ.get(
     "XLSX_PATH",
     os.path.join(os.path.dirname(__file__), "World Cup 2026 Sweeps.xlsx"),
@@ -128,11 +170,22 @@ def main():
         d = raw_date.date() if isinstance(raw_date, datetime) else raw_date
         home_score = ws_fr.cell(row, 4).value  # col D
         away_score = ws_fr.cell(row, 5).value  # col E
+        home_pen   = ws_fr.cell(row, 8).value  # col H: home penalty score
+        away_pen   = ws_fr.cell(row, 9).value  # col I: away penalty score
+        event_id     = ws_fr.cell(row, 12).value  # col L: ESPN event ID
+        home_team_id = ws_fr.cell(row, 13).value  # col M: ESPN home team ID
 
         played = (home_score is not None and away_score is not None)
         home_name = home or "TBD"
         away_name = away or "TBD"
         kickoff = kickoff_times.get((home_name, away_name))
+
+        # Fetch kick-by-kick shootout data for penalty matches
+        shootout = None
+        if home_pen is not None and event_id and home_team_id:
+            print(f"  Fetching shootout plays for {home_name} vs {away_name}...")
+            shootout = fetch_shootout_plays(str(event_id), str(home_team_id))
+
         fixtures.append({
             "date":        d.isoformat(),
             "kickoff_bst": kickoff,  # e.g. "20:00", or null if unknown
@@ -140,6 +193,9 @@ def main():
             "away":        away_name,
             "home_score":  int(home_score) if played else None,
             "away_score":  int(away_score) if played else None,
+            "home_pen":    int(home_pen) if home_pen is not None else None,
+            "away_pen":    int(away_pen) if away_pen is not None else None,
+            "shootout":    shootout,  # {"home_kicks": [T/F,...], "away_kicks": [T/F,...]}
             "status":      "played" if played else ("live" if d == date.today() else "upcoming"),
             "stage":       get_stage(d),
         })
@@ -153,9 +209,12 @@ def main():
         if fx["home_score"] is None:
             continue
         home, away = fx["home"], fx["away"]
-        hs, as_ = fx["home_score"], fx["away_score"]
+        # Include penalty goals in the total for points calculation
+        hs = fx["home_score"] + (fx["home_pen"] or 0)
+        as_ = fx["away_score"] + (fx["away_pen"] or 0)
         hp, ap = calc_points(hs, as_)
 
+        # Goals for/against include penalty goals
         for team, gf, ga, pts in [(home, hs, as_, hp), (away, as_, hs, ap)]:
             if team not in team_stats:
                 continue
@@ -175,8 +234,14 @@ def main():
     for fx in fixtures:
         if fx["home_score"] is None or fx["stage"] == "Group Stage":
             continue
-        hs, as_ = fx["home_score"], fx["away_score"]
-        loser = fx["away"] if hs > as_ else fx["home"] if as_ > hs else None
+        hs = fx["home_score"] + (fx["home_pen"] or 0)
+        as_ = fx["away_score"] + (fx["away_pen"] or 0)
+        if hs > as_:
+            loser = fx["away"]
+        elif as_ > hs:
+            loser = fx["home"]
+        else:
+            loser = None
         if loser and loser in team_stats:
             team_stats[loser]["eliminated"] = True
 
@@ -242,7 +307,8 @@ def main():
         if fx["home_score"] is None:
             continue
         d = fx["date"]
-        hs, as_ = fx["home_score"], fx["away_score"]
+        hs = fx["home_score"] + (fx["home_pen"] or 0)
+        as_ = fx["away_score"] + (fx["away_pen"] or 0)
         hp, ap = calc_points(hs, as_)
         for team, pts in [(fx["home"], hp), (fx["away"], ap)]:
             owner = team_to_player.get(team)
