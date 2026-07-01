@@ -1,6 +1,54 @@
 {
-  "last_updated": "2026-06-30T23:20:27Z",
+  "last_updated": "2026-07-01T04:45:18Z",
   "players": [
+    {
+      "name": "Chow",
+      "teams": [
+        "Mexico",
+        "Iran",
+        "Bosnia and Herzegovina"
+      ],
+      "total_points": 26,
+      "breakdown": [
+        {
+          "team": "Mexico",
+          "played": 4,
+          "won": 4,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 8,
+          "goals_against": 0,
+          "goal_diff": 8,
+          "points": 20,
+          "eliminated": false
+        },
+        {
+          "team": "Iran",
+          "played": 3,
+          "won": 0,
+          "lost": 0,
+          "drawn": 3,
+          "goals_for": 3,
+          "goals_against": 3,
+          "goal_diff": 0,
+          "points": 3,
+          "eliminated": true
+        },
+        {
+          "team": "Bosnia and Herzegovina",
+          "played": 3,
+          "won": 1,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 5,
+          "goals_against": 6,
+          "goal_diff": -1,
+          "points": 3,
+          "eliminated": false
+        }
+      ],
+      "rank": 1
+    },
     {
       "name": "Emma",
       "teams": [
@@ -47,7 +95,7 @@
           "eliminated": true
         }
       ],
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "Maria",
@@ -95,7 +143,7 @@
           "eliminated": false
         }
       ],
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "Josh",
@@ -141,54 +189,6 @@
           "goal_diff": -8,
           "points": -7,
           "eliminated": true
-        }
-      ],
-      "rank": 3
-    },
-    {
-      "name": "Chow",
-      "teams": [
-        "Mexico",
-        "Iran",
-        "Bosnia and Herzegovina"
-      ],
-      "total_points": 21,
-      "breakdown": [
-        {
-          "team": "Mexico",
-          "played": 3,
-          "won": 3,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 6,
-          "goals_against": 0,
-          "goal_diff": 6,
-          "points": 15,
-          "eliminated": false
-        },
-        {
-          "team": "Iran",
-          "played": 3,
-          "won": 0,
-          "lost": 0,
-          "drawn": 3,
-          "goals_for": 3,
-          "goals_against": 3,
-          "goal_diff": 0,
-          "points": 3,
-          "eliminated": true
-        },
-        {
-          "team": "Bosnia and Herzegovina",
-          "played": 3,
-          "won": 1,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 5,
-          "goals_against": 6,
-          "goal_diff": -1,
-          "points": 3,
-          "eliminated": false
         }
       ],
       "rank": 4
@@ -728,7 +728,7 @@
         "Ecuador",
         "Iraq"
       ],
-      "total_points": -2,
+      "total_points": -4,
       "breakdown": [
         {
           "team": "Senegal",
@@ -744,15 +744,15 @@
         },
         {
           "team": "Ecuador",
-          "played": 3,
+          "played": 4,
           "won": 1,
-          "lost": 1,
+          "lost": 2,
           "drawn": 1,
           "goals_for": 2,
-          "goals_against": 2,
-          "goal_diff": 0,
-          "points": 4,
-          "eliminated": false
+          "goals_against": 4,
+          "goal_diff": -2,
+          "points": 2,
+          "eliminated": true
         },
         {
           "team": "Iraq",
@@ -1819,15 +1819,15 @@
     },
     {
       "date": "2026-06-30",
-      "kickoff_bst": "02:00",
+      "kickoff_bst": "03:00",
       "home": "Mexico",
       "away": "Ecuador",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 0,
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "live",
+      "status": "played",
       "stage": "Round of 32"
     },
     {
@@ -1840,7 +1840,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 32"
     },
     {
@@ -1853,7 +1853,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 32"
     },
     {
@@ -1866,7 +1866,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 32"
     },
     {
@@ -1989,7 +1989,7 @@
     {
       "date": "2026-07-05",
       "kickoff_bst": "01:00",
-      "home": "Round of 32 7 Winner",
+      "home": "Mexico",
       "away": "Round of 32 8 Winner",
       "home_score": null,
       "away_score": null,
@@ -2181,6 +2181,31 @@
     ],
     "series": [
       {
+        "name": "Chow",
+        "data": [
+          5,
+          6,
+          6,
+          6,
+          7,
+          7,
+          7,
+          8,
+          8,
+          8,
+          9,
+          9,
+          9,
+          20,
+          20,
+          21,
+          21,
+          21,
+          21,
+          26
+        ]
+      },
+      {
         "name": "Emma",
         "data": [
           -2,
@@ -2253,31 +2278,6 @@
           12,
           16,
           22
-        ]
-      },
-      {
-        "name": "Chow",
-        "data": [
-          5,
-          6,
-          6,
-          6,
-          7,
-          7,
-          7,
-          8,
-          8,
-          8,
-          9,
-          9,
-          9,
-          20,
-          20,
-          21,
-          21,
-          21,
-          21,
-          21
         ]
       },
       {
@@ -2577,7 +2577,7 @@
           -2,
           -2,
           -2,
-          -2
+          -4
         ]
       }
     ]
