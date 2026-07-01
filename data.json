@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01T21:42:57Z",
+  "last_updated": "2026-07-01T23:22:50Z",
   "players": [
     {
       "name": "Chow",
@@ -530,6 +530,54 @@
       "rank": 11
     },
     {
+      "name": "Rowan",
+      "teams": [
+        "Belgium",
+        "South Korea",
+        "Qatar"
+      ],
+      "total_points": 8,
+      "breakdown": [
+        {
+          "team": "Belgium",
+          "played": 4,
+          "won": 2,
+          "lost": 0,
+          "drawn": 2,
+          "goals_for": 9,
+          "goals_against": 4,
+          "goal_diff": 5,
+          "points": 13,
+          "eliminated": false
+        },
+        {
+          "team": "South Korea",
+          "played": 3,
+          "won": 1,
+          "lost": 2,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 3,
+          "goal_diff": -1,
+          "points": 2,
+          "eliminated": true
+        },
+        {
+          "team": "Qatar",
+          "played": 3,
+          "won": 0,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 10,
+          "goal_diff": -8,
+          "points": -7,
+          "eliminated": true
+        }
+      ],
+      "rank": 12
+    },
+    {
       "name": "Yassi",
       "teams": [
         "England",
@@ -572,54 +620,6 @@
           "goals_against": 12,
           "goal_diff": -10,
           "points": -10,
-          "eliminated": true
-        }
-      ],
-      "rank": 12
-    },
-    {
-      "name": "Rowan",
-      "teams": [
-        "Belgium",
-        "South Korea",
-        "Qatar"
-      ],
-      "total_points": 4,
-      "breakdown": [
-        {
-          "team": "Belgium",
-          "played": 3,
-          "won": 1,
-          "lost": 0,
-          "drawn": 2,
-          "goals_for": 6,
-          "goals_against": 2,
-          "goal_diff": 4,
-          "points": 9,
-          "eliminated": false
-        },
-        {
-          "team": "South Korea",
-          "played": 3,
-          "won": 1,
-          "lost": 2,
-          "drawn": 0,
-          "goals_for": 2,
-          "goals_against": 3,
-          "goal_diff": -1,
-          "points": 2,
-          "eliminated": true
-        },
-        {
-          "team": "Qatar",
-          "played": 3,
-          "won": 0,
-          "lost": 2,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 10,
-          "goal_diff": -8,
-          "points": -7,
           "eliminated": true
         }
       ],
@@ -728,19 +728,19 @@
         "Ecuador",
         "Iraq"
       ],
-      "total_points": -4,
+      "total_points": -5,
       "breakdown": [
         {
           "team": "Senegal",
-          "played": 3,
+          "played": 4,
           "won": 1,
-          "lost": 2,
+          "lost": 3,
           "drawn": 0,
-          "goals_for": 8,
-          "goals_against": 6,
-          "goal_diff": 2,
-          "points": 5,
-          "eliminated": false
+          "goals_for": 10,
+          "goals_against": 9,
+          "goal_diff": 1,
+          "points": 4,
+          "eliminated": true
         },
         {
           "team": "Ecuador",
@@ -1848,12 +1848,12 @@
       "kickoff_bst": "21:00",
       "home": "Belgium",
       "away": "Senegal",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 2,
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "live",
+      "status": "played",
       "stage": "Round of 32"
     },
     {
@@ -2016,7 +2016,7 @@
       "date": "2026-07-06",
       "kickoff_bst": "01:00",
       "home": "Round of 32 9 Winner",
-      "away": "Round of 32 10 Winner",
+      "away": "Belgium",
       "home_score": null,
       "away_score": null,
       "home_pen": null,
@@ -2468,6 +2468,32 @@
         ]
       },
       {
+        "name": "Rowan",
+        "data": [
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          6,
+          -1,
+          -1,
+          -1,
+          0,
+          0,
+          0,
+          -3,
+          -3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          8
+        ]
+      },
+      {
         "name": "Yassi",
         "data": [
           0,
@@ -2491,32 +2517,6 @@
           5,
           2,
           6
-        ]
-      },
-      {
-        "name": "Rowan",
-        "data": [
-          4,
-          4,
-          5,
-          5,
-          6,
-          6,
-          6,
-          -1,
-          -1,
-          -1,
-          0,
-          0,
-          0,
-          -3,
-          -3,
-          4,
-          4,
-          4,
-          4,
-          4,
-          4
         ]
       },
       {
@@ -2594,7 +2594,7 @@
           -2,
           -2,
           -4,
-          -4
+          -5
         ]
       }
     ]
