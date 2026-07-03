@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03T03:58:41Z",
+  "last_updated": "2026-07-03T07:32:29Z",
   "players": [
     {
       "name": "Emma",
@@ -290,6 +290,54 @@
       "rank": 6
     },
     {
+      "name": "Ryan",
+      "teams": [
+        "Uruguay",
+        "Switzerland",
+        "Ghana"
+      ],
+      "total_points": 21,
+      "breakdown": [
+        {
+          "team": "Uruguay",
+          "played": 3,
+          "won": 0,
+          "lost": 1,
+          "drawn": 2,
+          "goals_for": 3,
+          "goals_against": 4,
+          "goal_diff": -1,
+          "points": 1,
+          "eliminated": true
+        },
+        {
+          "team": "Switzerland",
+          "played": 4,
+          "won": 3,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 9,
+          "goals_against": 3,
+          "goal_diff": 6,
+          "points": 16,
+          "eliminated": false
+        },
+        {
+          "team": "Ghana",
+          "played": 3,
+          "won": 1,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 2,
+          "goal_diff": 0,
+          "points": 4,
+          "eliminated": false
+        }
+      ],
+      "rank": 7
+    },
+    {
       "name": "Chris",
       "teams": [
         "Argentina",
@@ -335,7 +383,7 @@
           "eliminated": true
         }
       ],
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "Will",
@@ -380,54 +428,6 @@
           "goals_against": 2,
           "goal_diff": 0,
           "points": 3,
-          "eliminated": false
-        }
-      ],
-      "rank": 8
-    },
-    {
-      "name": "Ryan",
-      "teams": [
-        "Uruguay",
-        "Switzerland",
-        "Ghana"
-      ],
-      "total_points": 16,
-      "breakdown": [
-        {
-          "team": "Uruguay",
-          "played": 3,
-          "won": 0,
-          "lost": 1,
-          "drawn": 2,
-          "goals_for": 3,
-          "goals_against": 4,
-          "goal_diff": -1,
-          "points": 1,
-          "eliminated": true
-        },
-        {
-          "team": "Switzerland",
-          "played": 3,
-          "won": 2,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 7,
-          "goals_against": 3,
-          "goal_diff": 4,
-          "points": 11,
-          "eliminated": false
-        },
-        {
-          "team": "Ghana",
-          "played": 3,
-          "won": 1,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 2,
-          "goal_diff": 0,
-          "points": 4,
           "eliminated": false
         }
       ],
@@ -680,7 +680,7 @@
         "Algeria",
         "Uzbekistan"
       ],
-      "total_points": -2,
+      "total_points": -4,
       "breakdown": [
         {
           "team": "Croatia",
@@ -696,15 +696,15 @@
         },
         {
           "team": "Algeria",
-          "played": 3,
+          "played": 4,
           "won": 1,
-          "lost": 1,
+          "lost": 2,
           "drawn": 1,
           "goals_for": 5,
-          "goals_against": 7,
-          "goal_diff": -2,
-          "points": 2,
-          "eliminated": false
+          "goals_against": 9,
+          "goal_diff": -4,
+          "points": 0,
+          "eliminated": true
         },
         {
           "team": "Uzbekistan",
@@ -1900,12 +1900,12 @@
       "kickoff_bst": "04:00",
       "home": "Switzerland",
       "away": "Algeria",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 0,
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "played",
       "stage": "Round of 32"
     },
     {
@@ -2041,7 +2041,7 @@
     {
       "date": "2026-07-07",
       "kickoff_bst": "21:00",
-      "home": "Round of 32 13 Winner",
+      "home": "Switzerland",
       "away": "Round of 32 15 Winner",
       "home_score": null,
       "away_score": null,
@@ -2345,6 +2345,33 @@
         ]
       },
       {
+        "name": "Ryan",
+        "data": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2,
+          6,
+          12,
+          12,
+          12,
+          13,
+          13,
+          14,
+          18,
+          18,
+          17,
+          16,
+          16,
+          16,
+          16,
+          16,
+          21
+        ]
+      },
+      {
         "name": "Chris",
         "data": [
           0,
@@ -2396,33 +2423,6 @@
           17,
           17,
           17
-        ]
-      },
-      {
-        "name": "Ryan",
-        "data": [
-          0,
-          0,
-          1,
-          1,
-          2,
-          2,
-          6,
-          12,
-          12,
-          12,
-          13,
-          13,
-          14,
-          18,
-          18,
-          17,
-          16,
-          16,
-          16,
-          16,
-          16,
-          16
         ]
       },
       {
@@ -2584,7 +2584,7 @@
           -1,
           -1,
           -1,
-          -2
+          -4
         ]
       },
       {
