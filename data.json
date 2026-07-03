@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02T23:16:40Z",
+  "last_updated": "2026-07-03T03:58:41Z",
   "players": [
     {
       "name": "Emma",
@@ -146,6 +146,54 @@
       "rank": 3
     },
     {
+      "name": "Anna",
+      "teams": [
+        "Portugal",
+        "Japan",
+        "Scotland"
+      ],
+      "total_points": 22,
+      "breakdown": [
+        {
+          "team": "Portugal",
+          "played": 4,
+          "won": 2,
+          "lost": 0,
+          "drawn": 2,
+          "goals_for": 8,
+          "goals_against": 2,
+          "goal_diff": 6,
+          "points": 14,
+          "eliminated": false
+        },
+        {
+          "team": "Japan",
+          "played": 4,
+          "won": 1,
+          "lost": 1,
+          "drawn": 2,
+          "goals_for": 8,
+          "goals_against": 5,
+          "goal_diff": 3,
+          "points": 8,
+          "eliminated": true
+        },
+        {
+          "team": "Scotland",
+          "played": 3,
+          "won": 1,
+          "lost": 2,
+          "drawn": 0,
+          "goals_for": 1,
+          "goals_against": 4,
+          "goal_diff": -3,
+          "points": 0,
+          "eliminated": true
+        }
+      ],
+      "rank": 4
+    },
+    {
       "name": "Josh",
       "teams": [
         "France",
@@ -191,7 +239,7 @@
           "eliminated": true
         }
       ],
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Maria",
@@ -236,54 +284,6 @@
           "goals_against": 5,
           "goal_diff": 0,
           "points": 4,
-          "eliminated": true
-        }
-      ],
-      "rank": 5
-    },
-    {
-      "name": "Anna",
-      "teams": [
-        "Portugal",
-        "Japan",
-        "Scotland"
-      ],
-      "total_points": 18,
-      "breakdown": [
-        {
-          "team": "Portugal",
-          "played": 3,
-          "won": 1,
-          "lost": 0,
-          "drawn": 2,
-          "goals_for": 6,
-          "goals_against": 1,
-          "goal_diff": 5,
-          "points": 10,
-          "eliminated": false
-        },
-        {
-          "team": "Japan",
-          "played": 4,
-          "won": 1,
-          "lost": 1,
-          "drawn": 2,
-          "goals_for": 8,
-          "goals_against": 5,
-          "goal_diff": 3,
-          "points": 8,
-          "eliminated": true
-        },
-        {
-          "team": "Scotland",
-          "played": 3,
-          "won": 1,
-          "lost": 2,
-          "drawn": 0,
-          "goals_for": 1,
-          "goals_against": 4,
-          "goal_diff": -3,
-          "points": 0,
           "eliminated": true
         }
       ],
@@ -680,19 +680,19 @@
         "Algeria",
         "Uzbekistan"
       ],
-      "total_points": -1,
+      "total_points": -2,
       "breakdown": [
         {
           "team": "Croatia",
-          "played": 3,
+          "played": 4,
           "won": 2,
-          "lost": 1,
+          "lost": 2,
           "drawn": 0,
-          "goals_for": 5,
-          "goals_against": 5,
-          "goal_diff": 0,
-          "points": 6,
-          "eliminated": false
+          "goals_for": 6,
+          "goals_against": 7,
+          "goal_diff": -1,
+          "points": 5,
+          "eliminated": true
         },
         {
           "team": "Algeria",
@@ -1887,12 +1887,12 @@
       "kickoff_bst": "00:00",
       "home": "Portugal",
       "away": "Croatia",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 1,
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "live",
+      "status": "played",
       "stage": "Round of 32"
     },
     {
@@ -1905,7 +1905,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "live",
+      "status": "upcoming",
       "stage": "Round of 32"
     },
     {
@@ -1918,7 +1918,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 32"
     },
     {
@@ -1931,7 +1931,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 32"
     },
     {
@@ -1944,7 +1944,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 32"
     },
     {
@@ -2002,7 +2002,7 @@
     {
       "date": "2026-07-06",
       "kickoff_bst": "20:00",
-      "home": "Round of 32 11 Winner",
+      "home": "Portugal",
       "away": "Spain",
       "home_score": null,
       "away_score": null,
@@ -2264,6 +2264,33 @@
         ]
       },
       {
+        "name": "Anna",
+        "data": [
+          0,
+          0,
+          4,
+          5,
+          5,
+          5,
+          6,
+          6,
+          5,
+          12,
+          12,
+          12,
+          20,
+          17,
+          18,
+          18,
+          19,
+          19,
+          18,
+          18,
+          18,
+          22
+        ]
+      },
+      {
         "name": "Josh",
         "data": [
           0,
@@ -2315,33 +2342,6 @@
           23,
           22,
           22
-        ]
-      },
-      {
-        "name": "Anna",
-        "data": [
-          0,
-          0,
-          4,
-          5,
-          5,
-          5,
-          6,
-          6,
-          5,
-          12,
-          12,
-          12,
-          20,
-          17,
-          18,
-          18,
-          19,
-          19,
-          18,
-          18,
-          18,
-          18
         ]
       },
       {
@@ -2584,7 +2584,7 @@
           -1,
           -1,
           -1,
-          -1
+          -2
         ]
       },
       {
