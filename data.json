@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03T21:16:53Z",
+  "last_updated": "2026-07-03T23:13:19Z",
   "players": [
     {
       "name": "Maria",
@@ -1917,7 +1917,20 @@
       "away_score": 1,
       "home_pen": 2,
       "away_pen": 4,
-      "shootout": null,
+      "shootout": {
+        "home_kicks": [
+          false,
+          true,
+          true,
+          false
+        ],
+        "away_kicks": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
       "status": "played",
       "stage": "Round of 32"
     },
