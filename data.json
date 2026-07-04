@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-04T17:15:14Z",
+  "last_updated": "2026-07-04T19:25:48Z",
   "players": [
     {
       "name": "Maria",
@@ -98,54 +98,6 @@
       "rank": 2
     },
     {
-      "name": "Francesca",
-      "teams": [
-        "Spain",
-        "Canada",
-        "Haiti"
-      ],
-      "total_points": 25,
-      "breakdown": [
-        {
-          "team": "Spain",
-          "played": 4,
-          "won": 3,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 8,
-          "goals_against": 0,
-          "goal_diff": 8,
-          "points": 18,
-          "eliminated": false
-        },
-        {
-          "team": "Canada",
-          "played": 4,
-          "won": 2,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 9,
-          "goals_against": 3,
-          "goal_diff": 6,
-          "points": 13,
-          "eliminated": false
-        },
-        {
-          "team": "Haiti",
-          "played": 3,
-          "won": 0,
-          "lost": 3,
-          "drawn": 0,
-          "goals_for": 2,
-          "goals_against": 8,
-          "goal_diff": -6,
-          "points": -6,
-          "eliminated": true
-        }
-      ],
-      "rank": 3
-    },
-    {
       "name": "Chow",
       "teams": [
         "Mexico",
@@ -191,7 +143,7 @@
           "eliminated": true
         }
       ],
-      "rank": 4
+      "rank": 3
     },
     {
       "name": "Anna",
@@ -239,7 +191,7 @@
           "eliminated": true
         }
       ],
-      "rank": 5
+      "rank": 4
     },
     {
       "name": "Chris",
@@ -284,6 +236,54 @@
           "goals_against": 8,
           "goal_diff": -5,
           "points": -5,
+          "eliminated": true
+        }
+      ],
+      "rank": 5
+    },
+    {
+      "name": "Francesca",
+      "teams": [
+        "Spain",
+        "Canada",
+        "Haiti"
+      ],
+      "total_points": 22,
+      "breakdown": [
+        {
+          "team": "Spain",
+          "played": 4,
+          "won": 3,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 8,
+          "goals_against": 0,
+          "goal_diff": 8,
+          "points": 18,
+          "eliminated": false
+        },
+        {
+          "team": "Canada",
+          "played": 5,
+          "won": 2,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 9,
+          "goals_against": 6,
+          "goal_diff": 3,
+          "points": 10,
+          "eliminated": true
+        },
+        {
+          "team": "Haiti",
+          "played": 3,
+          "won": 0,
+          "lost": 3,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 8,
+          "goal_diff": -6,
+          "points": -6,
           "eliminated": true
         }
       ],
@@ -386,6 +386,54 @@
       "rank": 8
     },
     {
+      "name": "Connor",
+      "teams": [
+        "Morocco",
+        "Turkey",
+        "Saudi Arabia"
+      ],
+      "total_points": 19,
+      "breakdown": [
+        {
+          "team": "Morocco",
+          "played": 5,
+          "won": 4,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 13,
+          "goals_against": 6,
+          "goal_diff": 7,
+          "points": 20,
+          "eliminated": false
+        },
+        {
+          "team": "Turkey",
+          "played": 3,
+          "won": 1,
+          "lost": 2,
+          "drawn": 0,
+          "goals_for": 3,
+          "goals_against": 5,
+          "goal_diff": -2,
+          "points": 1,
+          "eliminated": true
+        },
+        {
+          "team": "Saudi Arabia",
+          "played": 3,
+          "won": 0,
+          "lost": 1,
+          "drawn": 2,
+          "goals_for": 1,
+          "goals_against": 5,
+          "goal_diff": -4,
+          "points": -2,
+          "eliminated": true
+        }
+      ],
+      "rank": 9
+    },
+    {
       "name": "Will",
       "teams": [
         "Colombia",
@@ -431,7 +479,7 @@
           "eliminated": true
         }
       ],
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "Anne",
@@ -476,54 +524,6 @@
           "goals_against": 10,
           "goal_diff": -6,
           "points": -5,
-          "eliminated": true
-        }
-      ],
-      "rank": 10
-    },
-    {
-      "name": "Connor",
-      "teams": [
-        "Morocco",
-        "Turkey",
-        "Saudi Arabia"
-      ],
-      "total_points": 13,
-      "breakdown": [
-        {
-          "team": "Morocco",
-          "played": 4,
-          "won": 3,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 10,
-          "goals_against": 6,
-          "goal_diff": 4,
-          "points": 14,
-          "eliminated": false
-        },
-        {
-          "team": "Turkey",
-          "played": 3,
-          "won": 1,
-          "lost": 2,
-          "drawn": 0,
-          "goals_for": 3,
-          "goals_against": 5,
-          "goal_diff": -2,
-          "points": 1,
-          "eliminated": true
-        },
-        {
-          "team": "Saudi Arabia",
-          "played": 3,
-          "won": 0,
-          "lost": 1,
-          "drawn": 2,
-          "goals_for": 1,
-          "goals_against": 5,
-          "goal_diff": -4,
-          "points": -2,
           "eliminated": true
         }
       ],
@@ -1965,12 +1965,12 @@
       "kickoff_bst": "18:00",
       "home": "Canada",
       "away": "Morocco",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 0,
+      "away_score": 3,
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "live",
+      "status": "played",
       "stage": "Round of 16"
     },
     {
@@ -2068,7 +2068,7 @@
       "date": "2026-07-09",
       "kickoff_bst": "21:00",
       "home": "Round of 16 1 Winner",
-      "away": "Round of 16 2 Winner",
+      "away": "Morocco",
       "home_score": null,
       "away_score": null,
       "home_pen": null,
@@ -2193,7 +2193,8 @@
       "2026-06-30",
       "2026-07-01",
       "2026-07-02",
-      "2026-07-03"
+      "2026-07-03",
+      "2026-07-04"
     ],
     "series": [
       {
@@ -2221,6 +2222,7 @@
           23,
           22,
           22,
+          27,
           27
         ]
       },
@@ -2249,33 +2251,6 @@
           25,
           25,
           25,
-          25
-        ]
-      },
-      {
-        "name": "Francesca",
-        "data": [
-          0,
-          1,
-          0,
-          0,
-          1,
-          1,
-          1,
-          10,
-          7,
-          7,
-          14,
-          14,
-          14,
-          11,
-          11,
-          15,
-          15,
-          19,
-          19,
-          19,
-          19,
           25,
           25
         ]
@@ -2303,6 +2278,7 @@
           21,
           21,
           26,
+          24,
           24,
           24,
           24
@@ -2333,6 +2309,7 @@
           18,
           18,
           22,
+          22,
           22
         ]
       },
@@ -2361,6 +2338,36 @@
           18,
           18,
           18,
+          22,
+          22
+        ]
+      },
+      {
+        "name": "Francesca",
+        "data": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          10,
+          7,
+          7,
+          14,
+          14,
+          14,
+          11,
+          11,
+          15,
+          15,
+          19,
+          19,
+          19,
+          19,
+          25,
+          25,
           22
         ]
       },
@@ -2386,6 +2393,7 @@
           12,
           12,
           16,
+          22,
           22,
           22,
           22,
@@ -2417,7 +2425,37 @@
           16,
           16,
           21,
+          20,
           20
+        ]
+      },
+      {
+        "name": "Connor",
+        "data": [
+          0,
+          0,
+          -1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          3,
+          3,
+          -1,
+          -1,
+          -1,
+          4,
+          8,
+          9,
+          9,
+          9,
+          13,
+          13,
+          13,
+          13,
+          13,
+          19
         ]
       },
       {
@@ -2445,6 +2483,7 @@
           17,
           17,
           17,
+          18,
           18
         ]
       },
@@ -2472,33 +2511,6 @@
           16,
           16,
           16,
-          13,
-          13
-        ]
-      },
-      {
-        "name": "Connor",
-        "data": [
-          0,
-          0,
-          -1,
-          -1,
-          0,
-          0,
-          0,
-          0,
-          3,
-          3,
-          -1,
-          -1,
-          -1,
-          4,
-          8,
-          9,
-          9,
-          9,
-          13,
-          13,
           13,
           13,
           13
@@ -2529,6 +2541,7 @@
           3,
           8,
           8,
+          8,
           8
         ]
       },
@@ -2555,6 +2568,7 @@
           4,
           4,
           4,
+          8,
           8,
           8,
           8
@@ -2585,6 +2599,7 @@
           2,
           6,
           6,
+          6,
           6
         ]
       },
@@ -2613,6 +2628,7 @@
           -1,
           -1,
           -4,
+          -4,
           -4
         ]
       },
@@ -2639,6 +2655,7 @@
           -2,
           -2,
           -4,
+          -5,
           -5,
           -5,
           -5
