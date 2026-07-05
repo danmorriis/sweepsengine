@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-04T23:04:57Z",
+  "last_updated": "2026-07-05T04:11:26Z",
   "players": [
     {
       "name": "Maria",
@@ -98,6 +98,54 @@
       "rank": 2
     },
     {
+      "name": "Josh",
+      "teams": [
+        "France",
+        "Paraguay",
+        "Cura\u00e7ao"
+      ],
+      "total_points": 25,
+      "breakdown": [
+        {
+          "team": "France",
+          "played": 5,
+          "won": 5,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 14,
+          "goals_against": 2,
+          "goal_diff": 12,
+          "points": 27,
+          "eliminated": false
+        },
+        {
+          "team": "Paraguay",
+          "played": 5,
+          "won": 2,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 7,
+          "goals_against": 9,
+          "goal_diff": -2,
+          "points": 5,
+          "eliminated": true
+        },
+        {
+          "team": "Cura\u00e7ao",
+          "played": 3,
+          "won": 0,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 9,
+          "goal_diff": -8,
+          "points": -7,
+          "eliminated": true
+        }
+      ],
+      "rank": 3
+    },
+    {
       "name": "Chow",
       "teams": [
         "Mexico",
@@ -143,7 +191,7 @@
           "eliminated": true
         }
       ],
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "Anna",
@@ -191,7 +239,7 @@
           "eliminated": true
         }
       ],
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Chris",
@@ -239,7 +287,7 @@
           "eliminated": true
         }
       ],
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "Francesca",
@@ -284,54 +332,6 @@
           "goals_against": 8,
           "goal_diff": -6,
           "points": -6,
-          "eliminated": true
-        }
-      ],
-      "rank": 6
-    },
-    {
-      "name": "Josh",
-      "teams": [
-        "France",
-        "Paraguay",
-        "Cura\u00e7ao"
-      ],
-      "total_points": 22,
-      "breakdown": [
-        {
-          "team": "France",
-          "played": 4,
-          "won": 4,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 13,
-          "goals_against": 2,
-          "goal_diff": 11,
-          "points": 23,
-          "eliminated": false
-        },
-        {
-          "team": "Paraguay",
-          "played": 4,
-          "won": 2,
-          "lost": 1,
-          "drawn": 1,
-          "goals_for": 7,
-          "goals_against": 8,
-          "goal_diff": -1,
-          "points": 6,
-          "eliminated": false
-        },
-        {
-          "team": "Cura\u00e7ao",
-          "played": 3,
-          "won": 0,
-          "lost": 2,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 9,
-          "goal_diff": -8,
-          "points": -7,
           "eliminated": true
         }
       ],
@@ -1978,12 +1978,12 @@
       "kickoff_bst": "22:00",
       "home": "Paraguay",
       "away": "France",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 0,
+      "away_score": 1,
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "live",
+      "status": "played",
       "stage": "Round of 16"
     },
     {
@@ -1996,7 +1996,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 16"
     },
     {
@@ -2009,7 +2009,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 16"
     },
     {
@@ -2067,7 +2067,7 @@
     {
       "date": "2026-07-09",
       "kickoff_bst": "21:00",
-      "home": "Round of 16 1 Winner",
+      "home": "France",
       "away": "Morocco",
       "home_score": null,
       "away_score": null,
@@ -2256,6 +2256,35 @@
         ]
       },
       {
+        "name": "Josh",
+        "data": [
+          0,
+          -3,
+          -3,
+          -9,
+          -9,
+          -4,
+          -4,
+          -4,
+          0,
+          1,
+          1,
+          7,
+          7,
+          7,
+          6,
+          12,
+          12,
+          12,
+          16,
+          22,
+          22,
+          22,
+          22,
+          25
+        ]
+      },
+      {
         "name": "Chow",
         "data": [
           5,
@@ -2368,35 +2397,6 @@
           19,
           25,
           25,
-          22
-        ]
-      },
-      {
-        "name": "Josh",
-        "data": [
-          0,
-          -3,
-          -3,
-          -9,
-          -9,
-          -4,
-          -4,
-          -4,
-          0,
-          1,
-          1,
-          7,
-          7,
-          7,
-          6,
-          12,
-          12,
-          12,
-          16,
-          22,
-          22,
-          22,
-          22,
           22
         ]
       },
