@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-05T23:09:40Z",
+  "last_updated": "2026-07-06T04:18:28Z",
   "players": [
     {
       "name": "Emma",
@@ -152,19 +152,19 @@
         "Iran",
         "Bosnia and Herzegovina"
       ],
-      "total_points": 24,
+      "total_points": 23,
       "breakdown": [
         {
           "team": "Mexico",
-          "played": 4,
+          "played": 5,
           "won": 4,
-          "lost": 0,
+          "lost": 1,
           "drawn": 0,
-          "goals_for": 8,
-          "goals_against": 0,
-          "goal_diff": 8,
-          "points": 20,
-          "eliminated": false
+          "goals_for": 10,
+          "goals_against": 3,
+          "goal_diff": 7,
+          "points": 19,
+          "eliminated": true
         },
         {
           "team": "Iran",
@@ -530,6 +530,54 @@
       "rank": 11
     },
     {
+      "name": "Yassi",
+      "teams": [
+        "England",
+        "Sweden",
+        "Tunisia"
+      ],
+      "total_points": 10,
+      "breakdown": [
+        {
+          "team": "England",
+          "played": 5,
+          "won": 4,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 11,
+          "goals_against": 5,
+          "goal_diff": 6,
+          "points": 19,
+          "eliminated": false
+        },
+        {
+          "team": "Sweden",
+          "played": 4,
+          "won": 1,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 7,
+          "goals_against": 10,
+          "goal_diff": -3,
+          "points": 1,
+          "eliminated": true
+        },
+        {
+          "team": "Tunisia",
+          "played": 3,
+          "won": 0,
+          "lost": 3,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 12,
+          "goal_diff": -10,
+          "points": -10,
+          "eliminated": true
+        }
+      ],
+      "rank": 12
+    },
+    {
       "name": "Dom",
       "teams": [
         "USA",
@@ -575,7 +623,7 @@
           "eliminated": true
         }
       ],
-      "rank": 12
+      "rank": 13
     },
     {
       "name": "Rowan",
@@ -620,54 +668,6 @@
           "goals_against": 10,
           "goal_diff": -8,
           "points": -7,
-          "eliminated": true
-        }
-      ],
-      "rank": 13
-    },
-    {
-      "name": "Yassi",
-      "teams": [
-        "England",
-        "Sweden",
-        "Tunisia"
-      ],
-      "total_points": 6,
-      "breakdown": [
-        {
-          "team": "England",
-          "played": 4,
-          "won": 3,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 8,
-          "goals_against": 3,
-          "goal_diff": 5,
-          "points": 15,
-          "eliminated": false
-        },
-        {
-          "team": "Sweden",
-          "played": 4,
-          "won": 1,
-          "lost": 2,
-          "drawn": 1,
-          "goals_for": 7,
-          "goals_against": 10,
-          "goal_diff": -3,
-          "points": 1,
-          "eliminated": true
-        },
-        {
-          "team": "Tunisia",
-          "played": 3,
-          "won": 0,
-          "lost": 3,
-          "drawn": 0,
-          "goals_for": 2,
-          "goals_against": 12,
-          "goal_diff": -10,
-          "points": -10,
           "eliminated": true
         }
       ],
@@ -2001,15 +2001,15 @@
     },
     {
       "date": "2026-07-05",
-      "kickoff_bst": "01:00",
+      "kickoff_bst": "02:00",
       "home": "Mexico",
       "away": "England",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 3,
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "live",
+      "status": "played",
       "stage": "Round of 16"
     },
     {
@@ -2022,7 +2022,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 16"
     },
     {
@@ -2035,7 +2035,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 16"
     },
     {
@@ -2094,7 +2094,7 @@
       "date": "2026-07-11",
       "kickoff_bst": "22:00",
       "home": "Norway",
-      "away": "Round of 16 4 Winner",
+      "away": "England",
       "home_score": null,
       "away_score": null,
       "home_pen": null,
@@ -2315,7 +2315,7 @@
           24,
           24,
           24,
-          24
+          23
         ]
       },
       {
@@ -2529,6 +2529,36 @@
         ]
       },
       {
+        "name": "Yassi",
+        "data": [
+          0,
+          0,
+          0,
+          3,
+          3,
+          3,
+          8,
+          8,
+          8,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          5,
+          5,
+          5,
+          2,
+          6,
+          6,
+          6,
+          6,
+          10
+        ]
+      },
+      {
         "name": "Dom",
         "data": [
           -1,
@@ -2586,36 +2616,6 @@
           8,
           8,
           8
-        ]
-      },
-      {
-        "name": "Yassi",
-        "data": [
-          0,
-          0,
-          0,
-          3,
-          3,
-          3,
-          8,
-          8,
-          8,
-          0,
-          0,
-          0,
-          1,
-          1,
-          0,
-          0,
-          5,
-          5,
-          5,
-          2,
-          6,
-          6,
-          6,
-          6,
-          6
         ]
       },
       {
