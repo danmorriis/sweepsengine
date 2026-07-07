@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06T23:15:27Z",
+  "last_updated": "2026-07-07T04:08:05Z",
   "players": [
     {
       "name": "Emma",
@@ -482,6 +482,54 @@
       "rank": 10
     },
     {
+      "name": "Rowan",
+      "teams": [
+        "Belgium",
+        "South Korea",
+        "Qatar"
+      ],
+      "total_points": 14,
+      "breakdown": [
+        {
+          "team": "Belgium",
+          "played": 5,
+          "won": 3,
+          "lost": 0,
+          "drawn": 2,
+          "goals_for": 13,
+          "goals_against": 5,
+          "goal_diff": 8,
+          "points": 19,
+          "eliminated": false
+        },
+        {
+          "team": "South Korea",
+          "played": 3,
+          "won": 1,
+          "lost": 2,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 3,
+          "goal_diff": -1,
+          "points": 2,
+          "eliminated": true
+        },
+        {
+          "team": "Qatar",
+          "played": 3,
+          "won": 0,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 10,
+          "goal_diff": -8,
+          "points": -7,
+          "eliminated": true
+        }
+      ],
+      "rank": 11
+    },
+    {
       "name": "Anne",
       "teams": [
         "Brazil",
@@ -527,7 +575,7 @@
           "eliminated": true
         }
       ],
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "Yassi",
@@ -575,7 +623,7 @@
           "eliminated": true
         }
       ],
-      "rank": 12
+      "rank": 13
     },
     {
       "name": "Dom",
@@ -584,19 +632,19 @@
         "Panama",
         "Czechia"
       ],
-      "total_points": 8,
+      "total_points": 5,
       "breakdown": [
         {
           "team": "USA",
-          "played": 4,
+          "played": 5,
           "won": 3,
-          "lost": 1,
+          "lost": 2,
           "drawn": 0,
-          "goals_for": 10,
-          "goals_against": 4,
-          "goal_diff": 6,
-          "points": 15,
-          "eliminated": false
+          "goals_for": 11,
+          "goals_against": 8,
+          "goal_diff": 3,
+          "points": 12,
+          "eliminated": true
         },
         {
           "team": "Panama",
@@ -620,54 +668,6 @@
           "goals_against": 6,
           "goal_diff": -4,
           "points": -3,
-          "eliminated": true
-        }
-      ],
-      "rank": 13
-    },
-    {
-      "name": "Rowan",
-      "teams": [
-        "Belgium",
-        "South Korea",
-        "Qatar"
-      ],
-      "total_points": 8,
-      "breakdown": [
-        {
-          "team": "Belgium",
-          "played": 4,
-          "won": 2,
-          "lost": 0,
-          "drawn": 2,
-          "goals_for": 9,
-          "goals_against": 4,
-          "goal_diff": 5,
-          "points": 13,
-          "eliminated": false
-        },
-        {
-          "team": "South Korea",
-          "played": 3,
-          "won": 1,
-          "lost": 2,
-          "drawn": 0,
-          "goals_for": 2,
-          "goals_against": 3,
-          "goal_diff": -1,
-          "points": 2,
-          "eliminated": true
-        },
-        {
-          "team": "Qatar",
-          "played": 3,
-          "won": 0,
-          "lost": 2,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 10,
-          "goal_diff": -8,
-          "points": -7,
           "eliminated": true
         }
       ],
@@ -2030,12 +2030,12 @@
       "kickoff_bst": "01:00",
       "home": "USA",
       "away": "Belgium",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 4,
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "live",
+      "status": "played",
       "stage": "Round of 16"
     },
     {
@@ -2048,7 +2048,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 16"
     },
     {
@@ -2061,7 +2061,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Round of 16"
     },
     {
@@ -2081,7 +2081,7 @@
       "date": "2026-07-10",
       "kickoff_bst": "20:00",
       "home": "Spain",
-      "away": "Round of 16 6 Winner",
+      "away": "Belgium",
       "home_score": null,
       "away_score": null,
       "home_pen": null,
@@ -2510,6 +2510,37 @@
         ]
       },
       {
+        "name": "Rowan",
+        "data": [
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          6,
+          -1,
+          -1,
+          -1,
+          0,
+          0,
+          0,
+          -3,
+          -3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          8,
+          8,
+          8,
+          8,
+          8,
+          14
+        ]
+      },
+      {
         "name": "Anne",
         "data": [
           0,
@@ -2599,38 +2630,7 @@
           8,
           8,
           8,
-          8
-        ]
-      },
-      {
-        "name": "Rowan",
-        "data": [
-          4,
-          4,
-          5,
-          5,
-          6,
-          6,
-          6,
-          -1,
-          -1,
-          -1,
-          0,
-          0,
-          0,
-          -3,
-          -3,
-          4,
-          4,
-          4,
-          4,
-          4,
-          8,
-          8,
-          8,
-          8,
-          8,
-          8
+          5
         ]
       },
       {
