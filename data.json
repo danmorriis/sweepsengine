@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-07T20:07:33Z",
+  "last_updated": "2026-07-07T23:08:39Z",
   "players": [
     {
       "name": "Emma",
@@ -242,6 +242,54 @@
       "rank": 5
     },
     {
+      "name": "Ryan",
+      "teams": [
+        "Uruguay",
+        "Switzerland",
+        "Ghana"
+      ],
+      "total_points": 24,
+      "breakdown": [
+        {
+          "team": "Uruguay",
+          "played": 3,
+          "won": 0,
+          "lost": 1,
+          "drawn": 2,
+          "goals_for": 3,
+          "goals_against": 4,
+          "goal_diff": -1,
+          "points": 1,
+          "eliminated": true
+        },
+        {
+          "team": "Switzerland",
+          "played": 5,
+          "won": 4,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 13,
+          "goals_against": 6,
+          "goal_diff": 7,
+          "points": 20,
+          "eliminated": false
+        },
+        {
+          "team": "Ghana",
+          "played": 4,
+          "won": 1,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 3,
+          "goal_diff": -1,
+          "points": 3,
+          "eliminated": true
+        }
+      ],
+      "rank": 6
+    },
+    {
       "name": "Chow",
       "teams": [
         "Mexico",
@@ -287,7 +335,7 @@
           "eliminated": true
         }
       ],
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "Anna",
@@ -332,54 +380,6 @@
           "goals_against": 4,
           "goal_diff": -3,
           "points": 0,
-          "eliminated": true
-        }
-      ],
-      "rank": 7
-    },
-    {
-      "name": "Ryan",
-      "teams": [
-        "Uruguay",
-        "Switzerland",
-        "Ghana"
-      ],
-      "total_points": 20,
-      "breakdown": [
-        {
-          "team": "Uruguay",
-          "played": 3,
-          "won": 0,
-          "lost": 1,
-          "drawn": 2,
-          "goals_for": 3,
-          "goals_against": 4,
-          "goal_diff": -1,
-          "points": 1,
-          "eliminated": true
-        },
-        {
-          "team": "Switzerland",
-          "played": 4,
-          "won": 3,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 9,
-          "goals_against": 3,
-          "goal_diff": 6,
-          "points": 16,
-          "eliminated": false
-        },
-        {
-          "team": "Ghana",
-          "played": 4,
-          "won": 1,
-          "lost": 2,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 3,
-          "goal_diff": -1,
-          "points": 3,
           "eliminated": true
         }
       ],
@@ -440,19 +440,19 @@
         "Australia",
         "Cape Verde"
       ],
-      "total_points": 18,
+      "total_points": 17,
       "breakdown": [
         {
           "team": "Colombia",
-          "played": 4,
+          "played": 5,
           "won": 3,
-          "lost": 0,
+          "lost": 1,
           "drawn": 1,
-          "goals_for": 5,
-          "goals_against": 1,
-          "goal_diff": 4,
-          "points": 14,
-          "eliminated": false
+          "goals_for": 8,
+          "goals_against": 5,
+          "goal_diff": 3,
+          "points": 13,
+          "eliminated": true
         },
         {
           "team": "Australia",
@@ -2056,12 +2056,27 @@
       "kickoff_bst": "21:00",
       "home": "Switzerland",
       "away": "Colombia",
-      "home_score": null,
-      "away_score": null,
-      "home_pen": null,
-      "away_pen": null,
-      "shootout": null,
-      "status": "live",
+      "home_score": 0,
+      "away_score": 0,
+      "home_pen": 4,
+      "away_pen": 3,
+      "shootout": {
+        "home_kicks": [
+          true,
+          true,
+          false,
+          true,
+          true
+        ],
+        "away_kicks": [
+          true,
+          false,
+          true,
+          false,
+          true
+        ]
+      },
+      "status": "played",
       "stage": "Round of 16"
     },
     {
@@ -2107,7 +2122,7 @@
       "date": "2026-07-11",
       "kickoff_bst": "02:00",
       "home": "Argentina",
-      "away": "Round of 16 8 Winner",
+      "away": "Switzerland",
       "home_score": null,
       "away_score": null,
       "home_pen": null,
@@ -2361,6 +2376,38 @@
         ]
       },
       {
+        "name": "Ryan",
+        "data": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2,
+          6,
+          12,
+          12,
+          12,
+          13,
+          13,
+          14,
+          18,
+          18,
+          17,
+          16,
+          16,
+          16,
+          16,
+          16,
+          21,
+          20,
+          20,
+          20,
+          20,
+          24
+        ]
+      },
+      {
         "name": "Chow",
         "data": [
           5,
@@ -2425,38 +2472,6 @@
         ]
       },
       {
-        "name": "Ryan",
-        "data": [
-          0,
-          0,
-          1,
-          1,
-          2,
-          2,
-          6,
-          12,
-          12,
-          12,
-          13,
-          13,
-          14,
-          18,
-          18,
-          17,
-          16,
-          16,
-          16,
-          16,
-          16,
-          21,
-          20,
-          20,
-          20,
-          20,
-          20
-        ]
-      },
-      {
         "name": "Connor",
         "data": [
           0,
@@ -2517,7 +2532,7 @@
           18,
           18,
           18,
-          18
+          17
         ]
       },
       {
