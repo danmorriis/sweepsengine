@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08T23:17:15Z",
+  "last_updated": "2026-07-09T04:02:33Z",
   "players": [
     {
       "name": "Emma",
@@ -2089,7 +2089,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Quarter-finals"
     },
     {
