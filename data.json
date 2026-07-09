@@ -1,6 +1,54 @@
 {
-  "last_updated": "2026-07-09T21:37:31Z",
+  "last_updated": "2026-07-09T23:19:59Z",
   "players": [
+    {
+      "name": "Josh",
+      "teams": [
+        "France",
+        "Paraguay",
+        "Cura\u00e7ao"
+      ],
+      "total_points": 30,
+      "breakdown": [
+        {
+          "team": "France",
+          "played": 6,
+          "won": 6,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 16,
+          "goals_against": 2,
+          "goal_diff": 14,
+          "points": 32,
+          "eliminated": false
+        },
+        {
+          "team": "Paraguay",
+          "played": 5,
+          "won": 2,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 7,
+          "goals_against": 9,
+          "goal_diff": -2,
+          "points": 5,
+          "eliminated": true
+        },
+        {
+          "team": "Cura\u00e7ao",
+          "played": 3,
+          "won": 0,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 1,
+          "goals_against": 9,
+          "goal_diff": -8,
+          "points": -7,
+          "eliminated": true
+        }
+      ],
+      "rank": 1
+    },
     {
       "name": "Emma",
       "teams": [
@@ -47,7 +95,7 @@
           "eliminated": true
         }
       ],
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "Chris",
@@ -95,7 +143,7 @@
           "eliminated": true
         }
       ],
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "Francesca",
@@ -143,7 +191,7 @@
           "eliminated": true
         }
       ],
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "Maria",
@@ -188,54 +236,6 @@
           "goals_against": 5,
           "goal_diff": 0,
           "points": 4,
-          "eliminated": true
-        }
-      ],
-      "rank": 4
-    },
-    {
-      "name": "Josh",
-      "teams": [
-        "France",
-        "Paraguay",
-        "Cura\u00e7ao"
-      ],
-      "total_points": 25,
-      "breakdown": [
-        {
-          "team": "France",
-          "played": 5,
-          "won": 5,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 14,
-          "goals_against": 2,
-          "goal_diff": 12,
-          "points": 27,
-          "eliminated": false
-        },
-        {
-          "team": "Paraguay",
-          "played": 5,
-          "won": 2,
-          "lost": 2,
-          "drawn": 1,
-          "goals_for": 7,
-          "goals_against": 9,
-          "goal_diff": -2,
-          "points": 5,
-          "eliminated": true
-        },
-        {
-          "team": "Cura\u00e7ao",
-          "played": 3,
-          "won": 0,
-          "lost": 2,
-          "drawn": 1,
-          "goals_for": 1,
-          "goals_against": 9,
-          "goal_diff": -8,
-          "points": -7,
           "eliminated": true
         }
       ],
@@ -392,19 +392,19 @@
         "Turkey",
         "Saudi Arabia"
       ],
-      "total_points": 19,
+      "total_points": 17,
       "breakdown": [
         {
           "team": "Morocco",
-          "played": 5,
+          "played": 6,
           "won": 4,
-          "lost": 0,
+          "lost": 1,
           "drawn": 1,
           "goals_for": 13,
-          "goals_against": 6,
-          "goal_diff": 7,
-          "points": 20,
-          "eliminated": false
+          "goals_against": 8,
+          "goal_diff": 5,
+          "points": 18,
+          "eliminated": true
         },
         {
           "team": "Turkey",
@@ -2084,12 +2084,12 @@
       "kickoff_bst": "21:00",
       "home": "France",
       "away": "Morocco",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 2,
+      "away_score": 0,
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "live",
+      "status": "played",
       "stage": "Quarter-finals"
     },
     {
@@ -2134,7 +2134,7 @@
     {
       "date": "2026-07-14",
       "kickoff_bst": "20:00",
-      "home": "Quarterfinal 1 Winner",
+      "home": "France",
       "away": "Quarterfinal 2 Winner",
       "home_score": null,
       "away_score": null,
@@ -2212,9 +2212,43 @@
       "2026-07-04",
       "2026-07-05",
       "2026-07-06",
-      "2026-07-07"
+      "2026-07-07",
+      "2026-07-09"
     ],
     "series": [
+      {
+        "name": "Josh",
+        "data": [
+          0,
+          -3,
+          -3,
+          -9,
+          -9,
+          -4,
+          -4,
+          -4,
+          0,
+          1,
+          1,
+          7,
+          7,
+          7,
+          6,
+          12,
+          12,
+          12,
+          16,
+          22,
+          22,
+          22,
+          22,
+          25,
+          25,
+          25,
+          25,
+          30
+        ]
+      },
       {
         "name": "Emma",
         "data": [
@@ -2242,6 +2276,7 @@
           25,
           25,
           25,
+          29,
           29,
           29,
           29
@@ -2276,6 +2311,7 @@
           22,
           22,
           22,
+          26,
           26
         ]
       },
@@ -2307,6 +2343,7 @@
           25,
           22,
           22,
+          26,
           26,
           26
         ]
@@ -2340,39 +2377,8 @@
           27,
           27,
           27,
+          26,
           26
-        ]
-      },
-      {
-        "name": "Josh",
-        "data": [
-          0,
-          -3,
-          -3,
-          -9,
-          -9,
-          -4,
-          -4,
-          -4,
-          0,
-          1,
-          1,
-          7,
-          7,
-          7,
-          6,
-          12,
-          12,
-          12,
-          16,
-          22,
-          22,
-          22,
-          22,
-          25,
-          25,
-          25,
-          25
         ]
       },
       {
@@ -2404,6 +2410,7 @@
           20,
           20,
           20,
+          24,
           24
         ]
       },
@@ -2434,6 +2441,7 @@
           24,
           24,
           24,
+          23,
           23,
           23,
           23
@@ -2468,6 +2476,7 @@
           22,
           22,
           21,
+          21,
           21
         ]
       },
@@ -2500,7 +2509,8 @@
           19,
           19,
           19,
-          19
+          19,
+          17
         ]
       },
       {
@@ -2532,6 +2542,7 @@
           18,
           18,
           18,
+          17,
           17
         ]
       },
@@ -2564,6 +2575,7 @@
           8,
           8,
           14,
+          14,
           14
         ]
       },
@@ -2594,6 +2606,7 @@
           13,
           13,
           13,
+          12,
           12,
           12,
           12
@@ -2628,6 +2641,7 @@
           6,
           10,
           10,
+          10,
           10
         ]
       },
@@ -2659,6 +2673,7 @@
           8,
           8,
           8,
+          5,
           5,
           5
         ]
@@ -2692,6 +2707,7 @@
           -4,
           -4,
           -4,
+          -4,
           -4
         ]
       },
@@ -2718,6 +2734,7 @@
           -2,
           -2,
           -4,
+          -5,
           -5,
           -5,
           -5,
