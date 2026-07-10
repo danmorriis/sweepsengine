@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-09T23:19:59Z",
+  "last_updated": "2026-07-10T04:02:12Z",
   "players": [
     {
       "name": "Josh",
@@ -2102,7 +2102,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Quarter-finals"
     },
     {
