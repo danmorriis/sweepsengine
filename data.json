@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10T23:05:50Z",
+  "last_updated": "2026-07-11T03:29:06Z",
   "players": [
     {
       "name": "Francesca",
@@ -2115,7 +2115,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Quarter-finals"
     },
     {
@@ -2128,7 +2128,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Quarter-finals"
     },
     {
