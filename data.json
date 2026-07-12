@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-11T22:57:33Z",
+  "last_updated": "2026-07-12T03:40:38Z",
   "players": [
     {
       "name": "Francesca",
@@ -104,7 +104,7 @@
         "Norway",
         "South Africa"
       ],
-      "total_points": 29,
+      "total_points": 28,
       "breakdown": [
         {
           "team": "Netherlands",
@@ -120,15 +120,15 @@
         },
         {
           "team": "Norway",
-          "played": 5,
+          "played": 6,
           "won": 4,
-          "lost": 1,
+          "lost": 2,
           "drawn": 0,
-          "goals_for": 12,
-          "goals_against": 9,
-          "goal_diff": 3,
-          "points": 15,
-          "eliminated": false
+          "goals_for": 13,
+          "goals_against": 11,
+          "goal_diff": 2,
+          "points": 14,
+          "eliminated": true
         },
         {
           "team": "South Africa",
@@ -482,6 +482,54 @@
       "rank": 10
     },
     {
+      "name": "Yassi",
+      "teams": [
+        "England",
+        "Sweden",
+        "Tunisia"
+      ],
+      "total_points": 14,
+      "breakdown": [
+        {
+          "team": "England",
+          "played": 6,
+          "won": 5,
+          "lost": 0,
+          "drawn": 1,
+          "goals_for": 13,
+          "goals_against": 6,
+          "goal_diff": 7,
+          "points": 23,
+          "eliminated": false
+        },
+        {
+          "team": "Sweden",
+          "played": 4,
+          "won": 1,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 7,
+          "goals_against": 10,
+          "goal_diff": -3,
+          "points": 1,
+          "eliminated": true
+        },
+        {
+          "team": "Tunisia",
+          "played": 3,
+          "won": 0,
+          "lost": 3,
+          "drawn": 0,
+          "goals_for": 2,
+          "goals_against": 12,
+          "goal_diff": -10,
+          "points": -10,
+          "eliminated": true
+        }
+      ],
+      "rank": 11
+    },
+    {
       "name": "Rowan",
       "teams": [
         "Belgium",
@@ -527,7 +575,7 @@
           "eliminated": true
         }
       ],
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "Anne",
@@ -572,54 +620,6 @@
           "goals_against": 10,
           "goal_diff": -6,
           "points": -5,
-          "eliminated": true
-        }
-      ],
-      "rank": 12
-    },
-    {
-      "name": "Yassi",
-      "teams": [
-        "England",
-        "Sweden",
-        "Tunisia"
-      ],
-      "total_points": 10,
-      "breakdown": [
-        {
-          "team": "England",
-          "played": 5,
-          "won": 4,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 11,
-          "goals_against": 5,
-          "goal_diff": 6,
-          "points": 19,
-          "eliminated": false
-        },
-        {
-          "team": "Sweden",
-          "played": 4,
-          "won": 1,
-          "lost": 2,
-          "drawn": 1,
-          "goals_for": 7,
-          "goals_against": 10,
-          "goal_diff": -3,
-          "points": 1,
-          "eliminated": true
-        },
-        {
-          "team": "Tunisia",
-          "played": 3,
-          "won": 0,
-          "lost": 3,
-          "drawn": 0,
-          "goals_for": 2,
-          "goals_against": 12,
-          "goal_diff": -10,
-          "points": -10,
           "eliminated": true
         }
       ],
@@ -2110,12 +2110,12 @@
       "kickoff_bst": "22:00",
       "home": "Norway",
       "away": "England",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 1,
+      "away_score": 2,
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "live",
+      "status": "played",
       "stage": "Quarter-finals"
     },
     {
@@ -2128,7 +2128,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "live",
+      "status": "upcoming",
       "stage": "Quarter-finals"
     },
     {
@@ -2147,7 +2147,7 @@
     {
       "date": "2026-07-15",
       "kickoff_bst": "20:00",
-      "home": "Quarterfinal 3 Winner",
+      "home": "England",
       "away": "Quarterfinal 4 Winner",
       "home_score": null,
       "away_score": null,
@@ -2214,7 +2214,8 @@
       "2026-07-06",
       "2026-07-07",
       "2026-07-09",
-      "2026-07-10"
+      "2026-07-10",
+      "2026-07-11"
     ],
     "series": [
       {
@@ -2248,6 +2249,7 @@
           26,
           26,
           26,
+          30,
           30
         ]
       },
@@ -2281,6 +2283,7 @@
           25,
           25,
           25,
+          30,
           30,
           30
         ]
@@ -2316,7 +2319,8 @@
           29,
           29,
           29,
-          29
+          29,
+          28
         ]
       },
       {
@@ -2348,6 +2352,7 @@
           22,
           22,
           22,
+          26,
           26,
           26,
           26
@@ -2384,6 +2389,7 @@
           27,
           26,
           26,
+          26,
           26
         ]
       },
@@ -2418,6 +2424,7 @@
           20,
           24,
           24,
+          24,
           24
         ]
       },
@@ -2448,6 +2455,7 @@
           24,
           24,
           24,
+          23,
           23,
           23,
           23,
@@ -2486,6 +2494,7 @@
           21,
           21,
           21,
+          21,
           21
         ]
       },
@@ -2519,6 +2528,7 @@
           19,
           19,
           19,
+          17,
           17,
           17
         ]
@@ -2554,7 +2564,43 @@
           18,
           17,
           17,
+          17,
           17
+        ]
+      },
+      {
+        "name": "Yassi",
+        "data": [
+          0,
+          0,
+          0,
+          3,
+          3,
+          3,
+          8,
+          8,
+          8,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          5,
+          5,
+          5,
+          2,
+          6,
+          6,
+          6,
+          6,
+          10,
+          10,
+          10,
+          10,
+          10,
+          14
         ]
       },
       {
@@ -2588,6 +2634,7 @@
           14,
           14,
           14,
+          13,
           13
         ]
       },
@@ -2622,41 +2669,8 @@
           12,
           12,
           12,
+          12,
           12
-        ]
-      },
-      {
-        "name": "Yassi",
-        "data": [
-          0,
-          0,
-          0,
-          3,
-          3,
-          3,
-          8,
-          8,
-          8,
-          0,
-          0,
-          0,
-          1,
-          1,
-          0,
-          0,
-          5,
-          5,
-          5,
-          2,
-          6,
-          6,
-          6,
-          6,
-          10,
-          10,
-          10,
-          10,
-          10
         ]
       },
       {
@@ -2687,6 +2701,7 @@
           8,
           8,
           8,
+          5,
           5,
           5,
           5,
@@ -2724,6 +2739,7 @@
           -4,
           -4,
           -4,
+          -4,
           -4
         ]
       },
@@ -2750,6 +2766,7 @@
           -2,
           -2,
           -4,
+          -5,
           -5,
           -5,
           -5,
