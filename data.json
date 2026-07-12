@@ -1,6 +1,54 @@
 {
-  "last_updated": "2026-07-12T03:40:38Z",
+  "last_updated": "2026-07-12T06:42:07Z",
   "players": [
+    {
+      "name": "Chris",
+      "teams": [
+        "Argentina",
+        "Ivory Coast",
+        "Jordan"
+      ],
+      "total_points": 31,
+      "breakdown": [
+        {
+          "team": "Argentina",
+          "played": 6,
+          "won": 6,
+          "lost": 0,
+          "drawn": 0,
+          "goals_for": 17,
+          "goals_against": 6,
+          "goal_diff": 11,
+          "points": 29,
+          "eliminated": false
+        },
+        {
+          "team": "Ivory Coast",
+          "played": 4,
+          "won": 2,
+          "lost": 2,
+          "drawn": 0,
+          "goals_for": 5,
+          "goals_against": 4,
+          "goal_diff": 1,
+          "points": 7,
+          "eliminated": true
+        },
+        {
+          "team": "Jordan",
+          "played": 3,
+          "won": 0,
+          "lost": 3,
+          "drawn": 0,
+          "goals_for": 3,
+          "goals_against": 8,
+          "goal_diff": -5,
+          "points": -5,
+          "eliminated": true
+        }
+      ],
+      "rank": 1
+    },
     {
       "name": "Francesca",
       "teams": [
@@ -47,7 +95,7 @@
           "eliminated": true
         }
       ],
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "Josh",
@@ -95,7 +143,7 @@
           "eliminated": true
         }
       ],
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "Emma",
@@ -140,54 +188,6 @@
           "goals_against": 4,
           "goal_diff": -2,
           "points": 2,
-          "eliminated": true
-        }
-      ],
-      "rank": 3
-    },
-    {
-      "name": "Chris",
-      "teams": [
-        "Argentina",
-        "Ivory Coast",
-        "Jordan"
-      ],
-      "total_points": 26,
-      "breakdown": [
-        {
-          "team": "Argentina",
-          "played": 5,
-          "won": 5,
-          "lost": 0,
-          "drawn": 0,
-          "goals_for": 14,
-          "goals_against": 5,
-          "goal_diff": 9,
-          "points": 24,
-          "eliminated": false
-        },
-        {
-          "team": "Ivory Coast",
-          "played": 4,
-          "won": 2,
-          "lost": 2,
-          "drawn": 0,
-          "goals_for": 5,
-          "goals_against": 4,
-          "goal_diff": 1,
-          "points": 7,
-          "eliminated": true
-        },
-        {
-          "team": "Jordan",
-          "played": 3,
-          "won": 0,
-          "lost": 3,
-          "drawn": 0,
-          "goals_for": 3,
-          "goals_against": 8,
-          "goal_diff": -5,
-          "points": -5,
           "eliminated": true
         }
       ],
@@ -242,54 +242,6 @@
       "rank": 5
     },
     {
-      "name": "Ryan",
-      "teams": [
-        "Uruguay",
-        "Switzerland",
-        "Ghana"
-      ],
-      "total_points": 24,
-      "breakdown": [
-        {
-          "team": "Uruguay",
-          "played": 3,
-          "won": 0,
-          "lost": 1,
-          "drawn": 2,
-          "goals_for": 3,
-          "goals_against": 4,
-          "goal_diff": -1,
-          "points": 1,
-          "eliminated": true
-        },
-        {
-          "team": "Switzerland",
-          "played": 5,
-          "won": 4,
-          "lost": 0,
-          "drawn": 1,
-          "goals_for": 13,
-          "goals_against": 6,
-          "goal_diff": 7,
-          "points": 20,
-          "eliminated": false
-        },
-        {
-          "team": "Ghana",
-          "played": 4,
-          "won": 1,
-          "lost": 2,
-          "drawn": 1,
-          "goals_for": 2,
-          "goals_against": 3,
-          "goal_diff": -1,
-          "points": 3,
-          "eliminated": true
-        }
-      ],
-      "rank": 6
-    },
-    {
       "name": "Chow",
       "teams": [
         "Mexico",
@@ -332,6 +284,54 @@
           "goals_against": 8,
           "goal_diff": -3,
           "points": 1,
+          "eliminated": true
+        }
+      ],
+      "rank": 6
+    },
+    {
+      "name": "Ryan",
+      "teams": [
+        "Uruguay",
+        "Switzerland",
+        "Ghana"
+      ],
+      "total_points": 22,
+      "breakdown": [
+        {
+          "team": "Uruguay",
+          "played": 3,
+          "won": 0,
+          "lost": 1,
+          "drawn": 2,
+          "goals_for": 3,
+          "goals_against": 4,
+          "goal_diff": -1,
+          "points": 1,
+          "eliminated": true
+        },
+        {
+          "team": "Switzerland",
+          "played": 6,
+          "won": 4,
+          "lost": 1,
+          "drawn": 1,
+          "goals_for": 14,
+          "goals_against": 9,
+          "goal_diff": 5,
+          "points": 18,
+          "eliminated": true
+        },
+        {
+          "team": "Ghana",
+          "played": 4,
+          "won": 1,
+          "lost": 2,
+          "drawn": 1,
+          "goals_for": 2,
+          "goals_against": 3,
+          "goal_diff": -1,
+          "points": 3,
           "eliminated": true
         }
       ],
@@ -2123,12 +2123,12 @@
       "kickoff_bst": "02:00",
       "home": "Argentina",
       "away": "Switzerland",
-      "home_score": null,
-      "away_score": null,
+      "home_score": 3,
+      "away_score": 1,
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "played",
       "stage": "Quarter-finals"
     },
     {
@@ -2148,7 +2148,7 @@
       "date": "2026-07-15",
       "kickoff_bst": "20:00",
       "home": "England",
-      "away": "Quarterfinal 4 Winner",
+      "away": "Argentina",
       "home_score": null,
       "away_score": null,
       "home_pen": null,
@@ -2218,6 +2218,41 @@
       "2026-07-11"
     ],
     "series": [
+      {
+        "name": "Chris",
+        "data": [
+          0,
+          0,
+          0,
+          4,
+          4,
+          8,
+          8,
+          8,
+          8,
+          7,
+          7,
+          11,
+          11,
+          11,
+          16,
+          16,
+          19,
+          19,
+          19,
+          18,
+          18,
+          18,
+          22,
+          22,
+          22,
+          22,
+          26,
+          26,
+          26,
+          31
+        ]
+      },
       {
         "name": "Francesca",
         "data": [
@@ -2324,41 +2359,6 @@
         ]
       },
       {
-        "name": "Chris",
-        "data": [
-          0,
-          0,
-          0,
-          4,
-          4,
-          8,
-          8,
-          8,
-          8,
-          7,
-          7,
-          11,
-          11,
-          11,
-          16,
-          16,
-          19,
-          19,
-          19,
-          18,
-          18,
-          18,
-          22,
-          22,
-          22,
-          22,
-          26,
-          26,
-          26,
-          26
-        ]
-      },
-      {
         "name": "Maria",
         "data": [
           0,
@@ -2394,41 +2394,6 @@
         ]
       },
       {
-        "name": "Ryan",
-        "data": [
-          0,
-          0,
-          1,
-          1,
-          2,
-          2,
-          6,
-          12,
-          12,
-          12,
-          13,
-          13,
-          14,
-          18,
-          18,
-          17,
-          16,
-          16,
-          16,
-          16,
-          16,
-          21,
-          20,
-          20,
-          20,
-          20,
-          24,
-          24,
-          24,
-          24
-        ]
-      },
-      {
         "name": "Chow",
         "data": [
           5,
@@ -2461,6 +2426,41 @@
           23,
           23,
           23
+        ]
+      },
+      {
+        "name": "Ryan",
+        "data": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2,
+          6,
+          12,
+          12,
+          12,
+          13,
+          13,
+          14,
+          18,
+          18,
+          17,
+          16,
+          16,
+          16,
+          16,
+          16,
+          21,
+          20,
+          20,
+          20,
+          20,
+          24,
+          24,
+          24,
+          22
         ]
       },
       {
