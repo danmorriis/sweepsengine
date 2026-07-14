@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-14T06:19:37Z",
+  "last_updated": "2026-07-14T10:06:27Z",
   "players": [
     {
       "name": "Chris",
@@ -2040,7 +2040,7 @@
     },
     {
       "date": "2026-07-07",
-      "kickoff_bst": null,
+      "kickoff_bst": "17:00",
       "home": "Argentina",
       "away": "Egypt",
       "home_score": 3,
@@ -2053,7 +2053,7 @@
     },
     {
       "date": "2026-07-07",
-      "kickoff_bst": null,
+      "kickoff_bst": "21:00",
       "home": "Switzerland",
       "away": "Colombia",
       "home_score": 0,
