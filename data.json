@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-14T21:07:23Z",
+  "last_updated": "2026-07-14T23:03:17Z",
   "players": [
     {
       "name": "Francesca",
@@ -2159,7 +2159,7 @@
     },
     {
       "date": "2026-07-18",
-      "kickoff_bst": "22:00",
+      "kickoff_bst": null,
       "home": "Semifinal 1 Loser",
       "away": "Semifinal 2 Loser",
       "home_score": null,
@@ -2173,7 +2173,7 @@
     {
       "date": "2026-07-19",
       "kickoff_bst": "20:00",
-      "home": "Semifinal 1 Winner",
+      "home": "Spain",
       "away": "Semifinal 2 Winner",
       "home_score": null,
       "away_score": null,
