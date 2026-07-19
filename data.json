@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-18T22:57:38Z",
+  "last_updated": "2026-07-19T03:36:48Z",
   "players": [
     {
       "name": "Chris",
@@ -2167,7 +2167,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "live",
+      "status": "upcoming",
       "stage": "Third Place"
     },
     {
@@ -2180,7 +2180,7 @@
       "home_pen": null,
       "away_pen": null,
       "shootout": null,
-      "status": "upcoming",
+      "status": "live",
       "stage": "Final"
     }
   ],
