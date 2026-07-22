@@ -1,10 +1,9 @@
 name: Update World Cup Results
 
 on:
-  schedule:
-    # Runs every 2 hours
-    - cron: "0 */2 * * *"
-  workflow_dispatch:  # also allows manual trigger from GitHub UI
+  # schedule:
+  #   - cron: "0 */2 * * *"
+  workflow_dispatch:  # manual trigger only — scheduled runs disabled
 
 jobs:
   update-results:
